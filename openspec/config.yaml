@@ -10,10 +10,13 @@ context: |
   bilingual (en + pt-br) by design — that is content, not artifacts.
 
   ## What the system is
-  Project Lunar is a narrative RPG ENGINE (not a single game): authors create
-  scenarios (lore, NPCs, locations, factions, setup questions) and players
-  live adventures narrated by LLMs, with 4-level persistent memory (crystal
-  pyramid), a reactive world, creativity-based combat and AI-generated
+  Project Lunar is a narrative RPG ENGINE — and the committed final product
+  built on it is a Role-Playing MMORPG based on the lore specified in these
+  specs (spec mmo-game): a persistent multiplayer world where the engine
+  (4-level crystal memory, world ticks, plot seeds, npc-minds, auditor)
+  remains the simulation core. Authors create scenarios (lore, NPCs,
+  locations, factions, setup questions) and players live adventures narrated
+  by LLMs, with a reactive world, creativity-based combat and AI-generated
   cold-opens. Bilingual (en + pt-br) in every prompt, crystal, journal and
   tag. No HP, mana or grind — narrative only.
 
@@ -56,6 +59,17 @@ context: |
   - deployment: Docker Compose stack (uv backend + nginx frontend with /api
     and SSE proxy, Neo4j in optional profile), credentials outside the
     image, persistence across restarts, host access for the Hermes proxy
+  - worldbuilding-research: documentary reverse engineering of mechanics
+    (Albion Online, GTA San Andreas, MUDs, CyberCode Online) + a playable
+    prototype of the final engine built on d3wasm (Doom 3 / id Tech 4 in
+    WebAssembly+WebGL, GPL-3.0 boundary documented); versioned lesson cards
+    in data/worldbuilding/lessons.json with target-spec traceability
+  - mmo-game: the final product direction — a lore-based Role-Playing
+    MMORPG on the engine: persistent multiplayer world (ticks while
+    offline, cross-player consequences), browser client on the d3wasm
+    engine path, narrative-first progression (no grind), social layer with
+    roleplay integrity, age-banding/avatar-mirror protections in
+    multiplayer, moderated community contribution channel
 
   ## Project invariants (learned in A/B — docs/fase3a_ab.md, fase3b_ab.md)
   - Never feed the narrator's own raw prose back as history beyond the open

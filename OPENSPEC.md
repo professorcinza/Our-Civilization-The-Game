@@ -19,6 +19,7 @@
   - [llm-routing](#llm-routing)
   - [memory-system](#memory-system)
   - [military-forces-catalog](#military-forces-catalog)
+  - [mmo-game](#mmo-game)
   - [narrative-audit](#narrative-audit)
   - [narrative-engine](#narrative-engine)
   - [npc-minds](#npc-minds)
@@ -31,6 +32,7 @@
 - [3. Changes (work in progress)](#3-changes-work-in-progress)
   - [add-engine-core](#add-engine-core)
   - [add-military-forces-catalog](#add-military-forces-catalog)
+  - [add-mmo-game](#add-mmo-game)
   - [add-worldbuilding-research](#add-worldbuilding-research)
   - [fix-auditor-agency-false-positive](#fix-auditor-agency-false-positive)
 
@@ -45,10 +47,13 @@ Game content (scenarios, prompts, crystals, journals, tags) remains
 bilingual (en + pt-br) by design — that is content, not artifacts.
 
 ## What the system is
-Project Lunar is a narrative RPG ENGINE (not a single game): authors create
-scenarios (lore, NPCs, locations, factions, setup questions) and players
-live adventures narrated by LLMs, with 4-level persistent memory (crystal
-pyramid), a reactive world, creativity-based combat and AI-generated
+Project Lunar is a narrative RPG ENGINE — and the committed final product
+built on it is a Role-Playing MMORPG based on the lore specified in these
+specs (spec mmo-game): a persistent multiplayer world where the engine
+(4-level crystal memory, world ticks, plot seeds, npc-minds, auditor)
+remains the simulation core. Authors create scenarios (lore, NPCs,
+locations, factions, setup questions) and players live adventures narrated
+by LLMs, with a reactive world, creativity-based combat and AI-generated
 cold-opens. Bilingual (en + pt-br) in every prompt, crystal, journal and
 tag. No HP, mana or grind — narrative only.
 
@@ -91,6 +96,17 @@ tag. No HP, mana or grind — narrative only.
 - deployment: Docker Compose stack (uv backend + nginx frontend with /api
   and SSE proxy, Neo4j in optional profile), credentials outside the
   image, persistence across restarts, host access for the Hermes proxy
+- worldbuilding-research: documentary reverse engineering of mechanics
+  (Albion Online, GTA San Andreas, MUDs, CyberCode Online) + a playable
+  prototype of the final engine built on d3wasm (Doom 3 / id Tech 4 in
+  WebAssembly+WebGL, GPL-3.0 boundary documented); versioned lesson cards
+  in data/worldbuilding/lessons.json with target-spec traceability
+- mmo-game: the final product direction — a lore-based Role-Playing
+  MMORPG on the engine: persistent multiplayer world (ticks while
+  offline, cross-player consequences), browser client on the d3wasm
+  engine path, narrative-first progression (no grind), social layer with
+  roleplay integrity, age-banding/avatar-mirror protections in
+  multiplayer, moderated community contribution channel
 
 ## Project invariants (learned in A/B — docs/fase3a_ab.md, fase3b_ab.md)
 - Never feed the narrator's own raw prose back as history beyond the open
@@ -1069,6 +1085,203 @@ The system SHALL offer complete, importable scenarios built on the catalog: (a) 
 - **WHEN** the player chooses force and specialization in the training scenario setup
 - **THEN** the answers SHALL interpolate into the lore and tone to steer the training narrative
 
+<!-- source: specs/mmo-game/spec.md -->
+
+### mmo-game
+
+#### Purpose
+
+The final product direction: Project Lunar's narrative engine powers a Role-Playing MMORPG whose world, lore and content derive from the specifications — the "O Cidadão do Futuro" universe, the military training worlds, and the PSYOPS/intelligence doctrine regiments — with a persistent multiplayer world on top of the single-player narrative systems already specified. This spec is the vision-level contract connecting the engine, the lore and the multiplayer layer; detailed mechanics arrive as future changes.
+
+#### Requirements
+
+##### Requirement: Final Product Is a Lore-Based MMORPG
+
+The final product SHALL be a Role-Playing MMORPG whose canonical world and content derive from the lore specified in the project (scenario lore cards, worldbuilding volumes, doctrine regiments, military forces catalog). The narrative engine (memory pyramid, world ticks, plot seeds, npc-minds, auditor) SHALL remain the simulation core; the MMO layer adds multiplayer presence on top of it, not a separate game.
+
+###### Scenario: Lore Is Canonical
+
+- **WHEN** any MMO content (zone, faction, NPC, item) is authored
+- **THEN** it SHALL trace back to lore defined in the specs' source material (story cards, worldbuilding docs) or enter through the scenario-authoring pipeline
+- **AND** content that contradicts established canon SHALL be rejected in review
+
+###### Scenario: Engine Powers the MMO
+
+- **WHEN** the MMO world simulates (memory, ticks, plots, NPC minds)
+- **THEN** it SHALL use the specified engine systems rather than bespoke MMO logic
+
+##### Requirement: Persistent Multiplayer World
+
+The world SHALL be persistent and shared: it continues to evolve off-screen (world-simulation ticks) while any given player is offline, and events caused by other players SHALL be observable later (rumors, journal entries, world changes) — applying the MUD lessons already captured in worldbuilding-research.
+
+###### Scenario: World Moves While a Player Is Offline
+
+- **WHEN** a player returns after an absence
+- **THEN** the world state SHALL reflect ticks and other players' consequences that occurred in the interval
+- **AND** the return SHALL surface those changes through narrative means (journal, world memory, NPC speech), not raw logs
+
+###### Scenario: Player-Consequence Visibility
+
+- **WHEN** one player's action changes the world (economy, territory, NPC fate)
+- **THEN** other players SHALL be able to encounter that consequence in their own narration
+
+##### Requirement: Browser Client on the d3wasm Engine Path
+
+The game client SHALL follow the engine path specified in worldbuilding-research: prototype on d3wasm (WebAssembly + WebGL id Tech 4) with a documented GPL-3.0 trade-off decision before the final engine is adopted; the MMO client remains browser-first (no native install required).
+
+###### Scenario: Client Runs in the Browser
+
+- **WHEN** a player opens the game in a modern browser
+- **THEN** the client SHALL run without plugins or native installation
+
+##### Requirement: Narrative-First Progression
+
+The MMORPG SHALL keep the engine's narrative-first rules: no HP bars, mana or grind; progression measured in memory (crystals), journal, relationships and world standing; combat resolved by the creativity score — even with many players online.
+
+###### Scenario: No Grind Leaks In
+
+- **WHEN** multiplayer systems are designed (grouping, shared quests, economy)
+- **THEN** they SHALL NOT introduce numeric grind loops (XP bars, repetitive reward cycles) contradicting the narrative-first invariant
+
+##### Requirement: Social Layer with Roleplay Integrity
+
+The social layer SHALL provide presence, communication and cooperation between players (seeing who is present, talking, acting together in a scene), informed by the MUD/RPI lessons: roleplay integrity expectations and consent boundaries, with avatar-mirror and age-banding protections applying to what other players can see and say to each other.
+
+###### Scenario: Presence and Speech
+
+- **WHEN** two players share a location
+- **THEN** each SHALL perceive the other's presence and in-character speech/emotes in the narration
+- **AND** out-of-character channels SHALL be clearly separated from in-world speech
+
+###### Scenario: Bands and Mirror Protections Carry Over
+
+- **WHEN** a minor-band player shares the world with adult-band players
+- **THEN** the age-banding tray SHALL govern what content reaches them
+- **AND** avatar-mirror consent and the LGPD deny-list SHALL apply to multiplayer visibility of personal data
+
+##### Requirement: Community Contribution Channel
+
+Following the CyberCode Online lesson, the MMO SHALL treat community-contributed content (lore fragments, scenario seeds, procedural corpora) as a first-class, moderated channel entering through the scenario-authoring pipeline — never directly mutating canon.
+
+###### Scenario: Moderated Contribution
+
+- **WHEN** a community contribution is submitted
+- **THEN** it SHALL pass scenario-authoring validation and review before becoming visible in the world
+
+##### Requirement: Scale Targets for the Open World (v1)
+
+The MMO SHALL meet these v1 measurable scale targets on the d3wasm + narrative-engine hybrid (targets are engineering estimates recorded as contracts, revisable by future changes with measured data): 1,000–3,000 concurrent players per open map; per-client visible characters capped by interest management at ~100 rendered at 30+ FPS on common hardware; thousands of deterministic routine NPCs per map; tens up to ~1–2 hundred LLM-alive NPC minds per region; and a per-narrated-turn LLM cost envelope in the ~US$ 0.01–0.03 range, with the ~US$ 0.2–0.6 per active player-hour figure as the planning budget. The bottleneck order recorded: LLM throughput/cost first, client rendering second, world simulation last.
+
+###### Scenario: Full Map Under Load
+
+- **WHEN** 3,000 players are online in one open map
+- **THEN** each client SHALL render at most ~100 characters in its area of interest at 30+ FPS
+- **AND** the world simulation SHALL remain responsive (no synchronous LLM dependency in the moment-to-moment path)
+
+###### Scenario: Per-Turn Cost Stays in Envelope
+
+- **WHEN** a narrated turn completes (narrator + auditor + crystallization + tick)
+- **THEN** its LLM cost SHALL be measured and tracked against the ~US$ 0.01–0.03 envelope, with prompt-caching zone hits reported
+
+##### Requirement: Hybrid Simulation Layers
+
+The simulation SHALL be layered so scale does not route through the LLM: (a) a deterministic moment-to-moment layer (movement, presence, short speech) with server authority and no LLM calls; (b) an LLM narrative-event layer invoked on significant player decisions and world beats only; (c) a shared NPC-mind pool per region with the witness filter governing what each NPC knows about each player. The open world SHALL partition into scenes/regions (the MUD room-lattice model), each region carrying its own LLM call budget.
+
+###### Scenario: Movement Never Calls the LLM
+
+- **WHEN** a player moves, emotes briefly or perceives presence
+- **THEN** the interaction SHALL be handled entirely by the deterministic layer
+- **AND** no LLM call SHALL be triggered
+
+###### Scenario: Region LLM Budget
+
+- **WHEN** a region's LLM call budget is exhausted
+- **THEN** narrative events in that region SHALL queue or degrade gracefully (deterministic narration fallback) instead of blocking the deterministic layer
+
+##### Requirement: d3wasm Netcode Gap Is the Headline Risk
+
+Adapting d3wasm (single-player port, no networking) to the MMO SHALL require building from scratch: client prediction, server authority, snapshotting and interest management. This netcode layer is the largest single engineering risk of the engine path and SHALL be load-tested against the v1 scale targets before those targets count as met.
+
+###### Scenario: Load Test Before Scale Sign-Off
+
+- **WHEN** the v1 scale targets are claimed as met
+- **THEN** a load test report (concurrent players, visible entities, FPS, LLM concurrency and cost) SHALL exist as evidence
+
+##### Requirement: Cultural Shards Over the Same Canon
+
+Drawing from the GTA V RP worldwide lesson, the MMO SHALL support cultural/regional shards: communities playing the same canonical world with their own rules, tone and language, rather than one uniform world-for-all. Shard-specific behavior SHALL be configuration over the shared canon (never forked lore), and cross-shard consequences MAY be limited by design.
+
+###### Scenario: Same Canon, Local Culture
+
+- **WHEN** a regional shard defines its own tone, language and house rules
+- **THEN** the canonical lore SHALL remain identical across shards
+- **AND** shard differences SHALL be declared configuration, reviewable against canon
+
+###### Scenario: Community Gate Mirrors Protections
+
+- **WHEN** a shard admits players through a community gate (application, invitation or tier)
+- **THEN** the age-banding tray and avatar-mirror consent SHALL remain non-negotiable beneath the community layer
+
+##### Requirement: Player-Run Institutions
+
+The MMO SHALL allow institutional roles (peacekeeping, medical, legal, press) to be occupied by players with persisted minds — the player-minds variant of npc-minds — making the world state partially community-operated, per the GTA V RP lesson. Player-held institutions SHALL be subject to the same narrative audit and canon rules as every other actor.
+
+###### Scenario: Player Institution Operates World State
+
+- **WHEN** a player on duty performs an institutional action (patrol, triage, ruling, reporting)
+- **THEN** the action SHALL enter the event store and affect the world like any actor's
+- **AND** the institution's conduct SHALL be auditable by the narrative auditor
+
+###### Scenario: Institution Handover
+
+- **WHEN** an institutional role changes hands between players
+- **THEN** the persisted mind and standing of the institution SHALL carry over without losing memory of prior events
+
+##### Requirement: Closed Player-Driven Economy
+
+Per the Albion-in-life-RP lesson, the MMO economy SHALL be closed and player-driven: no value spawned by NPC shops or infinite NPC jobs; goods and services produced by players (or the world simulation) with sinks draining value through lifelike costs (taxes, rent, utilities, insurance, maintenance); markets regional (per district/neighborhood) with prices allowed to diverge, and price/scarcity divergence usable as world-simulation tick signals.
+
+###### Scenario: No Infinite Faucet
+
+- **WHEN** a player earns money
+- **THEN** the value SHALL trace to another actor's spending or world production, never to an infinite NPC source
+- **AND** sinks (taxes, rent, maintenance) SHALL exist that drain value at a tunable rate
+
+###### Scenario: Regional Price Divergence Signals the World
+
+- **WHEN** prices diverge between districts beyond a threshold
+- **THEN** the world simulation MAY use that divergence as a tick trigger (shortage, conflict, blockade) surfaced through narration
+
+##### Requirement: Carry-Only Material Consequence
+
+Per the hybrid synthesis, material consequence SHALL apply to what a character carries, never to the character's life: robbery under threat transfers carried goods (wallet, phone, purchases, vehicle); stored, banked or insured assets remain safe; character death remains governed by RP protections (sacred life) — the fear is losing the cargo, the car, the month's money, not the person.
+
+###### Scenario: Robbery Transfers Carried Goods Only
+
+- **WHEN** a robbery under threat concludes per RP rules
+- **THEN** only carried items and the vehicle involved SHALL transfer
+- **AND** banked, stored and insured assets SHALL be untouched
+
+###### Scenario: Insurance as Sink
+
+- **WHEN** a player insures goods or vehicles
+- **THEN** premiums SHALL act as an economy sink and claims SHALL restore value without creating new money beyond the insured amount
+
+##### Requirement: Declared Territory Wars via Player Institutions
+
+Faction-controlled territory SHALL grant passive income (protection/commerce) and SHALL change hands only through wars declared via the player-run institutions (mayoralty, judgeship, peacekeeping): declaration, time window and engagement rules recorded in the event store — legalizing scheduled conflict (the Albion GvG lesson) inside the RP frame instead of ad-hoc staff arbitration.
+
+###### Scenario: War Requires Declaration
+
+- **WHEN** a faction attempts a territory takeover
+- **THEN** a declaration SHALL exist, approved through the competent player institution, with time window and engagement rules
+- **AND** undeclared mass conflict SHALL be treated as a rule violation subject to audit
+
+###### Scenario: Territory Income Is Simulation-Wired
+
+- **WHEN** a faction holds a territory
+- **THEN** its passive income SHALL flow through the economy (taxes/commerce), not spawn new value outside the closed economy
+
 <!-- source: specs/narrative-audit/spec.md -->
 
 ### narrative-audit
@@ -1744,7 +1957,7 @@ Automatic ticks SHALL run as a fire-and-forget asynchronous task after narration
 
 #### Purpose
 
-A research program of reverse engineering the mechanics of reference games (Albion Online, GTA San Andreas, MUDs) and a playable Doom 3-style WebGL prototype, with the goal of extracting verifiable world-building lessons that feed the Project Lunar specs for world-simulation, npc-minds, plot-generation, and scenario-authoring. Everything in English; structural headings and SHALL/MUST keywords in English.
+A research program of reverse engineering the mechanics of reference games (Albion Online, GTA San Andreas, GTA V RP worldwide, MUDs, CyberCode Online) and a playable prototype of the final engine built on d3wasm (Doom 3 / id Tech 4 ported to WebAssembly+WebGL, GPL-3.0), with the goal of extracting verifiable world-building lessons that feed the Project Lunar specs for world-simulation, npc-minds, plot-generation, scenario-authoring and mmo-game. Everything in English; structural headings and SHALL/MUST keywords in English.
 
 #### Requirements
 
@@ -1795,23 +2008,103 @@ The research system SHALL document, from public sources (documentation and wikis
 - **WHEN** the research documents OLC/builders or programmable worlds (MOO/MUSH)
 - **THEN** the card SHALL evaluate what the in-world authoring experience teaches about the scenario builder (frontend-ui/scenario-authoring)
 
-##### Requirement: Doom 3-Style WebGL Prototype for World-Building
+##### Requirement: Reverse Engineering of CyberCode Online Mechanics
 
-The project SHALL include a playable in-browser prototype (WebGL/OpenGL ES via Three.js or raw WebGL, no plugins) inspired by Doom 3 — dark corridors, dynamic flashlights, shadows, interactive lore terminals, positional audio, and script triggers — used as a world-building laboratory: every level design element SHALL teach a lesson mappable to the narrative engine (e.g., terminal with lore ≈ story card; script trigger ≈ plot seed; lighting that guides ≈ narrative emphasis).
+The research system SHALL document, from public sources (the open-source repository dexterhuang/cybercodeonline — README, CONTRIBUTING, UpdateNote — plus the live game), the world-building-relevant mechanics of CyberCode Online (browser/mobile text-based cyberpunk MMORPG): the casual AFK/idle core loop (tasks, leveling, crafting advancing without continuous player attention), the procedural generation of enemies, dungeons and locations from community-contributed corpora (word lists, dungeon layout structure masks, procedural equipment names), and lore (item/scenario/dungeon) as a first-class, multilingual community contribution channel. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Procedural World from Contributed Corpora
+
+- **WHEN** the research documents enemies/dungeons/locations generated from user-contributed lists and structure masks
+- **THEN** the card SHALL propose what this teaches about community-authored story card corpora and combinatorial variety (scenario-authoring/plot-generation) or a justified discard
+
+###### Scenario: World Moves While AFK
+
+- **WHEN** the research documents the idle/AFK progression loop
+- **THEN** the card SHALL evaluate its alignment with off-screen ticks and timeskip (world-simulation) or discard with rationale
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about the game
+- **THEN** the card SHALL cite the public source (repository path or URL) and verification date
+
+##### Requirement: Albion-in-Life-RP Hybrid Synthesis
+
+The research system SHALL document the cross-game synthesis of Albion Online systems transposed onto a real-life RP world (GTA San Andreas/RP style): risk bands reinterpreted as state presence per region (financial district = Blue with cameras and fast response; industrial/port = Yellow; periphery = Red; no-signal rural zones = Black with no reliable map/info), full loot domesticated as carry-only material loss, regional markets per neighborhood, guild territory reinterpreted as faction-controlled districts with protection/commerce income, seasons as elected government terms, spec-by-use as practice-based skill, and inter-city logistics as freight routes with ambush risk. The synthesis SHALL surface what each side fixes: Albion's closed economy solves RP inflation; RP's sacred character life domesticates Albion's cheap death; player institutions legalize scheduled territory wars.
+
+###### Scenario: Hybrid Translation Cards
+
+- **WHEN** the synthesis is documented
+- **THEN** lesson cards SHALL exist for the three novel translations: closed economy with faucets/sinks (mmo-game), carry-only material consequence (mmo-game), and declared territory wars via player-run institutions (mmo-game)
+- **AND** each card SHALL cite both source games and public sources
+
+###### Scenario: Tension Resolution Recorded
+
+- **WHEN** the synthesis identifies a design tension (cheap death vs. sacred life, scheduled vs. emergent conflict, systemic vs. character depth)
+- **THEN** the resolution mechanism SHALL be recorded as part of the card
+
+##### Requirement: Reverse Engineering of GTA V RP Worldwide Mechanics
+
+The research system SHALL document, from public sources (server sites and wikis: nopixel.net, cidadealta.gg, gta5rp.com, gta.world; platform browsers: rage.mp/servers, forge.plebmasters.de), the mechanics of the worldwide GTA V roleplay ecosystem (private RP cities on FiveM in the West/Brazil, RAGE MP in Russia/CIS): whitelist/allowlist gates (application, interview, paid tiers), the IC/OOC rule set (RDM/VDM, metagaming, powergaming, New Life Rule), player-run institutions (police, EMS, lawyer, judge, press), player-driven economies and gangs/factions, staff arbitration with seasonal storytelling arcs, and the per-country differentiation (NoPixel's story-first streamer culture, Brazil's streamer-founded cities with paid convenience tiers, Russia's voice-integrated massive servers, GTA World's strict text RP with 1M+ registered players). Each mechanic SHALL generate a lesson card in the same format as the other tracks, with candidate translations mapped where applicable to mmo-game.
+
+###### Scenario: Cultural Shard Lesson
+
+- **WHEN** the research documents per-country/per-community server differentiation (same world, different rules, tone and language)
+- **THEN** the card SHALL propose a translation to cultural/regional shards over one uniform world (mmo-game) or a justified discard
+
+###### Scenario: Player Institutions Lesson
+
+- **WHEN** the research documents player-run institutions (police, EMS, press) as world state operators
+- **THEN** the card SHALL evaluate institutional roles occupied by players with persisted minds (player-minds) instead of NPCs (mmo-game/npc-minds)
+
+###### Scenario: New Life Rule Maps to Witness Filter
+
+- **WHEN** the research documents the New Life Rule (dead characters forget the events of their previous death)
+- **THEN** the card SHALL record the convergence with the engine's witness filter and memory pyramid, and what the RP implementation teaches
+
+###### Scenario: Whitelist Maps to Protections
+
+- **WHEN** the research documents whitelist gates as community quality/protection mechanisms
+- **THEN** the card SHALL map them to age-banding trays and avatar-mirror consent gates
+
+###### Scenario: Platform Risk Lesson
+
+- **WHEN** the research documents platform dependency risk (Rockstar/Take-Two action against RAGE MP threatening the Russian scene)
+- **THEN** the card SHALL record the argument for the self-owned engine path (d3wasm) as mitigation
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about a specific server or country scene
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: d3wasm-Based Prototype of the Final Engine for World-Building
+
+The project SHALL include a playable in-browser prototype built on **d3wasm** (github.com/gabrielcuvillier/d3wasm — the id Tech 4 / Doom 3 engine ported to WebAssembly via Emscripten with a full WebGL renderer backend, GPL-3.0) as the prototype of the game's final engine. The prototype serves as a world-building laboratory — dark corridors, dynamic flashlights, shadows, interactive lore terminals, positional audio, and script triggers — where every level design element SHALL teach a lesson mappable to the narrative engine (e.g., terminal with lore ≈ story card; script trigger ≈ plot seed; lighting that guides ≈ narrative emphasis). Studying and extending the d3wasm codebase (`neo/` engine sources) SHALL also produce engine-architecture lesson cards (renderer, asset pipeline, scripting, GUI/terminal systems) informing the final engine decision.
 
 ###### Scenario: The Prototype Loads in the Browser
 
-- **WHEN** the prototype is opened in a modern browser (no native build)
-- **THEN** it SHALL render a first-person 3D scene with dynamic lighting at 30+ FPS on common hardware
+- **WHEN** the prototype is opened in a modern browser (no native build, no plugins)
+- **THEN** it SHALL render a first-person 3D scene with dynamic lighting at 30+ FPS on common hardware, running on the d3wasm WebAssembly/WebGL engine
 
 ###### Scenario: Interaction with Lore
 
 - **WHEN** the player interacts with a prototype terminal
 - **THEN** the displayed lore text SHALL be mapped to a world-building lesson card
 
+###### Scenario: Engine Architecture Lessons
+
+- **WHEN** the d3wasm codebase (id Tech 4 subsystems: scripting, GUI, asset pipeline, renderer) is studied
+- **THEN** lesson cards SHALL capture which architectural decisions apply to the final engine of a narrative RPG (or a justified discard)
+
+###### Scenario: GPL Boundary Is Respected
+
+- **WHEN** the prototype incorporates d3wasm engine code (GPL-3.0)
+- **THEN** the prototype's own code SHALL be licensed GPL-3.0-compatible
+- **AND** no original Doom 3 game assets (maps, textures, models, sounds, `.pk4` content) SHALL enter the repository — original or freely licensed assets only
+- **AND** the trade-off that a final engine derived from d3wasm inherits GPL-3.0 copyleft SHALL be documented before adoption
+
 ##### Requirement: Versioned Lesson Cards
 
-Lessons from the tracks (Albion, GTA SA, MUDs, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
+Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
 
 ###### Scenario: Traceable Accepted Card
 
@@ -1821,7 +2114,7 @@ Lessons from the tracks (Albion, GTA SA, MUDs, Doom 3) SHALL be persisted in a v
 
 ##### Requirement: No Asset Violations
 
-The research program SHALL use only documentary observation of mechanics (public sources) and original implementation in the prototype; no asset, code, model, texture, or audio extracted from the reference games SHALL enter the repository. The Doom 3-like prototype SHALL use original or free assets only with a documented permissive license.
+The research program SHALL use only documentary observation of mechanics (public sources) and original implementation in the prototype; no asset, code, model, texture, or audio extracted from the reference games SHALL enter the repository. The single licensed-code exception is the d3wasm engine itself (GPL-3.0, documented), used as the prototype's engine base; game assets remain original or free with a documented permissive license — the GPL-3.0 of the engine code does not extend to using proprietary game data.
 
 ###### Scenario: Asset Audit
 
@@ -2435,6 +2728,253 @@ The system SHALL offer complete, importable scenarios built on the catalog: (a) 
 - **WHEN** the player chooses force and specialization in the training scenario setup
 - **THEN** the answers SHALL interpolate into the lore and tone to steer the training narrative
 
+<!-- source: changes/add-mmo-game/ -->
+
+### add-mmo-game
+
+#### `proposal.md`
+
+# add-mmo-game
+
+## Why
+
+Product direction decision: the game itself will be a Role-Playing MMORPG based on the lore specified in the specs. Until now the specs described a single-player narrative engine and its research program; the multiplayer end-state existed only implicitly (MUD/CyberCode lessons, d3wasm engine path). This change records the commitment: a persistent multiplayer world on top of the specified engine, browser-first via the d3wasm path, narrative-first progression preserved.
+
+## What Changes
+
+**New spec: mmo-game (vision-level contract)**
+- 6 requirements:
+  1. Final product is a lore-based MMORPG — canonical world derives from the specs' lore (O Cidadão do Futuro, military training worlds, doctrine regiments); the engine stays the simulation core.
+  2. Persistent multiplayer world — off-screen ticks continue while players are offline; other players' consequences surface through narrative means (MUD lessons applied).
+  3. Browser client on the d3wasm engine path — prototype → final engine with the documented GPL-3.0 trade-off.
+  4. Narrative-first progression — no HP/mana/grind loops leak into multiplayer systems; progression is memory, journal, relationships, standing.
+  5. Social layer with roleplay integrity — presence, in-character speech/emotes, separated OOC channels; age-banding trays and avatar-mirror consent/LGPD govern multiplayer visibility.
+  6. Community contribution channel — CyberCode lesson: contributions enter through the moderated scenario-authoring pipeline, never mutating canon directly.
+  7. Scale targets for the open world (v1) — 1k–3k concurrent players per map, ~100 visible per client at 30+ FPS via interest management, thousands of routine NPCs, tens–~200 LLM-alive minds per region, ~US$ 0.01–0.03 per narrated turn (bottleneck order: LLM cost → client render → world sim).
+  8. Hybrid simulation layers — deterministic moment-to-moment (no LLM), LLM narrative events on significant beats only, per-region NPC-mind pools with witness filter and LLM budgets with graceful degradation.
+  9. d3wasm netcode gap as headline risk — client prediction, server authority, snapshotting and interest management built from scratch and load-tested before scale sign-off.
+  10. Cultural shards over the same canon — GTA V RP lesson: regional/community shards (own rules, tone, language) as configuration over shared canon, never forked lore; community gates cannot override age-banding or avatar-mirror consent.
+  11. Player-run institutions — institutional roles (peacekeeping, medical, legal, press) occupied by players with persisted minds (player-minds), community-operated world state under the same audit and canon rules.
+  12. Closed player-driven economy — no infinite NPC faucets; value produced by players/simulation, drained by lifelike sinks (taxes, rent, insurance); regional markets with divergence usable as tick signals.
+  13. Carry-only material consequence — robbery transfers what is carried; banked/stored/insured assets safe; character life remains sacred per RP rules; insurance as sink.
+  14. Declared territory wars via player institutions — territory income flows through the economy; takeovers require declaration, time window and engagement rules recorded in the event store.
+
+- From: no MMO requirement; multiplayer implied by research lessons only.
+- To: explicit vision-level contract; detailed mechanics (sharding, networking, economy, scale) arrive as future changes against this spec.
+
+## Impact
+
+- Affected specs: none modified; adds `mmo-game`. worldbuilding-research is referenced (engine path, MUD/CyberCode lessons), not changed.
+- Non-breaking: vision-level requirements; implementation plan unchanged until a future change picks it up.
+- The "engine, not a single game" framing in the project context is refined: the engine remains the core, and the committed product target built on it is this MMORPG.
+
+#### `tasks.md`
+
+# Tasks
+
+- [ ] Research MMO server architecture options for a narrative-first persistent world (presence, scene sharing, event sourcing across many campaigns/players)
+- [ ] Decide and document the d3wasm → final engine adoption trade-off (GPL-3.0 copyleft) with the worldbuilding-research prototype results
+- [ ] Design the multiplayer visibility model: what players see of each other, age-banding trays in shared scenes, avatar-mirror consent in multiplayer
+- [ ] Design the community contribution pipeline on top of scenario-authoring (submission, validation, review, canon merge)
+- [ ] Prototype: two players sharing one location with presence + in-character speech in the narration
+- [ ] Build the d3wasm netcode layer (client prediction, server authority, snapshotting, interest management) — headline engineering risk
+- [ ] Load-test against the v1 scale targets (1k–3k concurrent, ~100 visible at 30+ FPS, LLM concurrency + per-turn cost) and publish the report
+- [ ] Implement the deterministic moment-to-moment layer guaranteeing zero LLM calls for movement/presence/short speech
+- [ ] Implement per-region LLM budgets with graceful degradation (deterministic narration fallback)
+- [ ] Open follow-up changes for concrete mechanics (economy, grouping, world shards) against this spec
+
+#### `changes/add-mmo-game/specs/mmo-game/spec.md`
+
+## ADDED Requirements
+
+
+### Requirement: Final Product Is a Lore-Based MMORPG
+
+The final product SHALL be a Role-Playing MMORPG whose canonical world and content derive from the lore specified in the project (scenario lore cards, worldbuilding volumes, doctrine regiments, military forces catalog). The narrative engine (memory pyramid, world ticks, plot seeds, npc-minds, auditor) SHALL remain the simulation core; the MMO layer adds multiplayer presence on top of it, not a separate game.
+
+#### Scenario: Lore Is Canonical
+
+- **WHEN** any MMO content (zone, faction, NPC, item) is authored
+- **THEN** it SHALL trace back to lore defined in the specs' source material (story cards, worldbuilding docs) or enter through the scenario-authoring pipeline
+- **AND** content that contradicts established canon SHALL be rejected in review
+
+#### Scenario: Engine Powers the MMO
+
+- **WHEN** the MMO world simulates (memory, ticks, plots, NPC minds)
+- **THEN** it SHALL use the specified engine systems rather than bespoke MMO logic
+
+### Requirement: Persistent Multiplayer World
+
+The world SHALL be persistent and shared: it continues to evolve off-screen (world-simulation ticks) while any given player is offline, and events caused by other players SHALL be observable later (rumors, journal entries, world changes) — applying the MUD lessons already captured in worldbuilding-research.
+
+#### Scenario: World Moves While a Player Is Offline
+
+- **WHEN** a player returns after an absence
+- **THEN** the world state SHALL reflect ticks and other players' consequences that occurred in the interval
+- **AND** the return SHALL surface those changes through narrative means (journal, world memory, NPC speech), not raw logs
+
+#### Scenario: Player-Consequence Visibility
+
+- **WHEN** one player's action changes the world (economy, territory, NPC fate)
+- **THEN** other players SHALL be able to encounter that consequence in their own narration
+
+### Requirement: Browser Client on the d3wasm Engine Path
+
+The game client SHALL follow the engine path specified in worldbuilding-research: prototype on d3wasm (WebAssembly + WebGL id Tech 4) with a documented GPL-3.0 trade-off decision before the final engine is adopted; the MMO client remains browser-first (no native install required).
+
+#### Scenario: Client Runs in the Browser
+
+- **WHEN** a player opens the game in a modern browser
+- **THEN** the client SHALL run without plugins or native installation
+
+### Requirement: Narrative-First Progression
+
+The MMORPG SHALL keep the engine's narrative-first rules: no HP bars, mana or grind; progression measured in memory (crystals), journal, relationships and world standing; combat resolved by the creativity score — even with many players online.
+
+#### Scenario: No Grind Leaks In
+
+- **WHEN** multiplayer systems are designed (grouping, shared quests, economy)
+- **THEN** they SHALL NOT introduce numeric grind loops (XP bars, repetitive reward cycles) contradicting the narrative-first invariant
+
+### Requirement: Social Layer with Roleplay Integrity
+
+The social layer SHALL provide presence, communication and cooperation between players (seeing who is present, talking, acting together in a scene), informed by the MUD/RPI lessons: roleplay integrity expectations and consent boundaries, with avatar-mirror and age-banding protections applying to what other players can see and say to each other.
+
+#### Scenario: Presence and Speech
+
+- **WHEN** two players share a location
+- **THEN** each SHALL perceive the other's presence and in-character speech/emotes in the narration
+- **AND** out-of-character channels SHALL be clearly separated from in-world speech
+
+#### Scenario: Bands and Mirror Protections Carry Over
+
+- **WHEN** a minor-band player shares the world with adult-band players
+- **THEN** the age-banding tray SHALL govern what content reaches them
+- **AND** avatar-mirror consent and the LGPD deny-list SHALL apply to multiplayer visibility of personal data
+
+### Requirement: Community Contribution Channel
+
+Following the CyberCode Online lesson, the MMO SHALL treat community-contributed content (lore fragments, scenario seeds, procedural corpora) as a first-class, moderated channel entering through the scenario-authoring pipeline — never directly mutating canon.
+
+#### Scenario: Moderated Contribution
+
+- **WHEN** a community contribution is submitted
+- **THEN** it SHALL pass scenario-authoring validation and review before becoming visible in the world
+
+### Requirement: Scale Targets for the Open World (v1)
+
+The MMO SHALL meet these v1 measurable scale targets on the d3wasm + narrative-engine hybrid (targets are engineering estimates recorded as contracts, revisable by future changes with measured data): 1,000–3,000 concurrent players per open map; per-client visible characters capped by interest management at ~100 rendered at 30+ FPS on common hardware; thousands of deterministic routine NPCs per map; tens up to ~1–2 hundred LLM-alive NPC minds per region; and a per-narrated-turn LLM cost envelope in the ~US$ 0.01–0.03 range, with the ~US$ 0.2–0.6 per active player-hour figure as the planning budget. The bottleneck order recorded: LLM throughput/cost first, client rendering second, world simulation last.
+
+#### Scenario: Full Map Under Load
+
+- **WHEN** 3,000 players are online in one open map
+- **THEN** each client SHALL render at most ~100 characters in its area of interest at 30+ FPS
+- **AND** the world simulation SHALL remain responsive (no synchronous LLM dependency in the moment-to-moment path)
+
+#### Scenario: Per-Turn Cost Stays in Envelope
+
+- **WHEN** a narrated turn completes (narrator + auditor + crystallization + tick)
+- **THEN** its LLM cost SHALL be measured and tracked against the ~US$ 0.01–0.03 envelope, with prompt-caching zone hits reported
+
+### Requirement: Hybrid Simulation Layers
+
+The simulation SHALL be layered so scale does not route through the LLM: (a) a deterministic moment-to-moment layer (movement, presence, short speech) with server authority and no LLM calls; (b) an LLM narrative-event layer invoked on significant player decisions and world beats only; (c) a shared NPC-mind pool per region with the witness filter governing what each NPC knows about each player. The open world SHALL partition into scenes/regions (the MUD room-lattice model), each region carrying its own LLM call budget.
+
+#### Scenario: Movement Never Calls the LLM
+
+- **WHEN** a player moves, emotes briefly or perceives presence
+- **THEN** the interaction SHALL be handled entirely by the deterministic layer
+- **AND** no LLM call SHALL be triggered
+
+#### Scenario: Region LLM Budget
+
+- **WHEN** a region's LLM call budget is exhausted
+- **THEN** narrative events in that region SHALL queue or degrade gracefully (deterministic narration fallback) instead of blocking the deterministic layer
+
+### Requirement: d3wasm Netcode Gap Is the Headline Risk
+
+Adapting d3wasm (single-player port, no networking) to the MMO SHALL require building from scratch: client prediction, server authority, snapshotting and interest management. This netcode layer is the largest single engineering risk of the engine path and SHALL be load-tested against the v1 scale targets before those targets count as met.
+
+#### Scenario: Load Test Before Scale Sign-Off
+
+- **WHEN** the v1 scale targets are claimed as met
+- **THEN** a load test report (concurrent players, visible entities, FPS, LLM concurrency and cost) SHALL exist as evidence
+
+### Requirement: Cultural Shards Over the Same Canon
+
+Drawing from the GTA V RP worldwide lesson, the MMO SHALL support cultural/regional shards: communities playing the same canonical world with their own rules, tone and language, rather than one uniform world-for-all. Shard-specific behavior SHALL be configuration over the shared canon (never forked lore), and cross-shard consequences MAY be limited by design.
+
+#### Scenario: Same Canon, Local Culture
+
+- **WHEN** a regional shard defines its own tone, language and house rules
+- **THEN** the canonical lore SHALL remain identical across shards
+- **AND** shard differences SHALL be declared configuration, reviewable against canon
+
+#### Scenario: Community Gate Mirrors Protections
+
+- **WHEN** a shard admits players through a community gate (application, invitation or tier)
+- **THEN** the age-banding tray and avatar-mirror consent SHALL remain non-negotiable beneath the community layer
+
+### Requirement: Player-Run Institutions
+
+The MMO SHALL allow institutional roles (peacekeeping, medical, legal, press) to be occupied by players with persisted minds — the player-minds variant of npc-minds — making the world state partially community-operated, per the GTA V RP lesson. Player-held institutions SHALL be subject to the same narrative audit and canon rules as every other actor.
+
+#### Scenario: Player Institution Operates World State
+
+- **WHEN** a player on duty performs an institutional action (patrol, triage, ruling, reporting)
+- **THEN** the action SHALL enter the event store and affect the world like any actor's
+- **AND** the institution's conduct SHALL be auditable by the narrative auditor
+
+#### Scenario: Institution Handover
+
+- **WHEN** an institutional role changes hands between players
+- **THEN** the persisted mind and standing of the institution SHALL carry over without losing memory of prior events
+
+### Requirement: Closed Player-Driven Economy
+
+Per the Albion-in-life-RP lesson, the MMO economy SHALL be closed and player-driven: no value spawned by NPC shops or infinite NPC jobs; goods and services produced by players (or the world simulation) with sinks draining value through lifelike costs (taxes, rent, utilities, insurance, maintenance); markets regional (per district/neighborhood) with prices allowed to diverge, and price/scarcity divergence usable as world-simulation tick signals.
+
+#### Scenario: No Infinite Faucet
+
+- **WHEN** a player earns money
+- **THEN** the value SHALL trace to another actor's spending or world production, never to an infinite NPC source
+- **AND** sinks (taxes, rent, maintenance) SHALL exist that drain value at a tunable rate
+
+#### Scenario: Regional Price Divergence Signals the World
+
+- **WHEN** prices diverge between districts beyond a threshold
+- **THEN** the world simulation MAY use that divergence as a tick trigger (shortage, conflict, blockade) surfaced through narration
+
+### Requirement: Carry-Only Material Consequence
+
+Per the hybrid synthesis, material consequence SHALL apply to what a character carries, never to the character's life: robbery under threat transfers carried goods (wallet, phone, purchases, vehicle); stored, banked or insured assets remain safe; character death remains governed by RP protections (sacred life) — the fear is losing the cargo, the car, the month's money, not the person.
+
+#### Scenario: Robbery Transfers Carried Goods Only
+
+- **WHEN** a robbery under threat concludes per RP rules
+- **THEN** only carried items and the vehicle involved SHALL transfer
+- **AND** banked, stored and insured assets SHALL be untouched
+
+#### Scenario: Insurance as Sink
+
+- **WHEN** a player insures goods or vehicles
+- **THEN** premiums SHALL act as an economy sink and claims SHALL restore value without creating new money beyond the insured amount
+
+### Requirement: Declared Territory Wars via Player Institutions
+
+Faction-controlled territory SHALL grant passive income (protection/commerce) and SHALL change hands only through wars declared via the player-run institutions (mayoralty, judgeship, peacekeeping): declaration, time window and engagement rules recorded in the event store — legalizing scheduled conflict (the Albion GvG lesson) inside the RP frame instead of ad-hoc staff arbitration.
+
+#### Scenario: War Requires Declaration
+
+- **WHEN** a faction attempts a territory takeover
+- **THEN** a declaration SHALL exist, approved through the competent player institution, with time window and engagement rules
+- **AND** undeclared mass conflict SHALL be treated as a rule violation subject to audit
+
+#### Scenario: Territory Income Is Simulation-Wired
+
+- **WHEN** a faction holds a territory
+- **THEN** its passive income SHALL flow through the economy (taxes/commerce), not spawn new value outside the closed economy
+
 <!-- source: changes/add-worldbuilding-research/ -->
 
 ### add-worldbuilding-research
@@ -2451,31 +2991,37 @@ Project Lunar's world-building today derives from design intuition and from A/B 
 
 **New spec: worldbuilding-research**
 - From: no structured world-building research program; implicit and untraceable lessons.
-- To: 6 requirements — reverse engineering of Albion Online (player-driven economy, territories, risk bands, seasons), reverse engineering of GTA San Andreas (CJ stats, gang war, NPC routines, wanted level, progressive gating), reverse engineering of MUDs (offline persistent world, room+look network, social channels, RPI, OLC/MOO), a Doom 3-style WebGL prototype as a world-building laboratory, versioned lesson cards in `data/worldbuilding/lessons.json` with target-spec traceability, and an asset safeguard (documentary observation only + original implementation).
+- To: 9 requirements — reverse engineering of Albion Online (player-driven economy, territories, risk bands, seasons), the Albion-in-life-RP hybrid synthesis (risk bands as state presence, carry-only loss, closed economy vs RP inflation, declared territory wars — translations mapped to mmo-game), reverse engineering of GTA San Andreas (CJ stats, gang war, NPC routines, wanted level, progressive gating), reverse engineering of GTA V RP worldwide (whitelist gates, IC/OOC rules, player-run institutions, per-country scenes, with translations mapped to mmo-game), reverse engineering of MUDs (offline persistent world, room+look network, social channels, RPI, OLC/MOO), reverse engineering of CyberCode Online (AFK/idle loop, procedural world from community-contributed corpora, multilingual lore channel), a d3wasm-based prototype of the final engine as a world-building laboratory, versioned lesson cards in `data/worldbuilding/lessons.json` with target-spec traceability, and an asset safeguard (documentary observation only + original implementation, d3wasm GPL-3.0 engine as the single documented code exception).
 
 **Translation, not copying**
 - Each researched mechanic SHALL produce a card with: the original mechanic, why it works (emergent effect), and a candidate translation to the narrative engine (or a justified discard). Examples of candidate translations: Albion's regional markets → scarcity/price as a tick trigger; GTA SA pedestrian routines → npc-minds agendas; wanted level → consequence escalation in ticks; Doom 3 lore terminals → story cards.
 
-**Doom 3-like prototype**
-- To: a browser prototype (WebGL/Three.js, no native build, no plugins) with dark corridors, a dynamic flashlight, interactive terminals and script triggers — each element mapped to a lesson card. Assets 100% original or free with a documented license; nothing extracted from the reference games.
+**d3wasm-based prototype of the final engine**
+- To: a browser prototype built on **d3wasm** (github.com/gabrielcuvillier/d3wasm — id Tech 4 / Doom 3 ported to WebAssembly via Emscripten with a full WebGL renderer, GPL-3.0) used as the prototype of the game's final engine: dark corridors, a dynamic flashlight, interactive terminals and script triggers — each element mapped to a lesson card — plus engine-architecture lessons from studying the `neo/` sources (scripting, GUI/terminals, asset pipeline, renderer) to inform the final engine decision.
+- Licensing boundary: d3wasm engine code is the single licensed-code exception (GPL-3.0, documented) — prototype code becomes GPL-3.0-compatible; game assets remain 100% original or free with documented licenses; no original Doom 3 game data (`.pk4` content) enters the repo; the copyleft inheritance of a d3wasm-derived final engine is a documented trade-off to decide before adoption.
 
 ## Impact
 
 - Affected specs: none modified; adds `worldbuilding-research`. Accepted translations will later enter as changes in the target specs.
 - Non-breaking; versioned static data + isolated prototype (independent frontend or static route).
-- Legal risk mitigated by the asset requirement: research is documentary (public sources), implementation is original.
+- Legal risk mitigated by the asset requirement: research is documentary (public sources), implementation is original; the GPL-3.0 engine exception is explicit and contained to prototype code.
 
 #### `tasks.md`
 
 # Tasks
 
-- [x] Create `data/worldbuilding/lessons.json` with schema (source game, mechanic, evidence/source, candidate translation, status, target spec) — created with 6 seed cards (2 per source game), all status=proposta
+- [x] Create `data/worldbuilding/lessons.json` with schema (source game, mechanic, evidence/source, candidate translation, status, target spec) — originally created with 9 seed cards (Albion, GTA SA, MUDs, Doom 3); the dataset was removed in the fresh-start (specs-only) reset and MUST be recreated when implementation resumes
 - [ ] Research and document Albion Online mechanics (economy, territories, risk bands, seasons) in public sources
+- [ ] Document the Albion-in-life-RP hybrid synthesis (risk bands as state presence, carry-only loss, closed economy vs RP inflation, declared territory wars) with translation cards mapped to mmo-game
 - [ ] Research and document GTA San Andreas mechanics (stats, gangs, NPC routines, wanted level, gating) in public sources
+- [ ] Research and document GTA V RP worldwide mechanics (whitelist gates, IC/OOC rules, player-run institutions, player economies, per-country scenes: NoPixel/Cidade Alta/GTA5RP/GTA World) in public sources, with translations mapped to mmo-game
 - [ ] Research and document MUD mechanics (offline persistent world, room+look network, social channels, RPI, OLC/MOO) in public sources
-- [ ] Build a Doom 3-style WebGL prototype (first-person, dynamic lighting, lore terminals, triggers) with original/free assets
+- [ ] Research and document CyberCode Online mechanics (AFK/idle loop, procedural generation from community-contributed corpora, multilingual lore contributions) in the open-source repo and live game
+- [ ] Set up the d3wasm-based prototype (fork/vendor github.com/gabrielcuvillier/d3wasm — WebAssembly + WebGL id Tech 4) as the final-engine prototype base, with a documented GPL-3.0 compliance note
+- [ ] Build the world-building laboratory on it (first-person, dynamic lighting, lore terminals, triggers) with original/free assets — no Doom 3 game data (`.pk4`)
+- [ ] Study the `neo/` engine sources (scripting, GUI/terminals, asset pipeline, renderer) and produce engine-architecture lesson cards for the final engine decision, including the documented GPL copyleft trade-off
 - [ ] Map each prototype element to lesson cards
-- [ ] Triage cards (proposta → aceita/descartada) and open changes in the target specs for the accepted ones
+- [ ] Triage cards (proposed → accepted/discarded) and open changes in the target specs for the accepted ones
 - [ ] Document provenance/license of all prototype assets
 
 #### `changes/add-worldbuilding-research/specs/worldbuilding-research/spec.md`
@@ -2530,23 +3076,103 @@ The research system SHALL document, from public sources (documentation and wikis
 - **WHEN** the research documents OLC/builders or programmable worlds (MOO/MUSH)
 - **THEN** the card SHALL evaluate what the in-world authoring experience teaches about the scenario builder (frontend-ui/scenario-authoring)
 
-### Requirement: Doom 3-Style WebGL Prototype for World-Building
+### Requirement: Reverse Engineering of CyberCode Online Mechanics
 
-The project SHALL include a playable in-browser prototype (WebGL/OpenGL ES via Three.js or raw WebGL, no plugins) inspired by Doom 3 — dark corridors, dynamic flashlights, shadows, interactive lore terminals, positional audio, and script triggers — used as a world-building laboratory: every level design element SHALL teach a lesson mappable to the narrative engine (e.g., terminal with lore ≈ story card; script trigger ≈ plot seed; lighting that guides ≈ narrative emphasis).
+The research system SHALL document, from public sources (the open-source repository dexterhuang/cybercodeonline — README, CONTRIBUTING, UpdateNote — plus the live game), the world-building-relevant mechanics of CyberCode Online (browser/mobile text-based cyberpunk MMORPG): the casual AFK/idle core loop (tasks, leveling, crafting advancing without continuous player attention), the procedural generation of enemies, dungeons and locations from community-contributed corpora (word lists, dungeon layout structure masks, procedural equipment names), and lore (item/scenario/dungeon) as a first-class, multilingual community contribution channel. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Procedural World from Contributed Corpora
+
+- **WHEN** the research documents enemies/dungeons/locations generated from user-contributed lists and structure masks
+- **THEN** the card SHALL propose what this teaches about community-authored story card corpora and combinatorial variety (scenario-authoring/plot-generation) or a justified discard
+
+#### Scenario: World Moves While AFK
+
+- **WHEN** the research documents the idle/AFK progression loop
+- **THEN** the card SHALL evaluate its alignment with off-screen ticks and timeskip (world-simulation) or discard with rationale
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about the game
+- **THEN** the card SHALL cite the public source (repository path or URL) and verification date
+
+### Requirement: Albion-in-Life-RP Hybrid Synthesis
+
+The research system SHALL document the cross-game synthesis of Albion Online systems transposed onto a real-life RP world (GTA San Andreas/RP style): risk bands reinterpreted as state presence per region (financial district = Blue with cameras and fast response; industrial/port = Yellow; periphery = Red; no-signal rural zones = Black with no reliable map/info), full loot domesticated as carry-only material loss, regional markets per neighborhood, guild territory reinterpreted as faction-controlled districts with protection/commerce income, seasons as elected government terms, spec-by-use as practice-based skill, and inter-city logistics as freight routes with ambush risk. The synthesis SHALL surface what each side fixes: Albion's closed economy solves RP inflation; RP's sacred character life domesticates Albion's cheap death; player institutions legalize scheduled territory wars.
+
+#### Scenario: Hybrid Translation Cards
+
+- **WHEN** the synthesis is documented
+- **THEN** lesson cards SHALL exist for the three novel translations: closed economy with faucets/sinks (mmo-game), carry-only material consequence (mmo-game), and declared territory wars via player-run institutions (mmo-game)
+- **AND** each card SHALL cite both source games and public sources
+
+#### Scenario: Tension Resolution Recorded
+
+- **WHEN** the synthesis identifies a design tension (cheap death vs. sacred life, scheduled vs. emergent conflict, systemic vs. character depth)
+- **THEN** the resolution mechanism SHALL be recorded as part of the card
+
+### Requirement: Reverse Engineering of GTA V RP Worldwide Mechanics
+
+The research system SHALL document, from public sources (server sites and wikis: nopixel.net, cidadealta.gg, gta5rp.com, gta.world; platform browsers: rage.mp/servers, forge.plebmasters.de), the mechanics of the worldwide GTA V roleplay ecosystem (private RP cities on FiveM in the West/Brazil, RAGE MP in Russia/CIS): whitelist/allowlist gates (application, interview, paid tiers), the IC/OOC rule set (RDM/VDM, metagaming, powergaming, New Life Rule), player-run institutions (police, EMS, lawyer, judge, press), player-driven economies and gangs/factions, staff arbitration with seasonal storytelling arcs, and the per-country differentiation (NoPixel's story-first streamer culture, Brazil's streamer-founded cities with paid convenience tiers, Russia's voice-integrated massive servers, GTA World's strict text RP with 1M+ registered players). Each mechanic SHALL generate a lesson card in the same format as the other tracks, with candidate translations mapped where applicable to mmo-game.
+
+#### Scenario: Cultural Shard Lesson
+
+- **WHEN** the research documents per-country/per-community server differentiation (same world, different rules, tone and language)
+- **THEN** the card SHALL propose a translation to cultural/regional shards over one uniform world (mmo-game) or a justified discard
+
+#### Scenario: Player Institutions Lesson
+
+- **WHEN** the research documents player-run institutions (police, EMS, press) as world state operators
+- **THEN** the card SHALL evaluate institutional roles occupied by players with persisted minds (player-minds) instead of NPCs (mmo-game/npc-minds)
+
+#### Scenario: New Life Rule Maps to Witness Filter
+
+- **WHEN** the research documents the New Life Rule (dead characters forget the events of their previous death)
+- **THEN** the card SHALL record the convergence with the engine's witness filter and memory pyramid, and what the RP implementation teaches
+
+#### Scenario: Whitelist Maps to Protections
+
+- **WHEN** the research documents whitelist gates as community quality/protection mechanisms
+- **THEN** the card SHALL map them to age-banding trays and avatar-mirror consent gates
+
+#### Scenario: Platform Risk Lesson
+
+- **WHEN** the research documents platform dependency risk (Rockstar/Take-Two action against RAGE MP threatening the Russian scene)
+- **THEN** the card SHALL record the argument for the self-owned engine path (d3wasm) as mitigation
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about a specific server or country scene
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: d3wasm-Based Prototype of the Final Engine for World-Building
+
+The project SHALL include a playable in-browser prototype built on **d3wasm** (github.com/gabrielcuvillier/d3wasm — the id Tech 4 / Doom 3 engine ported to WebAssembly via Emscripten with a full WebGL renderer backend, GPL-3.0) as the prototype of the game's final engine. The prototype serves as a world-building laboratory — dark corridors, dynamic flashlights, shadows, interactive lore terminals, positional audio, and script triggers — where every level design element SHALL teach a lesson mappable to the narrative engine (e.g., terminal with lore ≈ story card; script trigger ≈ plot seed; lighting that guides ≈ narrative emphasis). Studying and extending the d3wasm codebase (`neo/` engine sources) SHALL also produce engine-architecture lesson cards (renderer, asset pipeline, scripting, GUI/terminal systems) informing the final engine decision.
 
 #### Scenario: The Prototype Loads in the Browser
 
-- **WHEN** the prototype is opened in a modern browser (no native build)
-- **THEN** it SHALL render a first-person 3D scene with dynamic lighting at 30+ FPS on common hardware
+- **WHEN** the prototype is opened in a modern browser (no native build, no plugins)
+- **THEN** it SHALL render a first-person 3D scene with dynamic lighting at 30+ FPS on common hardware, running on the d3wasm WebAssembly/WebGL engine
 
 #### Scenario: Interaction with Lore
 
 - **WHEN** the player interacts with a prototype terminal
 - **THEN** the displayed lore text SHALL be mapped to a world-building lesson card
 
+#### Scenario: Engine Architecture Lessons
+
+- **WHEN** the d3wasm codebase (id Tech 4 subsystems: scripting, GUI, asset pipeline, renderer) is studied
+- **THEN** lesson cards SHALL capture which architectural decisions apply to the final engine of a narrative RPG (or a justified discard)
+
+#### Scenario: GPL Boundary Is Respected
+
+- **WHEN** the prototype incorporates d3wasm engine code (GPL-3.0)
+- **THEN** the prototype's own code SHALL be licensed GPL-3.0-compatible
+- **AND** no original Doom 3 game assets (maps, textures, models, sounds, `.pk4` content) SHALL enter the repository — original or freely licensed assets only
+- **AND** the trade-off that a final engine derived from d3wasm inherits GPL-3.0 copyleft SHALL be documented before adoption
+
 ### Requirement: Versioned Lesson Cards
 
-Lessons from the tracks (Albion, GTA SA, MUDs, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
+Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
 
 #### Scenario: Traceable Accepted Card
 
@@ -2556,7 +3182,7 @@ Lessons from the tracks (Albion, GTA SA, MUDs, Doom 3) SHALL be persisted in a v
 
 ### Requirement: No Asset Violations
 
-The research program SHALL use only documentary observation of mechanics (public sources) and original implementation in the prototype; no asset, code, model, texture, or audio extracted from the reference games SHALL enter the repository. The Doom 3-like prototype SHALL use original or free assets only with a documented permissive license.
+The research program SHALL use only documentary observation of mechanics (public sources) and original implementation in the prototype; no asset, code, model, texture, or audio extracted from the reference games SHALL enter the repository. The single licensed-code exception is the d3wasm engine itself (GPL-3.0, documented), used as the prototype's engine base; game assets remain original or free with a documented permissive license — the GPL-3.0 of the engine code does not extend to using proprietary game data.
 
 #### Scenario: Asset Audit
 
