@@ -67,6 +67,233 @@ The research system SHALL document, from public sources (the open-source reposit
 - **WHEN** a lesson card claims a mechanic or number about the game
 - **THEN** the card SHALL cite the public source (repository path or URL) and verification date
 
+### Requirement: Reverse Engineering of Military/Tactical Simulation Mechanics
+
+The research system SHALL document, from public sources (Arma 3, Escape from Tarkov and Ready or Not official documentation and community ballistics/medicine guides), the mechanics that make them tactical references: Arma 3's honest ballistics (projectile drop, material penetration, energy balance — every shot a physical fact following laws, not dice), Tarkov's distinct ammo behaviors, body-part health and hydration/energy systems, and Ready or Not's entry planning and proportional use of force under police rules of engagement. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Physics-Honesty Lesson
+
+- **WHEN** the research documents ballistics, penetration and energy balance
+- **THEN** the card SHALL propose context-sensitive combat resolution over tracked physical facts, with real expertise usable in training scenarios (combat-system/mmo-game)
+
+#### Scenario: Functional-Body Lesson
+
+- **WHEN** the research documents body-part health and distinct ammo semantics
+- **THEN** the card SHALL propose the functional body narrative (local impairments closing options, loadout semantics) compatible with the no-HP invariant (mmo-game)
+
+#### Scenario: ROE Lesson
+
+- **WHEN** the research documents proportional force and entry planning
+- **THEN** the card SHALL propose rules of engagement as an audited operable doctrine and binding pre-action plans (mmo-game/narrative-audit)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Life/Strategy Game Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the life and strategy references: The Sims (decaying motive system — the historical origin of entity curves; wants/fears in rolling slots with aspiration points; relationship scores that decay over time; memories shaping behavior; autonomy acting on personality; story progression evolving the town without the player; life stages and genetics), Civilization (the 4X loop; leader AI with declared and hidden agendas; the tech/civics trees; eureka boosts — actions accelerating research; wonder races where only one builder completes; golden/dark ages with legacy; declared victory conditions; espionage, diplomacy, city-states), and Age of Empires (real-time resource economy; age advancement as gated progression; branching landmarks changing playstyle per age; counter triangles; fog of war; random maps; unique civilization bonuses). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Wants-and-Fears Lesson
+
+- **WHEN** the research documents rolling want/fear slots driving character behavior
+- **THEN** the card SHALL propose NPC wants/fears as a continuous plot-seed machine (mmo-game/plot-generation)
+
+#### Scenario: Faction-Agenda Lesson
+
+- **WHEN** the research documents leader agendas, declared and hidden
+- **THEN** the card SHALL propose faction minds with declared agendas (consistent, observable) and hidden agendas (revealed through analysis) (mmo-game/npc-minds)
+
+#### Scenario: Eureka Lesson
+
+- **WHEN** the research documents actions accelerating research
+- **THEN** the card SHALL propose practice accelerating learning for characters and institutions (mmo-game)
+
+#### Scenario: Race-and-Epoch Lessons
+
+- **WHEN** the research documents wonder races and golden/dark ages
+- **THEN** the card SHALL propose unique-achievement races (composing with windows) and regional epochs with persistent legacy (mmo-game/world-simulation)
+
+#### Scenario: Evidence Reinforcements
+
+- **WHEN** the research documents the Sims motive decay and the fog of war
+- **THEN** the card SHALL record them as genre evidence for entity curves and attention-based fidelity already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Hacking/Intel Simulation Mechanics
+
+The research system SHALL document, from public sources (official sites, the Malwarebytes and popsecurity analyses of NITE Team 4, the HackHub developer posts and Steam page), the mechanics of hacking and intelligence simulators: Hacknet's terminal-native interface, layered reconnaissance (scan/probe/exploit), active/passive trace clocks, bounce/proxy routing, RAM program slots and lore delivered through server file systems; Grey Hack's diegetic scripting (a real in-world scripting language), asynchronous multiplayer intrusion (your infrastructure attacked while offline), hardening arms race and player markets; NITE Team 4's operable intelligence cycle with real NSA analyst terminology (from the Snowden archive), entity-link analysis as gameplay, cyber+physical mission coordination and its 15-module study-level architecture; and HackHub's real Kali Linux VM as interface — the maximum-fidelity tier where the operable tool is the real tool. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Graph-as-Instrument Lesson
+
+- **WHEN** the research documents entity-link analysis as the player's core activity
+- **THEN** the card SHALL propose the knowledge-graph as the analyst's instrument — analysis actions progressively reveal and link the world graph (knowledge-graph/mmo-game)
+
+#### Scenario: Intel-Cycle Lesson
+
+- **WHEN** the research documents the phased intelligence workflow with real terminology
+- **THEN** the card SHALL propose the operable intelligence cycle as the intel module of the doctrinal systems (mmo-game)
+
+#### Scenario: Real-Tool Tier Lesson
+
+- **WHEN** the research documents a real Kali VM as the game interface
+- **THEN** the card SHALL propose a maximum-fidelity tier where operable systems run the real tool — with sandboxing and no real third-party targets as hard constraints (mmo-game)
+
+#### Scenario: Async-Intrusion Lesson
+
+- **WHEN** the research documents asynchronous multiplayer intrusion and hardening
+- **THEN** the card SHALL propose player infrastructure attackable while offline, hardening as persistent OPSEC gameplay, and exploit decay as an arms race (mmo-game/world-simulation)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Honorable Mentions Mechanics
+
+The research system SHALL document, from public sources (Kerbal Space Program and Farming Simulator official documentation, space-agency endorsements, community guides), the mechanics of the honorable mentions: KSP's real orbital physics and aerodynamics (used even by space agencies — the authority proof of training-grade simulation), its emergent pedagogy (explosions as data — failure teaches), and transfer windows (the right moment when cost drops, defined by world state); and Farming Simulator's complete agriculture cycle with real licensed equipment (proof of the closed economy and provenance-based authenticity), its cycle durations (nothing is instant — time as the raw material of production) and crop rotation (over-exploitation depletes, rotation restores). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Failure-as-Pedagogy Lesson
+
+- **WHEN** the research documents KSP failures teaching through honest physics ("rapid unscheduled disassembly" as data)
+- **THEN** the card SHALL propose failure crystallization — failed actions generating lesson memories and plot seeds (memory-system/mmo-game)
+
+#### Scenario: Windows-of-Opportunity Lesson
+
+- **WHEN** the research documents transfer windows
+- **THEN** the card SHALL propose world-tick windows where actions become cheaper or possible, with timing as cost (mmo-game/world-simulation)
+
+#### Scenario: Seasonal-Production Lesson
+
+- **WHEN** the research documents crop cycles with durations and weather dependence
+- **THEN** the card SHALL propose seasonal maturation of world production over narrative time (mmo-game)
+
+#### Scenario: Resource-Rotation Lesson
+
+- **WHEN** the research documents crop rotation restoring depleted soil
+- **THEN** the card SHALL propose depletion/rest curves on world capital (neighborhoods, informant networks, territories, patrons) (mmo-game/world-simulation)
+
+#### Scenario: Training-Grade Evidence Reinforcement
+
+- **WHEN** the research documents space agencies using KSP
+- **THEN** the card SHALL record it as authority evidence for the training-grade requirement already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Red Dead Redemption Mechanics
+
+The research system SHALL document, from public sources (RDR2/RDR1 official documentation, Rockstar design interviews, community analysis), the mechanics that keep RDR2 ahead of most 2026 releases as systemic density: world-as-simulation (NPC routines, predator chains, decaying carcasses, mud/snow affecting movement), horse bonding (bond levels, permanent death, carrying the inventory), the honor system that changes prices/dialogues/endings without a visible moral meter, hunting with real rules (wrong caliber ruins the pelt, clean shot preserves value, abandoned carcass attracts predators), crime with witnesses (regional bounty, mask-mediated identity), contextual dialogue with NPC memory, the living body (weight, beard, dirt changing treatment), and Dead Eye target marking as a tactical tool; plus RDR1's random road events, iconic duels and Euphoria reactions — and what aged badly (heavy controls, slow menus, sprawled tutorials) recorded as design guardrails. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Consequence-Afterlife Lesson
+
+- **WHEN** the research documents decaying carcasses attracting predators and material chains
+- **THEN** the card SHALL propose consequences with material afterlife — abandoned outcomes decay and attract new actors (world-simulation/mmo-game)
+
+#### Scenario: Companion-Bond Lesson
+
+- **WHEN** the research documents horse bonding with permanent death and carried inventory
+- **THEN** the card SHALL propose companion bond curves with narrative permanence wired to carry-only consequence (mmo-game)
+
+#### Scenario: Honor-Without-Meter Lesson
+
+- **WHEN** the research documents the honor system changing the world without a visible gauge
+- **THEN** the card SHALL propose emergent reputation without a moral meter, with presentation-based treatment (mmo-game)
+
+#### Scenario: Guardrails From What Aged Badly
+
+- **WHEN** the research documents friction complaints (heavy controls, slow menus, sprawled tutorials)
+- **THEN** the card SHALL record density-without-friction guardrails for the game's interface and onboarding
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Survival Simulation Mechanics
+
+The research system SHALL document, from public sources (SCUM and Project Zomboid official documentation and community guides), the survival mechanics relevant to a narrative-first adaptation: SCUM's detailed metabolism ledger (calories, nutrients, digestion timing, visible time passage such as beard growth) and Project Zomboid's psychological and medical simulation (stress from environment, sleep debt and nightmares, wounds with distinct prognosis, slow illness arcs, boredom and comfort needs). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Narrated-Ledger Lesson
+
+- **WHEN** the research documents the metabolism simulation
+- **THEN** the card SHALL propose a coarse narrated metabolism ledger — the world accounts and tells, the player never manages nutrients — and the body as visible calendar (avatar-mirror/mmo-game)
+
+#### Scenario: Sleep-Crystallization Lesson
+
+- **WHEN** the research documents sleep debt, dreams and unsafe sleep
+- **THEN** the card SHALL propose memory crystallization during sleep with poor sleep yielding partial or twisted consolidation (memory-system/mmo-game)
+
+#### Scenario: Psyche-in-Prose Lesson
+
+- **WHEN** the research documents stress modulating performance
+- **THEN** the card SHALL propose psychological curves modulating the narration itself — an LLM-native mechanic no traditional survival game has (narrative-engine/mmo-game)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of World-Simulator Fidelity Mechanics
+
+The research system SHALL document, from public sources (Microsoft Flight Simulator and DCS World official documentation, developer communications, module-maker materials), the mechanics that make these simulators reference world-simulators: MSFS's whole-world substrate (the entire planet pre-exists at generated fidelity — photogrammetry where attention flows, autogen elsewhere — with authored content raising fidelity locally, like hand-crafted airports), real-time reality injection (live weather from real-world data), licensed aircraft (authenticity through partnership and provenance); and DCS World's study-level cockpit simulation (every button and system modeled and operable, teaching the real machine through operation), multi-crew stations (divided roles operating one complex system, e.g. pilot + RIO), the mission editor as a creation platform, and the third-party module ecosystem with a maintained quality bar. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Attention-Fidelity Lesson
+
+- **WHEN** the research documents the whole-world substrate with variable fidelity (detailed where attention flows, coarse elsewhere)
+- **THEN** the card SHALL propose attention-based simulation fidelity for the world (deep LLM simulation where players attend, deterministic routine elsewhere) mapped to the region budgets (mmo-game/world-simulation)
+
+#### Scenario: Operable Systems Lesson
+
+- **WHEN** the research documents study-level cockpits where every button works
+- **THEN** the card SHALL propose operable doctrinal systems (each real doctrinal step an operable action) and multi-crew stations for player-run institutions (mmo-game)
+
+#### Scenario: Reality Injection Lesson
+
+- **WHEN** the research documents live real-world weather as content
+- **THEN** the card SHALL evaluate an opt-in reality feed as a world tick source (provenance and date attached, era-consistent) or a justified discard
+
+#### Scenario: Authoring Platform Lesson
+
+- **WHEN** the research documents the mission editor and module ecosystem
+- **THEN** the card SHALL propose depth for the scenario editor (triggers/conditions — the same language as plot seeds and prototype triggers) and quality-gated author tiers (scenario-authoring/mmo-game)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these simulators
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Racing Simulation Fidelity Mechanics
+
+The research system SHALL document, from public sources (iRacing and Assetto Corsa Competizione official documentation and community telemetry guides; BeamNG.drive documentation of its soft-body node-beam model), the mechanics that make professional drivers train on these simulators: tire thermal/degradation models (grip as a temperature and wear curve, not a state), the friction circle (finite total grip shared between competing demands), weight transfer (load shifts under braking/cornering; direction changes require preparation), aerodynamic context sensitivity (downforce rising with speed, dirty air degrading following cars), telemetry-driven deliberate practice loops (lap data exported and analyzed), iRacing's safety rating and licensing (conduct measured per incident, progressive access), and BeamNG's soft-body deformation (vehicles as node-beam structures where crash damage is continuous, structural and functionally emergent — never a pre-baked damage state). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Training-Transfer Lesson
+
+- **WHEN** the research documents professionals training on the simulator because skills transfer to reality
+- **THEN** the card SHALL propose transfer-of-training as a measurable simulation-quality bar for the game's training domains (mmo-game) or a justified discard
+
+#### Scenario: Thermal Curves Lesson
+
+- **WHEN** the research documents tire thermal/degradation models and the friction circle
+- **THEN** the card SHALL map them to stateful entity curves with finite agency budgets in the world simulation (world-simulation/npc-minds)
+
+#### Scenario: Soft-Body Graph Lesson
+
+- **WHEN** the research documents BeamNG's node-beam deformation with emergent functional damage
+- **THEN** the card SHALL propose graph-edge deformation as the consequence model for the world's knowledge graph (knowledge-graph/world-simulation)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these simulators
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
 ### Requirement: Albion-in-Life-RP Hybrid Synthesis
 
 The research system SHALL document the cross-game synthesis of Albion Online systems transposed onto a real-life RP world (GTA San Andreas/RP style): risk bands reinterpreted as state presence per region (financial district = Blue with cameras and fast response; industrial/port = Yellow; periphery = Red; no-signal rural zones = Black with no reliable map/info), full loot domesticated as carry-only material loss, regional markets per neighborhood, guild territory reinterpreted as faction-controlled districts with protection/commerce income, seasons as elected government terms, spec-by-use as practice-based skill, and inter-city logistics as freight routes with ambush risk. The synthesis SHALL surface what each side fixes: Albion's closed economy solves RP inflation; RP's sacred character life domesticates Albion's cheap death; player institutions legalize scheduled territory wars.
@@ -144,7 +371,7 @@ The project SHALL include a playable in-browser prototype built on **d3wasm** (g
 
 ### Requirement: Versioned Lesson Cards
 
-Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
+Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, racing sims, world sims, tactical/survival sims, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
 
 #### Scenario: Traceable Accepted Card
 

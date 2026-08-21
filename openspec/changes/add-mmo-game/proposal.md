@@ -22,6 +22,36 @@ Product direction decision: the game itself will be a Role-Playing MMORPG based 
   12. Closed player-driven economy — no infinite NPC faucets; value produced by players/simulation, drained by lifelike sinks (taxes, rent, insurance); regional markets with divergence usable as tick signals.
   13. Carry-only material consequence — robbery transfers what is carried; banked/stored/insured assets safe; character life remains sacred per RP rules; insurance as sink.
   14. Declared territory wars via player institutions — territory income flows through the economy; takeovers require declaration, time window and engagement rules recorded in the event store.
+  15. Universal device portability — playable on any device meeting a published minimum capability contract (processing, network, input); browser client primary, ports preserve the contract; below the 3D floor the narrative-first text/stream client provides full participation.
+  16. Training-grade simulation fidelity — transfer-of-training as measurable quality bar in training domains (doctrine anchored to the verified catalog); journal/crystals as a telemetry loop with causal replay for deliberate practice.
+  17. Stateful entity curves — thermal-like curves (patience, suspicion, influence), finite agency budget per entity per turn (friction circle), organizational inertia (weight transfer), context-dependent performance (aero/dirty air).
+  18. Soft-body graph consequence — world damage as deformation of specific knowledge-graph edges; functional consequences emerge from topology; identical crises deform different structures differently.
+  19. Attention-based simulation fidelity — the world exists everywhere at coarse deterministic substrate; deep LLM simulation follows player attention (regions heat/cool), composing with per-region budgets.
+  20. Operable doctrinal systems — study-level instruments (intel, PSYOP, SCAME, interrogation, OPSEC): every real doctrinal step an operable action traceable to source.
+  21. Multi-crew stations — institutions and complex systems run by divided player stations with distinct consoles and information asymmetry (cooperation required, communication in-world).
+  22. Optional reality feed — opt-in per scenario for contemporary settings: real-world data as world tick inputs with provenance and date; fictional universes stay closed.
+  23. Functional body narrative — harm as named conditions with natural history closing specific options (no bars, no HP); the no-HP invariant's cost model.
+  24. Context-sensitive combat resolution — tracked physical facts (cover/distance/material) drive outcomes; binding pre-action plans; loadout semantics; consequences ripple beyond the target.
+  25. Rules of engagement as audited doctrine — proportional force as an operable continuum judged by the auditor; unjustified force carries legal/psychological/reputational/heat consequence; civilians constrain via witness filter.
+  26. Narrated metabolism ledger — the world accounts the body's slow systems and tells them in prose (never managed); delayed compounding consequences; the body as visible calendar (avatar-mirror).
+  27. Psychological curves modulating narration — LLM-native: stress/fear/moral shift the tone and perception of the prose itself; state readable from narration.
+  28. Sleep-crystallization — memory crystals consolidate during sleep; poor/unsafe sleep yields twisted fragments usable as plot seeds (nightmares).
+  29. Consequence afterlife — abandoned outcomes decay on a timeline and attract new actors; method determines yield value.
+  30. Companion bonds — mounts/animals/AI partners as load-bearing characters: bond curves, permanent death, carried inventory bound to them.
+  31. Emergent reputation without a moral meter — no gauge anywhere; the world reacts via curves/witness memory/standing, and visible presentation changes treatment.
+  32. Regional heat with identity mediation — bounties accrue per region; masks/disguises contest attribution against notoriety.
+  33. Deliberative combat — focus marking binds resolution; formal confrontations (duels) run a binding structure where preparation and nerve decide.
+  34. Simulation density without friction — density never taxes the interface; onboarding is diegetic, never front-loaded tutorials.
+  35. Failure crystallizes — failed actions generate lesson memories (the causal why) and feed plot seeds; defeat is story and knowledge, never silent game-over.
+  36. Windows of opportunity — world state opens/closes time-sensitive windows where actions become cheaper or possible; timing is a first-class dimension of action.
+  37. Seasonal production and resource rotation — world production matures over narrative time (harvest in season); world capital carries depletion curves restored by rotation and rest, never by purchase alone.
+  38. The graph as the analyst's instrument — analysis actions progressively reveal and link the world graph; lore deposited in-world (filesystem as narrative surface).
+  39. Operable intelligence cycle — collect/process/analyze/disseminate as operable workflow; cyber+physical stations as its multi-crew expression.
+  40. Maximum-fidelity tier — real tools (sandboxed, no real targets) and diegetic scripting as study-level cyber operation; 1:1 training transfer.
+  41. Asynchronous intrusion and hardening — infrastructure attackable while offline, surfacing narratively on return; hardening raises attacker cost; exploits decay (arms race).
+  42. NPC wants and fears as plot seeds — rolling desires/dreads per NPC that resolve into memory and re-roll; plots emerge from colliding desires, not only player triggers.
+  43. Faction agendas, declared and hidden — behavior consistent with both layers; the hidden layer revealed through intelligence work on the graph.
+  44. Regional epochs with legacy — world ticks flip sustained regional periods (golden/turmoil) that change production, curves and windows, and leave durable legacy when they end.
 
 - From: no MMO requirement; multiplayer implied by research lessons only.
 - To: explicit vision-level contract; detailed mechanics (sharding, networking, economy, scale) arrive as future changes against this spec.

@@ -1168,6 +1168,11 @@ Following the CyberCode Online lesson, the MMO SHALL treat community-contributed
 - **WHEN** a community contribution is submitted
 - **THEN** it SHALL pass scenario-authoring validation and review before becoming visible in the world
 
+###### Scenario: Quality-Gated Author Tiers
+
+- **WHEN** an author consistently passes review at depth (study-level modules: systems, triggers, lore packages)
+- **THEN** the author tier MAY unlock premium authoring capabilities (deeper modules, faster review lanes), per the DCS module-ecosystem lesson — with the quality bar maintained regardless of tier
+
 ##### Requirement: Scale Targets for the Open World (v1)
 
 The MMO SHALL meet these v1 measurable scale targets on the d3wasm + narrative-engine hybrid (targets are engineering estimates recorded as contracts, revisable by future changes with measured data): 1,000–3,000 concurrent players per open map; per-client visible characters capped by interest management at ~100 rendered at 30+ FPS on common hardware; thousands of deterministic routine NPCs per map; tens up to ~1–2 hundred LLM-alive NPC minds per region; and a per-narrated-turn LLM cost envelope in the ~US$ 0.01–0.03 range, with the ~US$ 0.2–0.6 per active player-hour figure as the planning budget. The bottleneck order recorded: LLM throughput/cost first, client rendering second, world simulation last.
@@ -1221,6 +1226,11 @@ Drawing from the GTA V RP worldwide lesson, the MMO SHALL support cultural/regio
 
 - **WHEN** a shard admits players through a community gate (application, invitation or tier)
 - **THEN** the age-banding tray and avatar-mirror consent SHALL remain non-negotiable beneath the community layer
+
+###### Scenario: Branching Style Choices (Landmarks)
+
+- **WHEN** a shard or community reaches an advancement threshold
+- **THEN** it MAY take a branching style choice (its landmark) that durably changes its playbook and expression — declared configuration over the same canon, never a lore fork
 
 ##### Requirement: Player-Run Institutions
 
@@ -1281,6 +1291,471 @@ Faction-controlled territory SHALL grant passive income (protection/commerce) an
 
 - **WHEN** a faction holds a territory
 - **THEN** its passive income SHALL flow through the economy (taxes/commerce), not spawn new value outside the closed economy
+
+##### Requirement: Universal Device Portability
+
+The game SHALL be portable to any device with minimum processing, network and input hardware sufficient to interact with the game. The browser client (no install) is the primary target; where a browser client is not viable on a device, a port SHALL preserve the capability contract — full interaction with the same world, canon and account. A published minimum capability contract SHALL define the floor for processing (rendering or text-mode), network (bandwidth/latency for the deterministic layer and narrative streaming) and input (keyboard, touch, gamepad, assistive technology).
+
+###### Scenario: Minimum-Spec Device Plays Fully
+
+- **WHEN** a device meets the published minimum capability contract
+- **THEN** the game SHALL be fully playable on it — same world, same canon, same account, no feature lock-outs beyond declared degradation tiers
+
+###### Scenario: Below 3D Floor Degrades to Text Client
+
+- **WHEN** a device cannot run the 3D/WebGL client but can stream text and send input
+- **THEN** a degraded text/stream client (the narrative-first core over the same SSE contract) SHALL provide full participation in the world
+
+###### Scenario: Input Agnosticism
+
+- **WHEN** the player interacts via keyboard/mouse, touch, gamepad or assistive input
+- **THEN** all core interactions (movement, speech, narrative choices) SHALL remain available, with input mappings declared per mode
+
+###### Scenario: Port Preserves the Contract
+
+- **WHEN** the game is ported to a platform without a viable browser
+- **THEN** the port SHALL implement the same capability contract (deterministic layer + narrative streaming) rather than a reduced spin-off
+
+##### Requirement: Training-Grade Simulation Fidelity
+
+Per the racing-simulator lesson (professionals train on iRacing/ACC because causal fidelity transfers skill), the game's training domains (military doctrine, intelligence, PSYOP, negotiation) SHALL aim for transfer-of-training as a measurable quality bar: causal models faithful enough that skills and intuitions developed in-game map to real-world understanding, anchored to the verified fact catalog and real doctrine, with the journal/crystal memory serving as a telemetry loop (causal replay and analysis for deliberate practice).
+
+###### Scenario: Expert Recognizes the Procedure
+
+- **WHEN** a subject-matter expert reviews an in-game procedure from a training domain
+- **THEN** the expert SHALL recognize the real-world doctrine it models, with deviations documented
+
+###### Scenario: Causal Replay for Deliberate Practice
+
+- **WHEN** a player opens the analysis mode over a past arc
+- **THEN** the causal chain (events, decisions, consequences from the event store and journal) SHALL be reconstructable and inspectable, like lap telemetry
+
+###### Scenario: Practice Accelerates Learning (Eurekas)
+
+- **WHEN** a character or institution performs actions related to a skill or doctrine being learned
+- **THEN** the learning rate SHALL accelerate proportionally — doing the thing teaches faster than studying it from afar
+
+##### Requirement: Stateful Entity Curves
+
+Per the tire-thermal/friction-circle/weight-transfer lesson, entities (NPCs, factions, institutions) SHALL carry continuous state curves instead of binary flags: thermal-like curves (patience, suspicion, influence) that heat under abuse, degrade with overuse and recover with careful management; a finite agency/attention budget per entity per turn (no entity maximizes two competing fronts simultaneously); organizational inertia (direction changes require preparation, abrupt maneuvers destabilize); and context-dependent performance (proximity to stronger actors can draft or disturb, per the aerodynamics lesson).
+
+###### Scenario: No Binary Hostility
+
+- **WHEN** an entity's disposition is queried
+- **THEN** it SHALL expose curve values (e.g., patience temperature, suspicion wear) with history, not a hostile/friendly flag
+
+###### Scenario: Friction Circle of Agency
+
+- **WHEN** an entity attempts two demanding fronts in the same turn
+- **THEN** its finite agency budget SHALL force degraded performance on at least one front
+
+###### Scenario: Preparation Before the Turn
+
+- **WHEN** a faction changes direction abruptly without preparation events
+- **THEN** the world simulation SHALL apply destabilization proportional to the maneuver and the faction's momentum
+
+##### Requirement: Soft-Body Graph Consequence
+
+Per the BeamNG node-beam lesson, world consequence SHALL be modeled as deformation of the knowledge graph — not scalar state flags: damage and crisis events deform specific edges (relations) of the affected structure, and functional consequences (lengthened influence routes, rerouted resources, weakened command) SHALL emerge from the deformed graph topology. Identical crises hitting different structures SHALL produce different deformations.
+
+###### Scenario: Damage Deforms Specific Edges
+
+- **WHEN** a faction suffers a targeted blow (e.g., funding severed)
+- **THEN** the deformation SHALL be recorded on the specific graph edges involved, not as a global strength scalar
+
+###### Scenario: Consequence Emerges from Topology
+
+- **WHEN** a deformed structure acts
+- **THEN** its functional limitations SHALL derive from the graph topology (longer paths, missing links) rather than an applied penalty constant
+
+###### Scenario: No Two Crises Deform Alike
+
+- **WHEN** the same crisis template hits two structurally different factions
+- **THEN** the resulting deformations and emergent consequences SHALL differ
+
+##### Requirement: Attention-Based Simulation Fidelity
+
+Per the MSFS whole-world lesson, the world SHALL exist everywhere at coarse deterministic fidelity (routines, economy wiring, agendas — the substrate), with deep simulation (rich LLM minds, narrated detail) following player attention: regions players attend heat up into deep simulation and crystallize rich memory; neglected regions cool back to routine. Simulation depth is a law of the world (fidelity follows attention), not merely a cost cap — and it composes with the per-region LLM budgets already specified.
+
+###### Scenario: Region Heats and Cools
+
+- **WHEN** player attention concentrates on a region and later abandons it
+- **THEN** the region SHALL escalate to deep simulation while attended and de-escalate to deterministic routine when neglected, with the transition surfaced narratively (not as a system message)
+
+###### Scenario: Nothing Is Nonexistent
+
+- **WHEN** players arrive anywhere in the canonical world
+- **THEN** the location SHALL exist with at least substrate-level simulation (routine, economy wiring, presence) — no "unrendered void" inside canon
+
+##### Requirement: Operable Doctrinal Systems
+
+Per the DCS study-level lesson (every cockpit button works), the game's instruments (intelligence analysis, PSYOP planning, counter-propaganda SCAME, interrogation, OPSEC) SHALL be operable systems: each real doctrinal step is an action the player performs in sequence, following the verified doctrine sources — not narrative mentions. Operating the system SHALL teach the real procedure (training transfer extended from recognition to operation).
+
+###### Scenario: Every Doctrinal Step Is an Action
+
+- **WHEN** a player uses a doctrinal system (e.g., runs a counter-propaganda response)
+- **THEN** each step of the real doctrine SHALL be an explicit operable action in the workflow, traceable to its source
+
+###### Scenario: Expert Walkthrough Recognized
+
+- **WHEN** a subject-matter expert observes a player completing a doctrinal workflow
+- **THEN** the expert SHALL recognize the real procedure, with deviations from doctrine documented
+
+##### Requirement: Multi-Crew Stations
+
+Per the DCS multi-crew lesson (pilot + RIO operating one aircraft), player-run institutions and complex systems SHALL support divided stations: multiple players operating one system with distinct consoles, responsibilities and information (what one station sees, the other does not), cooperation required for full performance.
+
+###### Scenario: Divided Stations, One System
+
+- **WHEN** an institutional operation runs with multiple players on duty
+- **THEN** stations SHALL have distinct capabilities and information views, and the system's full performance SHALL require their cooperation
+
+###### Scenario: Station Information Asymmetry
+
+- **WHEN** one station perceives information relevant to another
+- **THEN** conveying it SHALL be an in-world act (communication), not automatic UI sharing
+
+##### Requirement: Optional Reality Feed
+
+Per the MSFS live-weather lesson, the world system SHALL provide a reality feed that scenarios MAY enable: real-world current data (news, conditions) entering as world tick inputs for contemporary settings, with every injected item carrying provenance and date, and never bleeding into fictional universes (era and canon consistency enforced).
+
+###### Scenario: Opt-In per Scenario
+
+- **WHEN** a contemporary scenario enables the reality feed
+- **THEN** injected real-world items SHALL enter as world tick inputs with source URL and verification date attached
+
+###### Scenario: Fictional Universes Stay Closed
+
+- **WHEN** a fictional-universe scenario (e.g. O Cidadão do Futuro) runs
+- **THEN** no reality feed content SHALL enter its world
+
+##### Requirement: Functional Body Narrative
+
+Per the Tarkov/Project Zomboid lesson, harm and illness SHALL be tracked as specific functional conditions with natural history — never numeric health bars: each condition (cut hand, compromised leg, fever, exhaustion) closes specific options in narration, evolves with care or neglect (prognosis), and compounds with others. This is the no-HP invariant's cost model: damage is the growing list of what the character can no longer do this scene.
+
+###### Scenario: No Bars, Only Conditions
+
+- **WHEN** a character is harmed
+- **THEN** the recorded state SHALL be a named condition closing specific options, with prognosis and care requirements — never a numeric pool
+
+###### Scenario: Conditions Evolve
+
+- **WHEN** a condition receives care or neglect over narrative time
+- **THEN** it SHALL progress through its natural history (improve, stabilize, worsen) rather than being removed by a single action
+
+##### Requirement: Context-Sensitive Combat Resolution
+
+Per the Arma 3 physics-honesty lesson, combat resolution SHALL honor tracked physical facts (cover, distance, material, visibility) recorded as world state: the same creative action resolves differently by context; declared pre-action plans (entry planning — Ready or Not lesson) bind the resolution; carried equipment has distinct, knowable tactical semantics (loadout as tactical statement); and consequences MAY propagate beyond the direct target through intermediaries (penetration — soft-body graph ripple).
+
+###### Scenario: Same Action, Different Context
+
+- **WHEN** the same described action runs against different tracked physical facts
+- **THEN** the resolution SHALL differ accordingly, citing the facts that drove it
+
+###### Scenario: The Plan Binds
+
+- **WHEN** a player declares a pre-action plan (roles, entries, cover)
+- **THEN** the resolution SHALL treat the plan as binding context, and deviations SHALL cost proportionally
+
+###### Scenario: Ripple Beyond the Target
+
+- **WHEN** an action's effect passes through intermediaries (material, structure, third parties)
+- **THEN** consequences SHALL propagate to entities beyond the direct target via graph deformation
+
+##### Requirement: Rules of Engagement as Audited Doctrine
+
+Per the Ready or Not lesson, proportional use of force SHALL be an operable doctrinal system: the force continuum (real ROE/police doctrine) is a workflow with explicit steps and justification points, judged post-hoc by the narrative auditor; unjustified force SHALL carry legal, psychological, reputational and heat consequences; non-combatants in the scene constrain action through the witness filter.
+
+###### Scenario: Continuum Is Operable
+
+- **WHEN** force is applied
+- **THEN** the applicable continuum step SHALL be an explicit operable choice with justification recorded in the event store
+
+###### Scenario: Auditor Judges Proportionality
+
+- **WHEN** the turn is audited
+- **THEN** disproportionate force against the circumstances (unarmed, surrendered, civilian present) SHALL be flagged with consequence, not silently resolved
+
+##### Requirement: Narrated Metabolism Ledger
+
+Per the SCUM lesson, the body's slow systems (nourishment, fatigue accumulation, conditioning) SHALL be a coarse ledger accounted by the world and expressed in narration — the player never manages nutrients or dashboards; consequences arrive delayed and compounding (anti-grind by structure), and the body carries visible time passage (weight, scars, beard — the avatar as calendar, wired to avatar-mirror).
+
+###### Scenario: The World Accounts
+
+- **WHEN** the character's regimen over days is poor (food, rest, exertion)
+- **THEN** the narration SHALL surface it as fact and capability shifts — without any management UI
+
+###### Scenario: Body as Calendar
+
+- **WHEN** narrative time passes
+- **THEN** visible physical markers of that passage SHALL accumulate on the avatar across sessions
+
+##### Requirement: Psychological Curves Modulating Narration
+
+Per the Project Zomboid lesson extended to an LLM-native mechanic, psychological state (stress, fear, morale) SHALL be entity curves applied to the player character that modulate what and how the narrator tells: tone, perception and offered options shift with psychological state, so an experienced player can read their own state from the prose itself.
+
+###### Scenario: Tone Reflects State
+
+- **WHEN** the character's stress curve runs high
+- **THEN** the narration's tone and perceptual offerings SHALL shift accordingly (threats overheard, intentions misread) without a meter being shown
+
+###### Scenario: Recovery Is Narrated
+
+- **WHEN** the curve recovers through rest, comfort or socializing
+- **THEN** the narration's register SHALL demonstrably settle, and the change SHALL be attributable in analysis mode
+
+##### Requirement: Sleep-Crystallization
+
+Per the Project Zomboid sleep lesson bound to the engine's memory pyramid, memory crystallization SHALL occur during sleep: resting well consolidates the day into clean crystals; sleeping badly or unsafely yields partial, twisted or interrupted consolidation (nightmare seeds for plot-generation); dreams are narrative beats with mechanical weight.
+
+###### Scenario: Crystals Form in Sleep
+
+- **WHEN** the character sleeps after accumulated events
+- **THEN** the crystallization of those events SHALL be tied to that sleep, with quality affecting fidelity
+
+###### Scenario: Nightmare Seeds
+
+- **WHEN** sleep is poor, unsafe or stressed
+- **THEN** consolidation MAY produce twisted fragments usable as plot seeds rather than clean memory
+
+##### Requirement: Consequence Afterlife
+
+Per the RDR2 lesson (carcasses decay and attract predators; the world keeps metabolizing what players leave behind), consequences SHALL have material afterlife: abandoned outcomes decay on a timeline and attract new actors — a dropped body draws scavengers, an unfinished deal breeds its own plot, a ruined pelt has a smell. The world's reaction to neglect is content.
+
+###### Scenario: Abandoned Consequence Attracts
+
+- **WHEN** a consequence is left unaddressed in the world
+- **THEN** it SHALL decay along a timeline and MAY attract actors or spawn developments that feed on it
+
+###### Scenario: Method Determines Yield
+
+- **WHEN** an action produces a harvestable outcome (hunt, deal, extraction)
+- **THEN** the method's quality SHALL determine the yield's value — clean work preserves worth, rough work ruins it
+
+##### Requirement: Companion Bonds
+
+Per the RDR2 horse lesson, companions (mounts, animals, AI partners) SHALL be load-bearing characters: bond curves deepening with care and shared narrative, permanent death (no respawn — loss is story), and carried inventory bound to them, composing with carry-only consequence: losing the companion risks what it carries.
+
+###### Scenario: Bond Deepens With Care
+
+- **WHEN** a companion is cared for and shares narrative over time
+- **THEN** its bond curve SHALL deepen, unlocking trust behaviors — never as numeric stats shown to the player
+
+###### Scenario: Companion Loss Is Narrative
+
+- **WHEN** a companion dies
+- **THEN** the loss SHALL be permanent and narratively consequential, and the items it carried SHALL be subject to carry-only rules (recoverable at the site of loss, not teleported)
+
+##### Requirement: Emergent Reputation Without a Moral Meter
+
+Per the RDR2 honor lesson, conduct reputation SHALL be emergent and invisible: no moral gauge is ever displayed — the world reacts through accumulated conduct held in entity curves, witness memory and regional standing (prices, dialogue options, how strangers greet, what children are told), and visible presentation (dirt, dress, weight, wounds) changes the treatment the character receives.
+
+###### Scenario: No Moral UI
+
+- **WHEN** the player looks for their moral standing
+- **THEN** no gauge, alignment or karma value SHALL exist anywhere in the interface — only the world's reactions
+
+###### Scenario: Presentation Changes Treatment
+
+- **WHEN** the character's visible state (clean vs bloodied, dressed vs ragged) differs
+- **THEN** NPC reception and offered options SHALL shift accordingly, traceable in analysis mode
+
+##### Requirement: Regional Heat With Identity Mediation
+
+Per the RDR2 crime lesson, heat SHALL be regional and identity-mediated: witnesses report within their region, bounties accrue per region (per the GTA wanted-level lesson already specified), and identity obfuscation (mask, disguise, alias) delays or redirects attribution — recognition is a contest between notoriety and concealment.
+
+###### Scenario: Heat Stays Regional
+
+- **WHEN** a character accrues heat in one region
+- **THEN** other regions SHALL react only to what traveled there by word of witness, not by global flag
+
+###### Scenario: Concealment Contests Notoriety
+
+- **WHEN** an identity-obfuscating measure is used during an offense
+- **THEN** attribution SHALL be delayed or misdirected proportional to the disguise and the character's local notoriety
+
+##### Requirement: Deliberative Combat — Focus and Formal Duels
+
+Per the Dead Eye and RDR1 duel lessons, combat SHALL support deliberation: focus marking (declaring targets and intents before resolution — the resolution honors the marks, composing with binding entry plans) and formalized confrontation scenes (duels, negotiations, standoffs) with a binding structure of setup, tension and decisive instant where preparation and nerve decide.
+
+###### Scenario: Focus Marks Bind Resolution
+
+- **WHEN** a player marks targets and intents in a focus window
+- **THEN** the resolution SHALL treat the marks as declared plan, with execution quality modulated by context
+
+###### Scenario: The Duel Has Structure
+
+- **WHEN** a formal confrontation is initiated
+- **THEN** it SHALL run its binding structure (setup, escalation, decisive instant), and the better-prepared side holds the edge the structure confers
+
+##### Requirement: Simulation Density Without Friction
+
+Per the RDR2 aging-badly lesson (heavy controls, slow menus, sprawled tutorials recorded as guardrails), simulation density SHALL NOT justify interface friction: core actions stay immediate, menus never simulate weight, and onboarding is diegetic — woven into play, never front-loaded tutorials.
+
+###### Scenario: Density Never Taxes the Interface
+
+- **WHEN** the world's simulation grows denser
+- **THEN** interface latency and action depth SHALL remain constant — simulation cost is paid by the systems, not the player's hands
+
+###### Scenario: Diegetic Onboarding
+
+- **WHEN** a new system becomes relevant
+- **THEN** it SHALL be taught through play in-world (an NPC, a failure, a witnessed event), not through tutorial walls
+
+##### Requirement: Failure Crystallizes
+
+Per the KSP lesson (explosions are data — failure teaches through honest systems), failure SHALL be generative: a failed action crystallizes into a lesson memory recording why it failed, and failures feed plot-generation as seeds — the world metabolizes defeat into story and knowledge, never a silent game-over.
+
+###### Scenario: Failed Action Leaves a Lesson
+
+- **WHEN** an action resolves as significant failure
+- **THEN** a lesson memory SHALL crystallize recording the causal why, available to later deliberation
+
+###### Scenario: Failure Feeds the Plot
+
+- **WHEN** a failure reshapes the situation
+- **THEN** it SHALL be eligible as plot seed material, surfacing consequences that feed on the defeat
+
+##### Requirement: Windows of Opportunity
+
+Per the KSP transfer-window lesson, the world simulation SHALL open and close time-sensitive windows where specific actions become cheaper or newly possible — defined by world state (approaching elections, departing convoys, weather fronts), with missing a window carrying its cost; timing is a first-class dimension of action.
+
+###### Scenario: The Window Opens From World State
+
+- **WHEN** world state makes an action's cost drop or feasibility rise
+- **THEN** a window SHALL be derivable from that state and observable in-world (rumor, journal, NPC speech)
+
+###### Scenario: The Window Closes
+
+- **WHEN** the defining state passes
+- **THEN** the window SHALL close and the action SHALL revert to its full cost or infeasibility
+
+###### Scenario: Unique Achievement Races
+
+- **WHEN** an achievement is declared unique (only one completer)
+- **THEN** competing investors SHALL race within the window, and the losers' investment SHALL convert into partial salvage — never full refund, never silent loss
+
+##### Requirement: Seasonal Production and Resource Rotation
+
+Per the Farming Simulator lesson, world production SHALL be seasonal and rotational: resources mature over narrative time (cohorts trained, dossiers compiled, crops grown, works finished) so timing matters — beginning early and harvesting in season; and world capital (neighborhoods, informant networks, territories, patrons) carries depletion curves: over-exploitation degrades, alternation and rest restore.
+
+###### Scenario: Maturation Takes Narrative Time
+
+- **WHEN** a production is started
+- **THEN** its maturation SHALL advance with narrative time and conditions, and harvesting out of season SHALL cost
+
+###### Scenario: Rotation Restores Depleted Capital
+
+- **WHEN** a world capital is over-exploited
+- **THEN** it SHALL degrade along its depletion curve and recover under alternation or rest, never by purchase alone
+
+##### Requirement: The Graph as the Analyst's Instrument
+
+Per the NITE Team 4 lesson, the knowledge-graph SHALL be a player-facing instrument, not just engine state: analysis actions progressively reveal and link entities (per the layered reconnaissance lesson — each probe exposes more graph), and story content is deposited in-world (files, systems, devices) so that intruding and inspecting digs up lore — the filesystem as narrative surface.
+
+###### Scenario: Analysis Reveals the Graph
+
+- **WHEN** a player performs analysis actions on entities
+- **THEN** links and nodes SHALL become visible/buildable through that work — the world's map is drawn by analysis, not given
+
+###### Scenario: Lore Deposited in Systems
+
+- **WHEN** a player intrudes or inspects an in-world system or device
+- **THEN** story content (files, records, traces) MAY be discovered there, mapped to story cards
+
+##### Requirement: Operable Intelligence Cycle
+
+Per the NITE Team 4 lesson, the intelligence cycle (collect → process → analyze → disseminate, with real analyst terminology) SHALL be an operable doctrinal workflow — the intel module of the operable doctrinal systems — and cyber+physical coordination SHALL be its multi-crew expression: a cyber station and a field station operating the same mission with asymmetric information.
+
+###### Scenario: Cycle Steps Are Operable
+
+- **WHEN** a player runs an intelligence operation
+- **THEN** each cycle phase SHALL be explicit operable actions with inputs and outputs flowing between phases
+
+###### Scenario: Cyber and Field Stations Share the Mission
+
+- **WHEN** an operation combines cyber and physical elements
+- **THEN** stations SHALL operate with asymmetric information, and the mission's full performance SHALL require their coordination
+
+##### Requirement: Maximum-Fidelity Tier — Real Tools
+
+Per the HackHub/Grey Hack lesson, operable doctrinal systems in the cyber domain MAY run at a maximum-fidelity tier: the real tool (a sandboxed real VM/terminal) as the operable surface, and diegetic scripting (in-world code the player writes and shares) as study-level operation. This tier SHALL be strictly contained: sandboxed environments only, no real third-party targets, no live offensive tooling against non-simulated systems.
+
+###### Scenario: Real Tool, Sandboxed
+
+- **WHEN** a cyber operation runs at maximum fidelity
+- **THEN** it SHALL execute in a contained sandbox with no reach beyond simulated systems
+
+###### Scenario: Transfer Is One-to-One
+
+- **WHEN** a player trains cyber skills at this tier
+- **THEN** the practiced operations SHALL map one-to-one to real-tool competence (the training-grade bar at its extreme)
+
+###### Scenario: Diegetic Scripts
+
+- **WHEN** automation or tooling is authored
+- **THEN** it SHALL exist as in-world scripts — writable, shareable and versioned artifacts under the closed economy
+
+##### Requirement: Asynchronous Intrusion and Hardening
+
+Per the Grey Hack lesson, player infrastructure SHALL be attackable while its owner is offline: intrusion attempts resolve against defensive state (hardening, OPSEC posture), the attack-that-happened-while-away surfaces narratively on return (composing with off-screen ticks and sleep), operations carry time-scoped escalation clocks (trace), and exploits decay along curves — the attacker/defender arms race as content engine.
+
+###### Scenario: Attacked While Away
+
+- **WHEN** a player's infrastructure is targeted in their absence
+- **THEN** the outcome SHALL resolve against their hardening posture and surface as narrative on return, not as a log line
+
+###### Scenario: Hardening Raises the Cost
+
+- **WHEN** a defender invests in hardening and OPSEC
+- **THEN** intrusion costs SHALL rise measurably for attackers, visible to them only as friction
+
+###### Scenario: Exploits Decay
+
+- **WHEN** an exploit technique circulates
+- **THEN** its effectiveness SHALL decay over narrative time as defenses adapt, forcing renewal
+
+##### Requirement: NPC Wants and Fears as Plot Seeds
+
+Per the Sims lesson, NPCs SHALL carry rolling wants and fears — a small set of current desires and dreads derived from their agenda, curves and history that refresh as they are fulfilled, frustrated or overtaken by events. Wants/fears feed plot-generation continuously: every character is a story machine, and the world's plots emerge from their colliding desires rather than only from scripted triggers.
+
+###### Scenario: Wants Refresh on Resolution
+
+- **WHEN** a want is fulfilled or a fear realized
+- **THEN** the slot SHALL resolve into memory and a new want/fear SHALL roll in, consistent with the NPC's agenda and what just happened
+
+###### Scenario: Plots Emerge from Colliding Desires
+
+- **WHEN** plot seeds are generated
+- **THEN** wants/fears of multiple NPCs MAY collide to compose the seed — desire against desire, not only player-triggered arcs
+
+##### Requirement: Faction Agendas — Declared and Hidden
+
+Per the Civilization lesson, factions SHALL carry two layers of agenda: a declared agenda (consistent, observable through words and deeds — the Civ visible agenda) and a hidden agenda (driving deviations, revealed only through analysis and intelligence work — composing with the graph-as-instrument requirement). Faction behavior SHALL always be consistent with both layers; the hidden layer explains what the declared layer cannot.
+
+###### Scenario: Behavior Consistent With Both Layers
+
+- **WHEN** a faction acts
+- **THEN** the action SHALL be consistent with its declared agenda on the surface and its hidden agenda underneath — never random contradiction
+
+###### Scenario: Hidden Agenda Revealed by Analysis
+
+- **WHEN** players accumulate enough linked intelligence about a faction's deviations
+- **THEN** the hidden agenda SHALL become inferable and confirmable through the graph, rewarding the intelligence cycle
+
+##### Requirement: Regional Epochs With Legacy
+
+Per the Civilization lesson, world ticks SHALL be able to flip regional epochs — sustained periods such as golden ages or turmoil — that persist while active and leave a legacy modifier when they end. Epochs are the heavy-scale state of a region (composing with attention-based fidelity and soft-body consequence): they change what the region produces, how curves drift and which windows open.
+
+###### Scenario: The Epoch Flips
+
+- **WHEN** a region's accumulated state crosses a threshold (prosperity, devastation, cohesion)
+- **THEN** the world tick MAY flip its epoch, and the change SHALL surface narratively across the region
+
+###### Scenario: The Epoch Leaves Legacy
+
+- **WHEN** an epoch ends
+- **THEN** it SHALL leave a durable legacy modifier on the region (skills, ruins, institutions, memory) rather than vanishing without trace
 
 <!-- source: specs/narrative-audit/spec.md -->
 
@@ -1957,7 +2432,7 @@ Automatic ticks SHALL run as a fire-and-forget asynchronous task after narration
 
 #### Purpose
 
-A research program of reverse engineering the mechanics of reference games (Albion Online, GTA San Andreas, GTA V RP worldwide, MUDs, CyberCode Online) and a playable prototype of the final engine built on d3wasm (Doom 3 / id Tech 4 ported to WebAssembly+WebGL, GPL-3.0), with the goal of extracting verifiable world-building lessons that feed the Project Lunar specs for world-simulation, npc-minds, plot-generation, scenario-authoring and mmo-game. Everything in English; structural headings and SHALL/MUST keywords in English.
+A research program of reverse engineering the mechanics of reference games (Albion Online, GTA San Andreas, GTA V RP worldwide, MUDs, CyberCode Online, racing simulators — iRacing, Assetto Corsa Competizione, BeamNG.drive — world simulators — Microsoft Flight Simulator, DCS World — and military/tactical and survival simulators — Arma 3, Escape from Tarkov, Ready or Not, SCUM, Project Zomboid) and a playable prototype of the final engine built on d3wasm (Doom 3 / id Tech 4 ported to WebAssembly+WebGL, GPL-3.0), with the goal of extracting verifiable world-building lessons that feed the Project Lunar specs for world-simulation, npc-minds, plot-generation, scenario-authoring, combat-system, memory-system, narrative-engine and mmo-game. Everything in English; structural headings and SHALL/MUST keywords in English.
 
 #### Requirements
 
@@ -2026,6 +2501,233 @@ The research system SHALL document, from public sources (the open-source reposit
 
 - **WHEN** a lesson card claims a mechanic or number about the game
 - **THEN** the card SHALL cite the public source (repository path or URL) and verification date
+
+##### Requirement: Reverse Engineering of Military/Tactical Simulation Mechanics
+
+The research system SHALL document, from public sources (Arma 3, Escape from Tarkov and Ready or Not official documentation and community ballistics/medicine guides), the mechanics that make them tactical references: Arma 3's honest ballistics (projectile drop, material penetration, energy balance — every shot a physical fact following laws, not dice), Tarkov's distinct ammo behaviors, body-part health and hydration/energy systems, and Ready or Not's entry planning and proportional use of force under police rules of engagement. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Physics-Honesty Lesson
+
+- **WHEN** the research documents ballistics, penetration and energy balance
+- **THEN** the card SHALL propose context-sensitive combat resolution over tracked physical facts, with real expertise usable in training scenarios (combat-system/mmo-game)
+
+###### Scenario: Functional-Body Lesson
+
+- **WHEN** the research documents body-part health and distinct ammo semantics
+- **THEN** the card SHALL propose the functional body narrative (local impairments closing options, loadout semantics) compatible with the no-HP invariant (mmo-game)
+
+###### Scenario: ROE Lesson
+
+- **WHEN** the research documents proportional force and entry planning
+- **THEN** the card SHALL propose rules of engagement as an audited operable doctrine and binding pre-action plans (mmo-game/narrative-audit)
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Life/Strategy Game Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the life and strategy references: The Sims (decaying motive system — the historical origin of entity curves; wants/fears in rolling slots with aspiration points; relationship scores that decay over time; memories shaping behavior; autonomy acting on personality; story progression evolving the town without the player; life stages and genetics), Civilization (the 4X loop; leader AI with declared and hidden agendas; the tech/civics trees; eureka boosts — actions accelerating research; wonder races where only one builder completes; golden/dark ages with legacy; declared victory conditions; espionage, diplomacy, city-states), and Age of Empires (real-time resource economy; age advancement as gated progression; branching landmarks changing playstyle per age; counter triangles; fog of war; random maps; unique civilization bonuses). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Wants-and-Fears Lesson
+
+- **WHEN** the research documents rolling want/fear slots driving character behavior
+- **THEN** the card SHALL propose NPC wants/fears as a continuous plot-seed machine (mmo-game/plot-generation)
+
+###### Scenario: Faction-Agenda Lesson
+
+- **WHEN** the research documents leader agendas, declared and hidden
+- **THEN** the card SHALL propose faction minds with declared agendas (consistent, observable) and hidden agendas (revealed through analysis) (mmo-game/npc-minds)
+
+###### Scenario: Eureka Lesson
+
+- **WHEN** the research documents actions accelerating research
+- **THEN** the card SHALL propose practice accelerating learning for characters and institutions (mmo-game)
+
+###### Scenario: Race-and-Epoch Lessons
+
+- **WHEN** the research documents wonder races and golden/dark ages
+- **THEN** the card SHALL propose unique-achievement races (composing with windows) and regional epochs with persistent legacy (mmo-game/world-simulation)
+
+###### Scenario: Evidence Reinforcements
+
+- **WHEN** the research documents the Sims motive decay and the fog of war
+- **THEN** the card SHALL record them as genre evidence for entity curves and attention-based fidelity already specified
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Hacking/Intel Simulation Mechanics
+
+The research system SHALL document, from public sources (official sites, the Malwarebytes and popsecurity analyses of NITE Team 4, the HackHub developer posts and Steam page), the mechanics of hacking and intelligence simulators: Hacknet's terminal-native interface, layered reconnaissance (scan/probe/exploit), active/passive trace clocks, bounce/proxy routing, RAM program slots and lore delivered through server file systems; Grey Hack's diegetic scripting (a real in-world scripting language), asynchronous multiplayer intrusion (your infrastructure attacked while offline), hardening arms race and player markets; NITE Team 4's operable intelligence cycle with real NSA analyst terminology (from the Snowden archive), entity-link analysis as gameplay, cyber+physical mission coordination and its 15-module study-level architecture; and HackHub's real Kali Linux VM as interface — the maximum-fidelity tier where the operable tool is the real tool. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Graph-as-Instrument Lesson
+
+- **WHEN** the research documents entity-link analysis as the player's core activity
+- **THEN** the card SHALL propose the knowledge-graph as the analyst's instrument — analysis actions progressively reveal and link the world graph (knowledge-graph/mmo-game)
+
+###### Scenario: Intel-Cycle Lesson
+
+- **WHEN** the research documents the phased intelligence workflow with real terminology
+- **THEN** the card SHALL propose the operable intelligence cycle as the intel module of the doctrinal systems (mmo-game)
+
+###### Scenario: Real-Tool Tier Lesson
+
+- **WHEN** the research documents a real Kali VM as the game interface
+- **THEN** the card SHALL propose a maximum-fidelity tier where operable systems run the real tool — with sandboxing and no real third-party targets as hard constraints (mmo-game)
+
+###### Scenario: Async-Intrusion Lesson
+
+- **WHEN** the research documents asynchronous multiplayer intrusion and hardening
+- **THEN** the card SHALL propose player infrastructure attackable while offline, hardening as persistent OPSEC gameplay, and exploit decay as an arms race (mmo-game/world-simulation)
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Honorable Mentions Mechanics
+
+The research system SHALL document, from public sources (Kerbal Space Program and Farming Simulator official documentation, space-agency endorsements, community guides), the mechanics of the honorable mentions: KSP's real orbital physics and aerodynamics (used even by space agencies — the authority proof of training-grade simulation), its emergent pedagogy (explosions as data — failure teaches), and transfer windows (the right moment when cost drops, defined by world state); and Farming Simulator's complete agriculture cycle with real licensed equipment (proof of the closed economy and provenance-based authenticity), its cycle durations (nothing is instant — time as the raw material of production) and crop rotation (over-exploitation depletes, rotation restores). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Failure-as-Pedagogy Lesson
+
+- **WHEN** the research documents KSP failures teaching through honest physics ("rapid unscheduled disassembly" as data)
+- **THEN** the card SHALL propose failure crystallization — failed actions generating lesson memories and plot seeds (memory-system/mmo-game)
+
+###### Scenario: Windows-of-Opportunity Lesson
+
+- **WHEN** the research documents transfer windows
+- **THEN** the card SHALL propose world-tick windows where actions become cheaper or possible, with timing as cost (mmo-game/world-simulation)
+
+###### Scenario: Seasonal-Production Lesson
+
+- **WHEN** the research documents crop cycles with durations and weather dependence
+- **THEN** the card SHALL propose seasonal maturation of world production over narrative time (mmo-game)
+
+###### Scenario: Resource-Rotation Lesson
+
+- **WHEN** the research documents crop rotation restoring depleted soil
+- **THEN** the card SHALL propose depletion/rest curves on world capital (neighborhoods, informant networks, territories, patrons) (mmo-game/world-simulation)
+
+###### Scenario: Training-Grade Evidence Reinforcement
+
+- **WHEN** the research documents space agencies using KSP
+- **THEN** the card SHALL record it as authority evidence for the training-grade requirement already specified
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Red Dead Redemption Mechanics
+
+The research system SHALL document, from public sources (RDR2/RDR1 official documentation, Rockstar design interviews, community analysis), the mechanics that keep RDR2 ahead of most 2026 releases as systemic density: world-as-simulation (NPC routines, predator chains, decaying carcasses, mud/snow affecting movement), horse bonding (bond levels, permanent death, carrying the inventory), the honor system that changes prices/dialogues/endings without a visible moral meter, hunting with real rules (wrong caliber ruins the pelt, clean shot preserves value, abandoned carcass attracts predators), crime with witnesses (regional bounty, mask-mediated identity), contextual dialogue with NPC memory, the living body (weight, beard, dirt changing treatment), and Dead Eye target marking as a tactical tool; plus RDR1's random road events, iconic duels and Euphoria reactions — and what aged badly (heavy controls, slow menus, sprawled tutorials) recorded as design guardrails. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Consequence-Afterlife Lesson
+
+- **WHEN** the research documents decaying carcasses attracting predators and material chains
+- **THEN** the card SHALL propose consequences with material afterlife — abandoned outcomes decay and attract new actors (world-simulation/mmo-game)
+
+###### Scenario: Companion-Bond Lesson
+
+- **WHEN** the research documents horse bonding with permanent death and carried inventory
+- **THEN** the card SHALL propose companion bond curves with narrative permanence wired to carry-only consequence (mmo-game)
+
+###### Scenario: Honor-Without-Meter Lesson
+
+- **WHEN** the research documents the honor system changing the world without a visible gauge
+- **THEN** the card SHALL propose emergent reputation without a moral meter, with presentation-based treatment (mmo-game)
+
+###### Scenario: Guardrails From What Aged Badly
+
+- **WHEN** the research documents friction complaints (heavy controls, slow menus, sprawled tutorials)
+- **THEN** the card SHALL record density-without-friction guardrails for the game's interface and onboarding
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Survival Simulation Mechanics
+
+The research system SHALL document, from public sources (SCUM and Project Zomboid official documentation and community guides), the survival mechanics relevant to a narrative-first adaptation: SCUM's detailed metabolism ledger (calories, nutrients, digestion timing, visible time passage such as beard growth) and Project Zomboid's psychological and medical simulation (stress from environment, sleep debt and nightmares, wounds with distinct prognosis, slow illness arcs, boredom and comfort needs). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Narrated-Ledger Lesson
+
+- **WHEN** the research documents the metabolism simulation
+- **THEN** the card SHALL propose a coarse narrated metabolism ledger — the world accounts and tells, the player never manages nutrients — and the body as visible calendar (avatar-mirror/mmo-game)
+
+###### Scenario: Sleep-Crystallization Lesson
+
+- **WHEN** the research documents sleep debt, dreams and unsafe sleep
+- **THEN** the card SHALL propose memory crystallization during sleep with poor sleep yielding partial or twisted consolidation (memory-system/mmo-game)
+
+###### Scenario: Psyche-in-Prose Lesson
+
+- **WHEN** the research documents stress modulating performance
+- **THEN** the card SHALL propose psychological curves modulating the narration itself — an LLM-native mechanic no traditional survival game has (narrative-engine/mmo-game)
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of World-Simulator Fidelity Mechanics
+
+The research system SHALL document, from public sources (Microsoft Flight Simulator and DCS World official documentation, developer communications, module-maker materials), the mechanics that make these simulators reference world-simulators: MSFS's whole-world substrate (the entire planet pre-exists at generated fidelity — photogrammetry where attention flows, autogen elsewhere — with authored content raising fidelity locally, like hand-crafted airports), real-time reality injection (live weather from real-world data), licensed aircraft (authenticity through partnership and provenance); and DCS World's study-level cockpit simulation (every button and system modeled and operable, teaching the real machine through operation), multi-crew stations (divided roles operating one complex system, e.g. pilot + RIO), the mission editor as a creation platform, and the third-party module ecosystem with a maintained quality bar. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Attention-Fidelity Lesson
+
+- **WHEN** the research documents the whole-world substrate with variable fidelity (detailed where attention flows, coarse elsewhere)
+- **THEN** the card SHALL propose attention-based simulation fidelity for the world (deep LLM simulation where players attend, deterministic routine elsewhere) mapped to the region budgets (mmo-game/world-simulation)
+
+###### Scenario: Operable Systems Lesson
+
+- **WHEN** the research documents study-level cockpits where every button works
+- **THEN** the card SHALL propose operable doctrinal systems (each real doctrinal step an operable action) and multi-crew stations for player-run institutions (mmo-game)
+
+###### Scenario: Reality Injection Lesson
+
+- **WHEN** the research documents live real-world weather as content
+- **THEN** the card SHALL evaluate an opt-in reality feed as a world tick source (provenance and date attached, era-consistent) or a justified discard
+
+###### Scenario: Authoring Platform Lesson
+
+- **WHEN** the research documents the mission editor and module ecosystem
+- **THEN** the card SHALL propose depth for the scenario editor (triggers/conditions — the same language as plot seeds and prototype triggers) and quality-gated author tiers (scenario-authoring/mmo-game)
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these simulators
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Racing Simulation Fidelity Mechanics
+
+The research system SHALL document, from public sources (iRacing and Assetto Corsa Competizione official documentation and community telemetry guides; BeamNG.drive documentation of its soft-body node-beam model), the mechanics that make professional drivers train on these simulators: tire thermal/degradation models (grip as a temperature and wear curve, not a state), the friction circle (finite total grip shared between competing demands), weight transfer (load shifts under braking/cornering; direction changes require preparation), aerodynamic context sensitivity (downforce rising with speed, dirty air degrading following cars), telemetry-driven deliberate practice loops (lap data exported and analyzed), iRacing's safety rating and licensing (conduct measured per incident, progressive access), and BeamNG's soft-body deformation (vehicles as node-beam structures where crash damage is continuous, structural and functionally emergent — never a pre-baked damage state). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Training-Transfer Lesson
+
+- **WHEN** the research documents professionals training on the simulator because skills transfer to reality
+- **THEN** the card SHALL propose transfer-of-training as a measurable simulation-quality bar for the game's training domains (mmo-game) or a justified discard
+
+###### Scenario: Thermal Curves Lesson
+
+- **WHEN** the research documents tire thermal/degradation models and the friction circle
+- **THEN** the card SHALL map them to stateful entity curves with finite agency budgets in the world simulation (world-simulation/npc-minds)
+
+###### Scenario: Soft-Body Graph Lesson
+
+- **WHEN** the research documents BeamNG's node-beam deformation with emergent functional damage
+- **THEN** the card SHALL propose graph-edge deformation as the consequence model for the world's knowledge graph (knowledge-graph/world-simulation)
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these simulators
+- **THEN** the card SHALL cite the public source (URL) and verification date
 
 ##### Requirement: Albion-in-Life-RP Hybrid Synthesis
 
@@ -2104,7 +2806,7 @@ The project SHALL include a playable in-browser prototype built on **d3wasm** (g
 
 ##### Requirement: Versioned Lesson Cards
 
-Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
+Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, racing sims, world sims, tactical/survival sims, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
 
 ###### Scenario: Traceable Accepted Card
 
@@ -2758,6 +3460,36 @@ Product direction decision: the game itself will be a Role-Playing MMORPG based 
   12. Closed player-driven economy — no infinite NPC faucets; value produced by players/simulation, drained by lifelike sinks (taxes, rent, insurance); regional markets with divergence usable as tick signals.
   13. Carry-only material consequence — robbery transfers what is carried; banked/stored/insured assets safe; character life remains sacred per RP rules; insurance as sink.
   14. Declared territory wars via player institutions — territory income flows through the economy; takeovers require declaration, time window and engagement rules recorded in the event store.
+  15. Universal device portability — playable on any device meeting a published minimum capability contract (processing, network, input); browser client primary, ports preserve the contract; below the 3D floor the narrative-first text/stream client provides full participation.
+  16. Training-grade simulation fidelity — transfer-of-training as measurable quality bar in training domains (doctrine anchored to the verified catalog); journal/crystals as a telemetry loop with causal replay for deliberate practice.
+  17. Stateful entity curves — thermal-like curves (patience, suspicion, influence), finite agency budget per entity per turn (friction circle), organizational inertia (weight transfer), context-dependent performance (aero/dirty air).
+  18. Soft-body graph consequence — world damage as deformation of specific knowledge-graph edges; functional consequences emerge from topology; identical crises deform different structures differently.
+  19. Attention-based simulation fidelity — the world exists everywhere at coarse deterministic substrate; deep LLM simulation follows player attention (regions heat/cool), composing with per-region budgets.
+  20. Operable doctrinal systems — study-level instruments (intel, PSYOP, SCAME, interrogation, OPSEC): every real doctrinal step an operable action traceable to source.
+  21. Multi-crew stations — institutions and complex systems run by divided player stations with distinct consoles and information asymmetry (cooperation required, communication in-world).
+  22. Optional reality feed — opt-in per scenario for contemporary settings: real-world data as world tick inputs with provenance and date; fictional universes stay closed.
+  23. Functional body narrative — harm as named conditions with natural history closing specific options (no bars, no HP); the no-HP invariant's cost model.
+  24. Context-sensitive combat resolution — tracked physical facts (cover/distance/material) drive outcomes; binding pre-action plans; loadout semantics; consequences ripple beyond the target.
+  25. Rules of engagement as audited doctrine — proportional force as an operable continuum judged by the auditor; unjustified force carries legal/psychological/reputational/heat consequence; civilians constrain via witness filter.
+  26. Narrated metabolism ledger — the world accounts the body's slow systems and tells them in prose (never managed); delayed compounding consequences; the body as visible calendar (avatar-mirror).
+  27. Psychological curves modulating narration — LLM-native: stress/fear/moral shift the tone and perception of the prose itself; state readable from narration.
+  28. Sleep-crystallization — memory crystals consolidate during sleep; poor/unsafe sleep yields twisted fragments usable as plot seeds (nightmares).
+  29. Consequence afterlife — abandoned outcomes decay on a timeline and attract new actors; method determines yield value.
+  30. Companion bonds — mounts/animals/AI partners as load-bearing characters: bond curves, permanent death, carried inventory bound to them.
+  31. Emergent reputation without a moral meter — no gauge anywhere; the world reacts via curves/witness memory/standing, and visible presentation changes treatment.
+  32. Regional heat with identity mediation — bounties accrue per region; masks/disguises contest attribution against notoriety.
+  33. Deliberative combat — focus marking binds resolution; formal confrontations (duels) run a binding structure where preparation and nerve decide.
+  34. Simulation density without friction — density never taxes the interface; onboarding is diegetic, never front-loaded tutorials.
+  35. Failure crystallizes — failed actions generate lesson memories (the causal why) and feed plot seeds; defeat is story and knowledge, never silent game-over.
+  36. Windows of opportunity — world state opens/closes time-sensitive windows where actions become cheaper or possible; timing is a first-class dimension of action.
+  37. Seasonal production and resource rotation — world production matures over narrative time (harvest in season); world capital carries depletion curves restored by rotation and rest, never by purchase alone.
+  38. The graph as the analyst's instrument — analysis actions progressively reveal and link the world graph; lore deposited in-world (filesystem as narrative surface).
+  39. Operable intelligence cycle — collect/process/analyze/disseminate as operable workflow; cyber+physical stations as its multi-crew expression.
+  40. Maximum-fidelity tier — real tools (sandboxed, no real targets) and diegetic scripting as study-level cyber operation; 1:1 training transfer.
+  41. Asynchronous intrusion and hardening — infrastructure attackable while offline, surfacing narratively on return; hardening raises attacker cost; exploits decay (arms race).
+  42. NPC wants and fears as plot seeds — rolling desires/dreads per NPC that resolve into memory and re-roll; plots emerge from colliding desires, not only player triggers.
+  43. Faction agendas, declared and hidden — behavior consistent with both layers; the hidden layer revealed through intelligence work on the graph.
+  44. Regional epochs with legacy — world ticks flip sustained regional periods (golden/turmoil) that change production, curves and windows, and leave durable legacy when they end.
 
 - From: no MMO requirement; multiplayer implied by research lessons only.
 - To: explicit vision-level contract; detailed mechanics (sharding, networking, economy, scale) arrive as future changes against this spec.
@@ -2781,6 +3513,8 @@ Product direction decision: the game itself will be a Role-Playing MMORPG based 
 - [ ] Load-test against the v1 scale targets (1k–3k concurrent, ~100 visible at 30+ FPS, LLM concurrency + per-turn cost) and publish the report
 - [ ] Implement the deterministic moment-to-moment layer guaranteeing zero LLM calls for movement/presence/short speech
 - [ ] Implement per-region LLM budgets with graceful degradation (deterministic narration fallback)
+- [ ] Publish the minimum capability contract (processing floor, network bandwidth/latency, input modes) with declared degradation tiers
+- [ ] Build the degraded text/stream client (narrative-first core over the same SSE contract) as the below-3D-floor fallback
 - [ ] Open follow-up changes for concrete mechanics (economy, grouping, world shards) against this spec
 
 #### `changes/add-mmo-game/specs/mmo-game/spec.md`
@@ -2861,6 +3595,11 @@ Following the CyberCode Online lesson, the MMO SHALL treat community-contributed
 - **WHEN** a community contribution is submitted
 - **THEN** it SHALL pass scenario-authoring validation and review before becoming visible in the world
 
+#### Scenario: Quality-Gated Author Tiers
+
+- **WHEN** an author consistently passes review at depth (study-level modules: systems, triggers, lore packages)
+- **THEN** the author tier MAY unlock premium authoring capabilities (deeper modules, faster review lanes), per the DCS module-ecosystem lesson — with the quality bar maintained regardless of tier
+
 ### Requirement: Scale Targets for the Open World (v1)
 
 The MMO SHALL meet these v1 measurable scale targets on the d3wasm + narrative-engine hybrid (targets are engineering estimates recorded as contracts, revisable by future changes with measured data): 1,000–3,000 concurrent players per open map; per-client visible characters capped by interest management at ~100 rendered at 30+ FPS on common hardware; thousands of deterministic routine NPCs per map; tens up to ~1–2 hundred LLM-alive NPC minds per region; and a per-narrated-turn LLM cost envelope in the ~US$ 0.01–0.03 range, with the ~US$ 0.2–0.6 per active player-hour figure as the planning budget. The bottleneck order recorded: LLM throughput/cost first, client rendering second, world simulation last.
@@ -2914,6 +3653,11 @@ Drawing from the GTA V RP worldwide lesson, the MMO SHALL support cultural/regio
 
 - **WHEN** a shard admits players through a community gate (application, invitation or tier)
 - **THEN** the age-banding tray and avatar-mirror consent SHALL remain non-negotiable beneath the community layer
+
+#### Scenario: Branching Style Choices (Landmarks)
+
+- **WHEN** a shard or community reaches an advancement threshold
+- **THEN** it MAY take a branching style choice (its landmark) that durably changes its playbook and expression — declared configuration over the same canon, never a lore fork
 
 ### Requirement: Player-Run Institutions
 
@@ -2975,6 +3719,471 @@ Faction-controlled territory SHALL grant passive income (protection/commerce) an
 - **WHEN** a faction holds a territory
 - **THEN** its passive income SHALL flow through the economy (taxes/commerce), not spawn new value outside the closed economy
 
+### Requirement: Universal Device Portability
+
+The game SHALL be portable to any device with minimum processing, network and input hardware sufficient to interact with the game. The browser client (no install) is the primary target; where a browser client is not viable on a device, a port SHALL preserve the capability contract — full interaction with the same world, canon and account. A published minimum capability contract SHALL define the floor for processing (rendering or text-mode), network (bandwidth/latency for the deterministic layer and narrative streaming) and input (keyboard, touch, gamepad, assistive technology).
+
+#### Scenario: Minimum-Spec Device Plays Fully
+
+- **WHEN** a device meets the published minimum capability contract
+- **THEN** the game SHALL be fully playable on it — same world, same canon, same account, no feature lock-outs beyond declared degradation tiers
+
+#### Scenario: Below 3D Floor Degrades to Text Client
+
+- **WHEN** a device cannot run the 3D/WebGL client but can stream text and send input
+- **THEN** a degraded text/stream client (the narrative-first core over the same SSE contract) SHALL provide full participation in the world
+
+#### Scenario: Input Agnosticism
+
+- **WHEN** the player interacts via keyboard/mouse, touch, gamepad or assistive input
+- **THEN** all core interactions (movement, speech, narrative choices) SHALL remain available, with input mappings declared per mode
+
+#### Scenario: Port Preserves the Contract
+
+- **WHEN** the game is ported to a platform without a viable browser
+- **THEN** the port SHALL implement the same capability contract (deterministic layer + narrative streaming) rather than a reduced spin-off
+
+### Requirement: Training-Grade Simulation Fidelity
+
+Per the racing-simulator lesson (professionals train on iRacing/ACC because causal fidelity transfers skill), the game's training domains (military doctrine, intelligence, PSYOP, negotiation) SHALL aim for transfer-of-training as a measurable quality bar: causal models faithful enough that skills and intuitions developed in-game map to real-world understanding, anchored to the verified fact catalog and real doctrine, with the journal/crystal memory serving as a telemetry loop (causal replay and analysis for deliberate practice).
+
+#### Scenario: Expert Recognizes the Procedure
+
+- **WHEN** a subject-matter expert reviews an in-game procedure from a training domain
+- **THEN** the expert SHALL recognize the real-world doctrine it models, with deviations documented
+
+#### Scenario: Causal Replay for Deliberate Practice
+
+- **WHEN** a player opens the analysis mode over a past arc
+- **THEN** the causal chain (events, decisions, consequences from the event store and journal) SHALL be reconstructable and inspectable, like lap telemetry
+
+#### Scenario: Practice Accelerates Learning (Eurekas)
+
+- **WHEN** a character or institution performs actions related to a skill or doctrine being learned
+- **THEN** the learning rate SHALL accelerate proportionally — doing the thing teaches faster than studying it from afar
+
+### Requirement: Stateful Entity Curves
+
+Per the tire-thermal/friction-circle/weight-transfer lesson, entities (NPCs, factions, institutions) SHALL carry continuous state curves instead of binary flags: thermal-like curves (patience, suspicion, influence) that heat under abuse, degrade with overuse and recover with careful management; a finite agency/attention budget per entity per turn (no entity maximizes two competing fronts simultaneously); organizational inertia (direction changes require preparation, abrupt maneuvers destabilize); and context-dependent performance (proximity to stronger actors can draft or disturb, per the aerodynamics lesson).
+
+#### Scenario: No Binary Hostility
+
+- **WHEN** an entity's disposition is queried
+- **THEN** it SHALL expose curve values (e.g., patience temperature, suspicion wear) with history, not a hostile/friendly flag
+
+#### Scenario: Friction Circle of Agency
+
+- **WHEN** an entity attempts two demanding fronts in the same turn
+- **THEN** its finite agency budget SHALL force degraded performance on at least one front
+
+#### Scenario: Preparation Before the Turn
+
+- **WHEN** a faction changes direction abruptly without preparation events
+- **THEN** the world simulation SHALL apply destabilization proportional to the maneuver and the faction's momentum
+
+### Requirement: Soft-Body Graph Consequence
+
+Per the BeamNG node-beam lesson, world consequence SHALL be modeled as deformation of the knowledge graph — not scalar state flags: damage and crisis events deform specific edges (relations) of the affected structure, and functional consequences (lengthened influence routes, rerouted resources, weakened command) SHALL emerge from the deformed graph topology. Identical crises hitting different structures SHALL produce different deformations.
+
+#### Scenario: Damage Deforms Specific Edges
+
+- **WHEN** a faction suffers a targeted blow (e.g., funding severed)
+- **THEN** the deformation SHALL be recorded on the specific graph edges involved, not as a global strength scalar
+
+#### Scenario: Consequence Emerges from Topology
+
+- **WHEN** a deformed structure acts
+- **THEN** its functional limitations SHALL derive from the graph topology (longer paths, missing links) rather than an applied penalty constant
+
+#### Scenario: No Two Crises Deform Alike
+
+- **WHEN** the same crisis template hits two structurally different factions
+- **THEN** the resulting deformations and emergent consequences SHALL differ
+
+### Requirement: Attention-Based Simulation Fidelity
+
+Per the MSFS whole-world lesson, the world SHALL exist everywhere at coarse deterministic fidelity (routines, economy wiring, agendas — the substrate), with deep simulation (rich LLM minds, narrated detail) following player attention: regions players attend heat up into deep simulation and crystallize rich memory; neglected regions cool back to routine. Simulation depth is a law of the world (fidelity follows attention), not merely a cost cap — and it composes with the per-region LLM budgets already specified.
+
+#### Scenario: Region Heats and Cools
+
+- **WHEN** player attention concentrates on a region and later abandons it
+- **THEN** the region SHALL escalate to deep simulation while attended and de-escalate to deterministic routine when neglected, with the transition surfaced narratively (not as a system message)
+
+#### Scenario: Nothing Is Nonexistent
+
+- **WHEN** players arrive anywhere in the canonical world
+- **THEN** the location SHALL exist with at least substrate-level simulation (routine, economy wiring, presence) — no "unrendered void" inside canon
+
+### Requirement: Operable Doctrinal Systems
+
+Per the DCS study-level lesson (every cockpit button works), the game's instruments (intelligence analysis, PSYOP planning, counter-propaganda SCAME, interrogation, OPSEC) SHALL be operable systems: each real doctrinal step is an action the player performs in sequence, following the verified doctrine sources — not narrative mentions. Operating the system SHALL teach the real procedure (training transfer extended from recognition to operation).
+
+#### Scenario: Every Doctrinal Step Is an Action
+
+- **WHEN** a player uses a doctrinal system (e.g., runs a counter-propaganda response)
+- **THEN** each step of the real doctrine SHALL be an explicit operable action in the workflow, traceable to its source
+
+#### Scenario: Expert Walkthrough Recognized
+
+- **WHEN** a subject-matter expert observes a player completing a doctrinal workflow
+- **THEN** the expert SHALL recognize the real procedure, with deviations from doctrine documented
+
+### Requirement: Multi-Crew Stations
+
+Per the DCS multi-crew lesson (pilot + RIO operating one aircraft), player-run institutions and complex systems SHALL support divided stations: multiple players operating one system with distinct consoles, responsibilities and information (what one station sees, the other does not), cooperation required for full performance.
+
+#### Scenario: Divided Stations, One System
+
+- **WHEN** an institutional operation runs with multiple players on duty
+- **THEN** stations SHALL have distinct capabilities and information views, and the system's full performance SHALL require their cooperation
+
+#### Scenario: Station Information Asymmetry
+
+- **WHEN** one station perceives information relevant to another
+- **THEN** conveying it SHALL be an in-world act (communication), not automatic UI sharing
+
+### Requirement: Optional Reality Feed
+
+Per the MSFS live-weather lesson, the world system SHALL provide a reality feed that scenarios MAY enable: real-world current data (news, conditions) entering as world tick inputs for contemporary settings, with every injected item carrying provenance and date, and never bleeding into fictional universes (era and canon consistency enforced).
+
+#### Scenario: Opt-In per Scenario
+
+- **WHEN** a contemporary scenario enables the reality feed
+- **THEN** injected real-world items SHALL enter as world tick inputs with source URL and verification date attached
+
+#### Scenario: Fictional Universes Stay Closed
+
+- **WHEN** a fictional-universe scenario (e.g. O Cidadão do Futuro) runs
+- **THEN** no reality feed content SHALL enter its world
+
+### Requirement: Functional Body Narrative
+
+Per the Tarkov/Project Zomboid lesson, harm and illness SHALL be tracked as specific functional conditions with natural history — never numeric health bars: each condition (cut hand, compromised leg, fever, exhaustion) closes specific options in narration, evolves with care or neglect (prognosis), and compounds with others. This is the no-HP invariant's cost model: damage is the growing list of what the character can no longer do this scene.
+
+#### Scenario: No Bars, Only Conditions
+
+- **WHEN** a character is harmed
+- **THEN** the recorded state SHALL be a named condition closing specific options, with prognosis and care requirements — never a numeric pool
+
+#### Scenario: Conditions Evolve
+
+- **WHEN** a condition receives care or neglect over narrative time
+- **THEN** it SHALL progress through its natural history (improve, stabilize, worsen) rather than being removed by a single action
+
+### Requirement: Context-Sensitive Combat Resolution
+
+Per the Arma 3 physics-honesty lesson, combat resolution SHALL honor tracked physical facts (cover, distance, material, visibility) recorded as world state: the same creative action resolves differently by context; declared pre-action plans (entry planning — Ready or Not lesson) bind the resolution; carried equipment has distinct, knowable tactical semantics (loadout as tactical statement); and consequences MAY propagate beyond the direct target through intermediaries (penetration — soft-body graph ripple).
+
+#### Scenario: Same Action, Different Context
+
+- **WHEN** the same described action runs against different tracked physical facts
+- **THEN** the resolution SHALL differ accordingly, citing the facts that drove it
+
+#### Scenario: The Plan Binds
+
+- **WHEN** a player declares a pre-action plan (roles, entries, cover)
+- **THEN** the resolution SHALL treat the plan as binding context, and deviations SHALL cost proportionally
+
+#### Scenario: Ripple Beyond the Target
+
+- **WHEN** an action's effect passes through intermediaries (material, structure, third parties)
+- **THEN** consequences SHALL propagate to entities beyond the direct target via graph deformation
+
+### Requirement: Rules of Engagement as Audited Doctrine
+
+Per the Ready or Not lesson, proportional use of force SHALL be an operable doctrinal system: the force continuum (real ROE/police doctrine) is a workflow with explicit steps and justification points, judged post-hoc by the narrative auditor; unjustified force SHALL carry legal, psychological, reputational and heat consequences; non-combatants in the scene constrain action through the witness filter.
+
+#### Scenario: Continuum Is Operable
+
+- **WHEN** force is applied
+- **THEN** the applicable continuum step SHALL be an explicit operable choice with justification recorded in the event store
+
+#### Scenario: Auditor Judges Proportionality
+
+- **WHEN** the turn is audited
+- **THEN** disproportionate force against the circumstances (unarmed, surrendered, civilian present) SHALL be flagged with consequence, not silently resolved
+
+### Requirement: Narrated Metabolism Ledger
+
+Per the SCUM lesson, the body's slow systems (nourishment, fatigue accumulation, conditioning) SHALL be a coarse ledger accounted by the world and expressed in narration — the player never manages nutrients or dashboards; consequences arrive delayed and compounding (anti-grind by structure), and the body carries visible time passage (weight, scars, beard — the avatar as calendar, wired to avatar-mirror).
+
+#### Scenario: The World Accounts
+
+- **WHEN** the character's regimen over days is poor (food, rest, exertion)
+- **THEN** the narration SHALL surface it as fact and capability shifts — without any management UI
+
+#### Scenario: Body as Calendar
+
+- **WHEN** narrative time passes
+- **THEN** visible physical markers of that passage SHALL accumulate on the avatar across sessions
+
+### Requirement: Psychological Curves Modulating Narration
+
+Per the Project Zomboid lesson extended to an LLM-native mechanic, psychological state (stress, fear, morale) SHALL be entity curves applied to the player character that modulate what and how the narrator tells: tone, perception and offered options shift with psychological state, so an experienced player can read their own state from the prose itself.
+
+#### Scenario: Tone Reflects State
+
+- **WHEN** the character's stress curve runs high
+- **THEN** the narration's tone and perceptual offerings SHALL shift accordingly (threats overheard, intentions misread) without a meter being shown
+
+#### Scenario: Recovery Is Narrated
+
+- **WHEN** the curve recovers through rest, comfort or socializing
+- **THEN** the narration's register SHALL demonstrably settle, and the change SHALL be attributable in analysis mode
+
+### Requirement: Sleep-Crystallization
+
+Per the Project Zomboid sleep lesson bound to the engine's memory pyramid, memory crystallization SHALL occur during sleep: resting well consolidates the day into clean crystals; sleeping badly or unsafely yields partial, twisted or interrupted consolidation (nightmare seeds for plot-generation); dreams are narrative beats with mechanical weight.
+
+#### Scenario: Crystals Form in Sleep
+
+- **WHEN** the character sleeps after accumulated events
+- **THEN** the crystallization of those events SHALL be tied to that sleep, with quality affecting fidelity
+
+#### Scenario: Nightmare Seeds
+
+- **WHEN** sleep is poor, unsafe or stressed
+- **THEN** consolidation MAY produce twisted fragments usable as plot seeds rather than clean memory
+
+### Requirement: Consequence Afterlife
+
+Per the RDR2 lesson (carcasses decay and attract predators; the world keeps metabolizing what players leave behind), consequences SHALL have material afterlife: abandoned outcomes decay on a timeline and attract new actors — a dropped body draws scavengers, an unfinished deal breeds its own plot, a ruined pelt has a smell. The world's reaction to neglect is content.
+
+#### Scenario: Abandoned Consequence Attracts
+
+- **WHEN** a consequence is left unaddressed in the world
+- **THEN** it SHALL decay along a timeline and MAY attract actors or spawn developments that feed on it
+
+#### Scenario: Method Determines Yield
+
+- **WHEN** an action produces a harvestable outcome (hunt, deal, extraction)
+- **THEN** the method's quality SHALL determine the yield's value — clean work preserves worth, rough work ruins it
+
+### Requirement: Companion Bonds
+
+Per the RDR2 horse lesson, companions (mounts, animals, AI partners) SHALL be load-bearing characters: bond curves deepening with care and shared narrative, permanent death (no respawn — loss is story), and carried inventory bound to them, composing with carry-only consequence: losing the companion risks what it carries.
+
+#### Scenario: Bond Deepens With Care
+
+- **WHEN** a companion is cared for and shares narrative over time
+- **THEN** its bond curve SHALL deepen, unlocking trust behaviors — never as numeric stats shown to the player
+
+#### Scenario: Companion Loss Is Narrative
+
+- **WHEN** a companion dies
+- **THEN** the loss SHALL be permanent and narratively consequential, and the items it carried SHALL be subject to carry-only rules (recoverable at the site of loss, not teleported)
+
+### Requirement: Emergent Reputation Without a Moral Meter
+
+Per the RDR2 honor lesson, conduct reputation SHALL be emergent and invisible: no moral gauge is ever displayed — the world reacts through accumulated conduct held in entity curves, witness memory and regional standing (prices, dialogue options, how strangers greet, what children are told), and visible presentation (dirt, dress, weight, wounds) changes the treatment the character receives.
+
+#### Scenario: No Moral UI
+
+- **WHEN** the player looks for their moral standing
+- **THEN** no gauge, alignment or karma value SHALL exist anywhere in the interface — only the world's reactions
+
+#### Scenario: Presentation Changes Treatment
+
+- **WHEN** the character's visible state (clean vs bloodied, dressed vs ragged) differs
+- **THEN** NPC reception and offered options SHALL shift accordingly, traceable in analysis mode
+
+### Requirement: Regional Heat With Identity Mediation
+
+Per the RDR2 crime lesson, heat SHALL be regional and identity-mediated: witnesses report within their region, bounties accrue per region (per the GTA wanted-level lesson already specified), and identity obfuscation (mask, disguise, alias) delays or redirects attribution — recognition is a contest between notoriety and concealment.
+
+#### Scenario: Heat Stays Regional
+
+- **WHEN** a character accrues heat in one region
+- **THEN** other regions SHALL react only to what traveled there by word of witness, not by global flag
+
+#### Scenario: Concealment Contests Notoriety
+
+- **WHEN** an identity-obfuscating measure is used during an offense
+- **THEN** attribution SHALL be delayed or misdirected proportional to the disguise and the character's local notoriety
+
+### Requirement: Deliberative Combat — Focus and Formal Duels
+
+Per the Dead Eye and RDR1 duel lessons, combat SHALL support deliberation: focus marking (declaring targets and intents before resolution — the resolution honors the marks, composing with binding entry plans) and formalized confrontation scenes (duels, negotiations, standoffs) with a binding structure of setup, tension and decisive instant where preparation and nerve decide.
+
+#### Scenario: Focus Marks Bind Resolution
+
+- **WHEN** a player marks targets and intents in a focus window
+- **THEN** the resolution SHALL treat the marks as declared plan, with execution quality modulated by context
+
+#### Scenario: The Duel Has Structure
+
+- **WHEN** a formal confrontation is initiated
+- **THEN** it SHALL run its binding structure (setup, escalation, decisive instant), and the better-prepared side holds the edge the structure confers
+
+### Requirement: Simulation Density Without Friction
+
+Per the RDR2 aging-badly lesson (heavy controls, slow menus, sprawled tutorials recorded as guardrails), simulation density SHALL NOT justify interface friction: core actions stay immediate, menus never simulate weight, and onboarding is diegetic — woven into play, never front-loaded tutorials.
+
+#### Scenario: Density Never Taxes the Interface
+
+- **WHEN** the world's simulation grows denser
+- **THEN** interface latency and action depth SHALL remain constant — simulation cost is paid by the systems, not the player's hands
+
+#### Scenario: Diegetic Onboarding
+
+- **WHEN** a new system becomes relevant
+- **THEN** it SHALL be taught through play in-world (an NPC, a failure, a witnessed event), not through tutorial walls
+
+### Requirement: Failure Crystallizes
+
+Per the KSP lesson (explosions are data — failure teaches through honest systems), failure SHALL be generative: a failed action crystallizes into a lesson memory recording why it failed, and failures feed plot-generation as seeds — the world metabolizes defeat into story and knowledge, never a silent game-over.
+
+#### Scenario: Failed Action Leaves a Lesson
+
+- **WHEN** an action resolves as significant failure
+- **THEN** a lesson memory SHALL crystallize recording the causal why, available to later deliberation
+
+#### Scenario: Failure Feeds the Plot
+
+- **WHEN** a failure reshapes the situation
+- **THEN** it SHALL be eligible as plot seed material, surfacing consequences that feed on the defeat
+
+### Requirement: Windows of Opportunity
+
+Per the KSP transfer-window lesson, the world simulation SHALL open and close time-sensitive windows where specific actions become cheaper or newly possible — defined by world state (approaching elections, departing convoys, weather fronts), with missing a window carrying its cost; timing is a first-class dimension of action.
+
+#### Scenario: The Window Opens From World State
+
+- **WHEN** world state makes an action's cost drop or feasibility rise
+- **THEN** a window SHALL be derivable from that state and observable in-world (rumor, journal, NPC speech)
+
+#### Scenario: The Window Closes
+
+- **WHEN** the defining state passes
+- **THEN** the window SHALL close and the action SHALL revert to its full cost or infeasibility
+
+#### Scenario: Unique Achievement Races
+
+- **WHEN** an achievement is declared unique (only one completer)
+- **THEN** competing investors SHALL race within the window, and the losers' investment SHALL convert into partial salvage — never full refund, never silent loss
+
+### Requirement: Seasonal Production and Resource Rotation
+
+Per the Farming Simulator lesson, world production SHALL be seasonal and rotational: resources mature over narrative time (cohorts trained, dossiers compiled, crops grown, works finished) so timing matters — beginning early and harvesting in season; and world capital (neighborhoods, informant networks, territories, patrons) carries depletion curves: over-exploitation degrades, alternation and rest restore.
+
+#### Scenario: Maturation Takes Narrative Time
+
+- **WHEN** a production is started
+- **THEN** its maturation SHALL advance with narrative time and conditions, and harvesting out of season SHALL cost
+
+#### Scenario: Rotation Restores Depleted Capital
+
+- **WHEN** a world capital is over-exploited
+- **THEN** it SHALL degrade along its depletion curve and recover under alternation or rest, never by purchase alone
+
+### Requirement: The Graph as the Analyst's Instrument
+
+Per the NITE Team 4 lesson, the knowledge-graph SHALL be a player-facing instrument, not just engine state: analysis actions progressively reveal and link entities (per the layered reconnaissance lesson — each probe exposes more graph), and story content is deposited in-world (files, systems, devices) so that intruding and inspecting digs up lore — the filesystem as narrative surface.
+
+#### Scenario: Analysis Reveals the Graph
+
+- **WHEN** a player performs analysis actions on entities
+- **THEN** links and nodes SHALL become visible/buildable through that work — the world's map is drawn by analysis, not given
+
+#### Scenario: Lore Deposited in Systems
+
+- **WHEN** a player intrudes or inspects an in-world system or device
+- **THEN** story content (files, records, traces) MAY be discovered there, mapped to story cards
+
+### Requirement: Operable Intelligence Cycle
+
+Per the NITE Team 4 lesson, the intelligence cycle (collect → process → analyze → disseminate, with real analyst terminology) SHALL be an operable doctrinal workflow — the intel module of the operable doctrinal systems — and cyber+physical coordination SHALL be its multi-crew expression: a cyber station and a field station operating the same mission with asymmetric information.
+
+#### Scenario: Cycle Steps Are Operable
+
+- **WHEN** a player runs an intelligence operation
+- **THEN** each cycle phase SHALL be explicit operable actions with inputs and outputs flowing between phases
+
+#### Scenario: Cyber and Field Stations Share the Mission
+
+- **WHEN** an operation combines cyber and physical elements
+- **THEN** stations SHALL operate with asymmetric information, and the mission's full performance SHALL require their coordination
+
+### Requirement: Maximum-Fidelity Tier — Real Tools
+
+Per the HackHub/Grey Hack lesson, operable doctrinal systems in the cyber domain MAY run at a maximum-fidelity tier: the real tool (a sandboxed real VM/terminal) as the operable surface, and diegetic scripting (in-world code the player writes and shares) as study-level operation. This tier SHALL be strictly contained: sandboxed environments only, no real third-party targets, no live offensive tooling against non-simulated systems.
+
+#### Scenario: Real Tool, Sandboxed
+
+- **WHEN** a cyber operation runs at maximum fidelity
+- **THEN** it SHALL execute in a contained sandbox with no reach beyond simulated systems
+
+#### Scenario: Transfer Is One-to-One
+
+- **WHEN** a player trains cyber skills at this tier
+- **THEN** the practiced operations SHALL map one-to-one to real-tool competence (the training-grade bar at its extreme)
+
+#### Scenario: Diegetic Scripts
+
+- **WHEN** automation or tooling is authored
+- **THEN** it SHALL exist as in-world scripts — writable, shareable and versioned artifacts under the closed economy
+
+### Requirement: Asynchronous Intrusion and Hardening
+
+Per the Grey Hack lesson, player infrastructure SHALL be attackable while its owner is offline: intrusion attempts resolve against defensive state (hardening, OPSEC posture), the attack-that-happened-while-away surfaces narratively on return (composing with off-screen ticks and sleep), operations carry time-scoped escalation clocks (trace), and exploits decay along curves — the attacker/defender arms race as content engine.
+
+#### Scenario: Attacked While Away
+
+- **WHEN** a player's infrastructure is targeted in their absence
+- **THEN** the outcome SHALL resolve against their hardening posture and surface as narrative on return, not as a log line
+
+#### Scenario: Hardening Raises the Cost
+
+- **WHEN** a defender invests in hardening and OPSEC
+- **THEN** intrusion costs SHALL rise measurably for attackers, visible to them only as friction
+
+#### Scenario: Exploits Decay
+
+- **WHEN** an exploit technique circulates
+- **THEN** its effectiveness SHALL decay over narrative time as defenses adapt, forcing renewal
+
+### Requirement: NPC Wants and Fears as Plot Seeds
+
+Per the Sims lesson, NPCs SHALL carry rolling wants and fears — a small set of current desires and dreads derived from their agenda, curves and history that refresh as they are fulfilled, frustrated or overtaken by events. Wants/fears feed plot-generation continuously: every character is a story machine, and the world's plots emerge from their colliding desires rather than only from scripted triggers.
+
+#### Scenario: Wants Refresh on Resolution
+
+- **WHEN** a want is fulfilled or a fear realized
+- **THEN** the slot SHALL resolve into memory and a new want/fear SHALL roll in, consistent with the NPC's agenda and what just happened
+
+#### Scenario: Plots Emerge from Colliding Desires
+
+- **WHEN** plot seeds are generated
+- **THEN** wants/fears of multiple NPCs MAY collide to compose the seed — desire against desire, not only player-triggered arcs
+
+### Requirement: Faction Agendas — Declared and Hidden
+
+Per the Civilization lesson, factions SHALL carry two layers of agenda: a declared agenda (consistent, observable through words and deeds — the Civ visible agenda) and a hidden agenda (driving deviations, revealed only through analysis and intelligence work — composing with the graph-as-instrument requirement). Faction behavior SHALL always be consistent with both layers; the hidden layer explains what the declared layer cannot.
+
+#### Scenario: Behavior Consistent With Both Layers
+
+- **WHEN** a faction acts
+- **THEN** the action SHALL be consistent with its declared agenda on the surface and its hidden agenda underneath — never random contradiction
+
+#### Scenario: Hidden Agenda Revealed by Analysis
+
+- **WHEN** players accumulate enough linked intelligence about a faction's deviations
+- **THEN** the hidden agenda SHALL become inferable and confirmable through the graph, rewarding the intelligence cycle
+
+### Requirement: Regional Epochs With Legacy
+
+Per the Civilization lesson, world ticks SHALL be able to flip regional epochs — sustained periods such as golden ages or turmoil — that persist while active and leave a legacy modifier when they end. Epochs are the heavy-scale state of a region (composing with attention-based fidelity and soft-body consequence): they change what the region produces, how curves drift and which windows open.
+
+#### Scenario: The Epoch Flips
+
+- **WHEN** a region's accumulated state crosses a threshold (prosperity, devastation, cohesion)
+- **THEN** the world tick MAY flip its epoch, and the change SHALL surface narratively across the region
+
+#### Scenario: The Epoch Leaves Legacy
+
+- **WHEN** an epoch ends
+- **THEN** it SHALL leave a durable legacy modifier on the region (skills, ruins, institutions, memory) rather than vanishing without trace
+
 <!-- source: changes/add-worldbuilding-research/ -->
 
 ### add-worldbuilding-research
@@ -2991,7 +4200,7 @@ Project Lunar's world-building today derives from design intuition and from A/B 
 
 **New spec: worldbuilding-research**
 - From: no structured world-building research program; implicit and untraceable lessons.
-- To: 9 requirements — reverse engineering of Albion Online (player-driven economy, territories, risk bands, seasons), the Albion-in-life-RP hybrid synthesis (risk bands as state presence, carry-only loss, closed economy vs RP inflation, declared territory wars — translations mapped to mmo-game), reverse engineering of GTA San Andreas (CJ stats, gang war, NPC routines, wanted level, progressive gating), reverse engineering of GTA V RP worldwide (whitelist gates, IC/OOC rules, player-run institutions, per-country scenes, with translations mapped to mmo-game), reverse engineering of MUDs (offline persistent world, room+look network, social channels, RPI, OLC/MOO), reverse engineering of CyberCode Online (AFK/idle loop, procedural world from community-contributed corpora, multilingual lore channel), a d3wasm-based prototype of the final engine as a world-building laboratory, versioned lesson cards in `data/worldbuilding/lessons.json` with target-spec traceability, and an asset safeguard (documentary observation only + original implementation, d3wasm GPL-3.0 engine as the single documented code exception).
+- To: 17 requirements — reverse engineering of Albion Online (player-driven economy, territories, risk bands, seasons), the Albion-in-life-RP hybrid synthesis (risk bands as state presence, carry-only loss, closed economy vs RP inflation, declared territory wars — translations mapped to mmo-game), reverse engineering of GTA San Andreas (CJ stats, gang war, NPC routines, wanted level, progressive gating), reverse engineering of GTA V RP worldwide (whitelist gates, IC/OOC rules, player-run institutions, per-country scenes, with translations mapped to mmo-game), reverse engineering of MUDs (offline persistent world, room+look network, social channels, RPI, OLC/MOO), reverse engineering of CyberCode Online (AFK/idle loop, procedural world from community-contributed corpora, multilingual lore channel), reverse engineering of racing simulation fidelity (iRacing/ACC tire thermal, friction circle, weight transfer, aero, telemetry loops, safety rating; BeamNG soft-body node-beam deformation — translations mapped to mmo-game/world-simulation/knowledge-graph), reverse engineering of world-simulator fidelity (MSFS whole-world substrate with attention-based fidelity, live weather injection, licensed aircraft; DCS study-level cockpits, multi-crew stations, mission editor, module ecosystem — translations mapped to mmo-game/scenario-authoring), reverse engineering of military/tactical simulation (Arma 3 honest ballistics, Tarkov ammo/body-part/hydration, Ready or Not entry planning and proportional force — translations mapped to combat-system/mmo-game), reverse engineering of survival simulation (SCUM metabolism ledger and visible time passage, Project Zomboid stress/sleep/wounds/illness — translations mapped to mmo-game/memory-system/narrative-engine), reverse engineering of Red Dead Redemption (RDR2 world-simulation density with consequence afterlife, companion bonds, honor without meter, identity-mediated regional heat, Dead Eye deliberation; RDR1 duels; aging-badly guardrails — translations mapped to mmo-game), reverse engineering of honorable mentions (KSP failure-as-pedagogy, transfer windows, agency endorsements as training-grade evidence; Farming Simulator cycle durations, seasonal production, crop rotation — translations mapped to mmo-game/memory-system/world-simulation), reverse engineering of hacking/intel simulators (Hacknet terminal/recon/traces/lore-in-filesystems, Grey Hack diegetic scripting and async intrusion, NITE Team 4 intel cycle and entity-link analysis, HackHub real-VM tier — translations mapped to mmo-game/knowledge-graph), reverse engineering of life/strategy games (Sims wants-fears and decay as curve evidence, story progression; Civ declared/hidden agendas, eurekas, wonder races, epochs; AoE branching landmarks, counters, fog as attention evidence — translations mapped to mmo-game/plot-generation/npc-minds/world-simulation), a d3wasm-based prototype of the final engine as a world-building laboratory, versioned lesson cards in `data/worldbuilding/lessons.json` with target-spec traceability, and an asset safeguard (documentary observation only + original implementation, d3wasm GPL-3.0 engine as the single documented code exception).
 
 **Translation, not copying**
 - Each researched mechanic SHALL produce a card with: the original mechanic, why it works (emergent effect), and a candidate translation to the narrative engine (or a justified discard). Examples of candidate translations: Albion's regional markets → scarcity/price as a tick trigger; GTA SA pedestrian routines → npc-minds agendas; wanted level → consequence escalation in ticks; Doom 3 lore terminals → story cards.
@@ -3016,6 +4225,14 @@ Project Lunar's world-building today derives from design intuition and from A/B 
 - [ ] Research and document GTA San Andreas mechanics (stats, gangs, NPC routines, wanted level, gating) in public sources
 - [ ] Research and document GTA V RP worldwide mechanics (whitelist gates, IC/OOC rules, player-run institutions, player economies, per-country scenes: NoPixel/Cidade Alta/GTA5RP/GTA World) in public sources, with translations mapped to mmo-game
 - [ ] Research and document MUD mechanics (offline persistent world, room+look network, social channels, RPI, OLC/MOO) in public sources
+- [ ] Research and document racing-sim fidelity mechanics (iRacing/ACC tire thermal, friction circle, weight transfer, aero/dirty air, telemetry loops, safety rating; BeamNG soft-body node-beam deformation) in public sources, with translations mapped to mmo-game/world-simulation/knowledge-graph
+- [ ] Research and document world-sim fidelity mechanics (MSFS whole-world substrate with variable fidelity, live weather injection, licensed aircraft; DCS study-level cockpits, multi-crew stations, mission editor, module ecosystem) in public sources, with translations mapped to mmo-game/scenario-authoring
+- [ ] Research and document military/tactical mechanics (Arma 3 ballistics/penetration/energy, Tarkov ammo/body-part/hydration, Ready or Not entry planning and proportional force) in public sources, with translations mapped to combat-system/mmo-game
+- [ ] Research and document survival mechanics (SCUM metabolism ledger and visible time passage, Project Zomboid stress/sleep/wounds/illness/comfort) in public sources, with translations mapped to mmo-game/memory-system/narrative-engine
+- [ ] Research and document Red Dead Redemption mechanics (RDR2 world-simulation density, horse bonding, honor without meter, witness crime, living body, Dead Eye; RDR1 duels and random events; aging-badly guardrails) in public sources, with translations mapped to mmo-game
+- [ ] Research and document honorable-mentions mechanics (KSP orbital physics and failure-as-pedagogy, transfer windows, agency endorsements; Farming Simulator cycle durations, crop rotation, licensed equipment) in public sources, with translations mapped to mmo-game/memory-system/world-simulation
+- [ ] Research and document hacking/intel sim mechanics (Hacknet terminal/recon/traces/lore-in-filesystems; Grey Hack diegetic scripting and async intrusion; NITE Team 4 intel cycle and entity-link analysis; HackHub real-VM tier) in public sources, with translations mapped to mmo-game/knowledge-graph
+- [ ] Research and document life/strategy game mechanics (Sims wants-fears/decay/story progression; Civ agendas/eurekas/wonder races/epochs/victories; AoE landmarks/counters/fog/random maps) in public sources, with translations mapped to mmo-game/plot-generation/npc-minds/world-simulation
 - [ ] Research and document CyberCode Online mechanics (AFK/idle loop, procedural generation from community-contributed corpora, multilingual lore contributions) in the open-source repo and live game
 - [ ] Set up the d3wasm-based prototype (fork/vendor github.com/gabrielcuvillier/d3wasm — WebAssembly + WebGL id Tech 4) as the final-engine prototype base, with a documented GPL-3.0 compliance note
 - [ ] Build the world-building laboratory on it (first-person, dynamic lighting, lore terminals, triggers) with original/free assets — no Doom 3 game data (`.pk4`)
@@ -3095,6 +4312,233 @@ The research system SHALL document, from public sources (the open-source reposit
 - **WHEN** a lesson card claims a mechanic or number about the game
 - **THEN** the card SHALL cite the public source (repository path or URL) and verification date
 
+### Requirement: Reverse Engineering of Military/Tactical Simulation Mechanics
+
+The research system SHALL document, from public sources (Arma 3, Escape from Tarkov and Ready or Not official documentation and community ballistics/medicine guides), the mechanics that make them tactical references: Arma 3's honest ballistics (projectile drop, material penetration, energy balance — every shot a physical fact following laws, not dice), Tarkov's distinct ammo behaviors, body-part health and hydration/energy systems, and Ready or Not's entry planning and proportional use of force under police rules of engagement. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Physics-Honesty Lesson
+
+- **WHEN** the research documents ballistics, penetration and energy balance
+- **THEN** the card SHALL propose context-sensitive combat resolution over tracked physical facts, with real expertise usable in training scenarios (combat-system/mmo-game)
+
+#### Scenario: Functional-Body Lesson
+
+- **WHEN** the research documents body-part health and distinct ammo semantics
+- **THEN** the card SHALL propose the functional body narrative (local impairments closing options, loadout semantics) compatible with the no-HP invariant (mmo-game)
+
+#### Scenario: ROE Lesson
+
+- **WHEN** the research documents proportional force and entry planning
+- **THEN** the card SHALL propose rules of engagement as an audited operable doctrine and binding pre-action plans (mmo-game/narrative-audit)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Life/Strategy Game Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the life and strategy references: The Sims (decaying motive system — the historical origin of entity curves; wants/fears in rolling slots with aspiration points; relationship scores that decay over time; memories shaping behavior; autonomy acting on personality; story progression evolving the town without the player; life stages and genetics), Civilization (the 4X loop; leader AI with declared and hidden agendas; the tech/civics trees; eureka boosts — actions accelerating research; wonder races where only one builder completes; golden/dark ages with legacy; declared victory conditions; espionage, diplomacy, city-states), and Age of Empires (real-time resource economy; age advancement as gated progression; branching landmarks changing playstyle per age; counter triangles; fog of war; random maps; unique civilization bonuses). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Wants-and-Fears Lesson
+
+- **WHEN** the research documents rolling want/fear slots driving character behavior
+- **THEN** the card SHALL propose NPC wants/fears as a continuous plot-seed machine (mmo-game/plot-generation)
+
+#### Scenario: Faction-Agenda Lesson
+
+- **WHEN** the research documents leader agendas, declared and hidden
+- **THEN** the card SHALL propose faction minds with declared agendas (consistent, observable) and hidden agendas (revealed through analysis) (mmo-game/npc-minds)
+
+#### Scenario: Eureka Lesson
+
+- **WHEN** the research documents actions accelerating research
+- **THEN** the card SHALL propose practice accelerating learning for characters and institutions (mmo-game)
+
+#### Scenario: Race-and-Epoch Lessons
+
+- **WHEN** the research documents wonder races and golden/dark ages
+- **THEN** the card SHALL propose unique-achievement races (composing with windows) and regional epochs with persistent legacy (mmo-game/world-simulation)
+
+#### Scenario: Evidence Reinforcements
+
+- **WHEN** the research documents the Sims motive decay and the fog of war
+- **THEN** the card SHALL record them as genre evidence for entity curves and attention-based fidelity already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Hacking/Intel Simulation Mechanics
+
+The research system SHALL document, from public sources (official sites, the Malwarebytes and popsecurity analyses of NITE Team 4, the HackHub developer posts and Steam page), the mechanics of hacking and intelligence simulators: Hacknet's terminal-native interface, layered reconnaissance (scan/probe/exploit), active/passive trace clocks, bounce/proxy routing, RAM program slots and lore delivered through server file systems; Grey Hack's diegetic scripting (a real in-world scripting language), asynchronous multiplayer intrusion (your infrastructure attacked while offline), hardening arms race and player markets; NITE Team 4's operable intelligence cycle with real NSA analyst terminology (from the Snowden archive), entity-link analysis as gameplay, cyber+physical mission coordination and its 15-module study-level architecture; and HackHub's real Kali Linux VM as interface — the maximum-fidelity tier where the operable tool is the real tool. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Graph-as-Instrument Lesson
+
+- **WHEN** the research documents entity-link analysis as the player's core activity
+- **THEN** the card SHALL propose the knowledge-graph as the analyst's instrument — analysis actions progressively reveal and link the world graph (knowledge-graph/mmo-game)
+
+#### Scenario: Intel-Cycle Lesson
+
+- **WHEN** the research documents the phased intelligence workflow with real terminology
+- **THEN** the card SHALL propose the operable intelligence cycle as the intel module of the doctrinal systems (mmo-game)
+
+#### Scenario: Real-Tool Tier Lesson
+
+- **WHEN** the research documents a real Kali VM as the game interface
+- **THEN** the card SHALL propose a maximum-fidelity tier where operable systems run the real tool — with sandboxing and no real third-party targets as hard constraints (mmo-game)
+
+#### Scenario: Async-Intrusion Lesson
+
+- **WHEN** the research documents asynchronous multiplayer intrusion and hardening
+- **THEN** the card SHALL propose player infrastructure attackable while offline, hardening as persistent OPSEC gameplay, and exploit decay as an arms race (mmo-game/world-simulation)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Honorable Mentions Mechanics
+
+The research system SHALL document, from public sources (Kerbal Space Program and Farming Simulator official documentation, space-agency endorsements, community guides), the mechanics of the honorable mentions: KSP's real orbital physics and aerodynamics (used even by space agencies — the authority proof of training-grade simulation), its emergent pedagogy (explosions as data — failure teaches), and transfer windows (the right moment when cost drops, defined by world state); and Farming Simulator's complete agriculture cycle with real licensed equipment (proof of the closed economy and provenance-based authenticity), its cycle durations (nothing is instant — time as the raw material of production) and crop rotation (over-exploitation depletes, rotation restores). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Failure-as-Pedagogy Lesson
+
+- **WHEN** the research documents KSP failures teaching through honest physics ("rapid unscheduled disassembly" as data)
+- **THEN** the card SHALL propose failure crystallization — failed actions generating lesson memories and plot seeds (memory-system/mmo-game)
+
+#### Scenario: Windows-of-Opportunity Lesson
+
+- **WHEN** the research documents transfer windows
+- **THEN** the card SHALL propose world-tick windows where actions become cheaper or possible, with timing as cost (mmo-game/world-simulation)
+
+#### Scenario: Seasonal-Production Lesson
+
+- **WHEN** the research documents crop cycles with durations and weather dependence
+- **THEN** the card SHALL propose seasonal maturation of world production over narrative time (mmo-game)
+
+#### Scenario: Resource-Rotation Lesson
+
+- **WHEN** the research documents crop rotation restoring depleted soil
+- **THEN** the card SHALL propose depletion/rest curves on world capital (neighborhoods, informant networks, territories, patrons) (mmo-game/world-simulation)
+
+#### Scenario: Training-Grade Evidence Reinforcement
+
+- **WHEN** the research documents space agencies using KSP
+- **THEN** the card SHALL record it as authority evidence for the training-grade requirement already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Red Dead Redemption Mechanics
+
+The research system SHALL document, from public sources (RDR2/RDR1 official documentation, Rockstar design interviews, community analysis), the mechanics that keep RDR2 ahead of most 2026 releases as systemic density: world-as-simulation (NPC routines, predator chains, decaying carcasses, mud/snow affecting movement), horse bonding (bond levels, permanent death, carrying the inventory), the honor system that changes prices/dialogues/endings without a visible moral meter, hunting with real rules (wrong caliber ruins the pelt, clean shot preserves value, abandoned carcass attracts predators), crime with witnesses (regional bounty, mask-mediated identity), contextual dialogue with NPC memory, the living body (weight, beard, dirt changing treatment), and Dead Eye target marking as a tactical tool; plus RDR1's random road events, iconic duels and Euphoria reactions — and what aged badly (heavy controls, slow menus, sprawled tutorials) recorded as design guardrails. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Consequence-Afterlife Lesson
+
+- **WHEN** the research documents decaying carcasses attracting predators and material chains
+- **THEN** the card SHALL propose consequences with material afterlife — abandoned outcomes decay and attract new actors (world-simulation/mmo-game)
+
+#### Scenario: Companion-Bond Lesson
+
+- **WHEN** the research documents horse bonding with permanent death and carried inventory
+- **THEN** the card SHALL propose companion bond curves with narrative permanence wired to carry-only consequence (mmo-game)
+
+#### Scenario: Honor-Without-Meter Lesson
+
+- **WHEN** the research documents the honor system changing the world without a visible gauge
+- **THEN** the card SHALL propose emergent reputation without a moral meter, with presentation-based treatment (mmo-game)
+
+#### Scenario: Guardrails From What Aged Badly
+
+- **WHEN** the research documents friction complaints (heavy controls, slow menus, sprawled tutorials)
+- **THEN** the card SHALL record density-without-friction guardrails for the game's interface and onboarding
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Survival Simulation Mechanics
+
+The research system SHALL document, from public sources (SCUM and Project Zomboid official documentation and community guides), the survival mechanics relevant to a narrative-first adaptation: SCUM's detailed metabolism ledger (calories, nutrients, digestion timing, visible time passage such as beard growth) and Project Zomboid's psychological and medical simulation (stress from environment, sleep debt and nightmares, wounds with distinct prognosis, slow illness arcs, boredom and comfort needs). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Narrated-Ledger Lesson
+
+- **WHEN** the research documents the metabolism simulation
+- **THEN** the card SHALL propose a coarse narrated metabolism ledger — the world accounts and tells, the player never manages nutrients — and the body as visible calendar (avatar-mirror/mmo-game)
+
+#### Scenario: Sleep-Crystallization Lesson
+
+- **WHEN** the research documents sleep debt, dreams and unsafe sleep
+- **THEN** the card SHALL propose memory crystallization during sleep with poor sleep yielding partial or twisted consolidation (memory-system/mmo-game)
+
+#### Scenario: Psyche-in-Prose Lesson
+
+- **WHEN** the research documents stress modulating performance
+- **THEN** the card SHALL propose psychological curves modulating the narration itself — an LLM-native mechanic no traditional survival game has (narrative-engine/mmo-game)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of World-Simulator Fidelity Mechanics
+
+The research system SHALL document, from public sources (Microsoft Flight Simulator and DCS World official documentation, developer communications, module-maker materials), the mechanics that make these simulators reference world-simulators: MSFS's whole-world substrate (the entire planet pre-exists at generated fidelity — photogrammetry where attention flows, autogen elsewhere — with authored content raising fidelity locally, like hand-crafted airports), real-time reality injection (live weather from real-world data), licensed aircraft (authenticity through partnership and provenance); and DCS World's study-level cockpit simulation (every button and system modeled and operable, teaching the real machine through operation), multi-crew stations (divided roles operating one complex system, e.g. pilot + RIO), the mission editor as a creation platform, and the third-party module ecosystem with a maintained quality bar. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Attention-Fidelity Lesson
+
+- **WHEN** the research documents the whole-world substrate with variable fidelity (detailed where attention flows, coarse elsewhere)
+- **THEN** the card SHALL propose attention-based simulation fidelity for the world (deep LLM simulation where players attend, deterministic routine elsewhere) mapped to the region budgets (mmo-game/world-simulation)
+
+#### Scenario: Operable Systems Lesson
+
+- **WHEN** the research documents study-level cockpits where every button works
+- **THEN** the card SHALL propose operable doctrinal systems (each real doctrinal step an operable action) and multi-crew stations for player-run institutions (mmo-game)
+
+#### Scenario: Reality Injection Lesson
+
+- **WHEN** the research documents live real-world weather as content
+- **THEN** the card SHALL evaluate an opt-in reality feed as a world tick source (provenance and date attached, era-consistent) or a justified discard
+
+#### Scenario: Authoring Platform Lesson
+
+- **WHEN** the research documents the mission editor and module ecosystem
+- **THEN** the card SHALL propose depth for the scenario editor (triggers/conditions — the same language as plot seeds and prototype triggers) and quality-gated author tiers (scenario-authoring/mmo-game)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these simulators
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Racing Simulation Fidelity Mechanics
+
+The research system SHALL document, from public sources (iRacing and Assetto Corsa Competizione official documentation and community telemetry guides; BeamNG.drive documentation of its soft-body node-beam model), the mechanics that make professional drivers train on these simulators: tire thermal/degradation models (grip as a temperature and wear curve, not a state), the friction circle (finite total grip shared between competing demands), weight transfer (load shifts under braking/cornering; direction changes require preparation), aerodynamic context sensitivity (downforce rising with speed, dirty air degrading following cars), telemetry-driven deliberate practice loops (lap data exported and analyzed), iRacing's safety rating and licensing (conduct measured per incident, progressive access), and BeamNG's soft-body deformation (vehicles as node-beam structures where crash damage is continuous, structural and functionally emergent — never a pre-baked damage state). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Training-Transfer Lesson
+
+- **WHEN** the research documents professionals training on the simulator because skills transfer to reality
+- **THEN** the card SHALL propose transfer-of-training as a measurable simulation-quality bar for the game's training domains (mmo-game) or a justified discard
+
+#### Scenario: Thermal Curves Lesson
+
+- **WHEN** the research documents tire thermal/degradation models and the friction circle
+- **THEN** the card SHALL map them to stateful entity curves with finite agency budgets in the world simulation (world-simulation/npc-minds)
+
+#### Scenario: Soft-Body Graph Lesson
+
+- **WHEN** the research documents BeamNG's node-beam deformation with emergent functional damage
+- **THEN** the card SHALL propose graph-edge deformation as the consequence model for the world's knowledge graph (knowledge-graph/world-simulation)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic or number about these simulators
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
 ### Requirement: Albion-in-Life-RP Hybrid Synthesis
 
 The research system SHALL document the cross-game synthesis of Albion Online systems transposed onto a real-life RP world (GTA San Andreas/RP style): risk bands reinterpreted as state presence per region (financial district = Blue with cameras and fast response; industrial/port = Yellow; periphery = Red; no-signal rural zones = Black with no reliable map/info), full loot domesticated as carry-only material loss, regional markets per neighborhood, guild territory reinterpreted as faction-controlled districts with protection/commerce income, seasons as elected government terms, spec-by-use as practice-based skill, and inter-city logistics as freight routes with ambush risk. The synthesis SHALL surface what each side fixes: Albion's closed economy solves RP inflation; RP's sacred character life domesticates Albion's cheap death; player institutions legalize scheduled territory wars.
@@ -3172,7 +4616,7 @@ The project SHALL include a playable in-browser prototype built on **d3wasm** (g
 
 ### Requirement: Versioned Lesson Cards
 
-Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
+Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, racing sims, world sims, tactical/survival sims, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
 
 #### Scenario: Traceable Accepted Card
 
