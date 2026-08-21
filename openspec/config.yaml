@@ -1,0 +1,69 @@
+schema: spec-driven
+
+context: |
+  # Project Lunar — local-first narrative RPG engine
+
+  Language: en
+  All artifacts must be written in English.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  Game content (scenarios, prompts, crystals, journals, tags) remains
+  bilingual (en + pt-br) by design — that is content, not artifacts.
+
+  ## What the system is
+  Project Lunar is a narrative RPG ENGINE (not a single game): authors create
+  scenarios (lore, NPCs, locations, factions, setup questions) and players
+  live adventures narrated by LLMs, with 4-level persistent memory (crystal
+  pyramid), a reactive world, creativity-based combat and AI-generated
+  cold-opens. Bilingual (en + pt-br) in every prompt, crystal, journal and
+  tag. No HP, mana or grind — narrative only.
+
+  ## Stack
+  - Frontend: React 19 + Vite 7 + Zustand 5 + Tailwind 3 (frontend/)
+  - Backend: Python 3.10+ + FastAPI (backend/app/) — central orchestrator is
+    GameSession (services/game_session.py)
+  - Persistence: SQLite event-sourced (events.db, scenarios.db, traces.db)
+  - Graph: Neo4j 5 (Docker) + Graphiti-core (experimental)
+  - LLM: litellm — DeepSeek (1M ctx), Anthropic Claude (1M/200k), OpenAI
+    gpt-5.6-sol (372k); optional CLIProxyAPI proxy (port 8318)
+  - Narrative delivery: SSE (POST /api/game/action) with inline control tags
+    ([MODE], [JOURNAL], [INVENTORY], [POWER], [CRYSTAL], [PLOT_AUTO],
+    [TRUNCATE_CLEAN], [USAGE], [TRACE], [DONE])
+
+  ## Capability map (openspec/specs/)
+  - scenario-authoring: scenarios, setup questions, story cards, interpolation
+  - opening-generation: fixed vs AI-generated cold-open
+  - narrative-engine: mode detection, prompts, streaming, open scene window
+  - prompt-caching: zones 0/1/2 + cloaking (PHASE 2)
+  - memory-system: SHORT→MEDIUM→LONG→MEMORY pyramid + RAG + witness filter
+  - combat-system: 40/40/20 creativity score + power levels
+  - npc-minds: private thoughts, decay, knowledge boundaries
+  - world-simulation: off-screen world ticks + timeskip
+  - plot-generation: automatic triggers, cooldowns, plot lock
+  - journal-system: automatic detection of significant events
+  - inventory-system: inline tags [ITEM_ADD|USE|LOSE]
+  - knowledge-graph: Neo4j + canonical name resolution
+  - llm-routing: multi-provider, model policy, token accounting
+  - narrative-audit: context-aware post-hoc auditor (PHASE 3b)
+  - game-api: REST + SSE contract
+  - event-persistence: event sourcing + full state rebuild
+  - frontend-ui: panels, wizard, builder, devtools
+  - military-forces-catalog: real catalog of units/squadrons/specializations
+    of the Brazilian Armed Forces + world elites + ideal soldier model, with
+    sources
+  - avatar-mirror: the player as an avatar of themselves (all ages):
+    mirroring levels with consent, narrative translation (CTN), LGPD
+    deny-list, context budget (~1k tokens) always in the volatile zone
+  - deployment: Docker Compose stack (uv backend + nginx frontend with /api
+    and SSE proxy, Neo4j in optional profile), credentials outside the
+    image, persistence across restarts, host access for the Hermes proxy
+
+  ## Project invariants (learned in A/B — docs/fase3a_ab.md, fase3b_ab.md)
+  - Never feed the narrator's own raw prose back as history beyond the open
+    scene (tic auto-conditioning).
+  - Pink-elephant anti-pattern: never give literal examples of vices to
+    avoid.
+  - [ITEM_*] tags and @Name mentions are load-bearing side effects: the
+    Auditor must never alter them in a rewrite.
+  - All in-memory state is rebuilt from the event store on every GET.
+  - Feature flags (LUNAR_FEATURE_*, default ON) degrade to legacy behavior
+    instead of breaking.
