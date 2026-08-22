@@ -285,10 +285,25 @@ never a second-class citizen — every feature expresses through the same contra
     legislation and precedent, institutional elections, migration between
     shards, art and patronage, cuisine, sports leagues, education with
     the full pedagogical cycle (crystals as curriculum, masters, schools,
-    lineages, knowledge ecology), science with peer review, historiography,
+    lineages, knowledge ecology) and the researcher/engineer pipeline —
+    the five-step ladder with the binding stamp, laboratory formation
+    (journal clubs, replication as canon audit, priority notebooks,
+    funding and scientific Goodhart), emergent disciplines, talent
+    demographics with brain drain and generational lag, and real-player
+    formation on public data — plus science with peer review, historiography,
     logistics on graph edges, operable utilities, public works, pollution and
     recovery, emergent belief (fictional canon only), diplomatic protocol as
-    operable doctrine, and bureaucracy as conscious in-world texture.
+    operable doctrine, and bureaucracy as conscious in-world texture — plus
+    the clean-energy matrix (physically honest sources, transmission and
+    dispatch with the operator station, energy auctions and the spot signal,
+    the Wright's-law transition with stranded assets and critical minerals,
+    distributed prosumers, and matrix crises as announced threats) — plus
+    the nuclear layer: the reactor as honest envelope (xenon, decay heat,
+    type personalities), the multi-crew control room and proliferation-
+    sensitive fuel cycle, defense in depth under an independent regulator,
+    ten-thousand-year waste as the definitive legacy artifact, nuclear
+    economics (FOAK overruns, the carbon debate), and radiation/INES-scale
+    crises coupled to the world's weather.
 15. **Civilization lab** — the real-simulator layer (spec civilization-lab):
     three modes over one engine (game / sealed-fork simulator / emulator
     calibrated by the reality feed), consented character-level telemetry with a
@@ -339,6 +354,30 @@ never a second-class citizen — every feature expresses through the same contra
     rare emergent NPC prodigies), and expertise measured in the lab
     (transfer vs baseline in consented cohorts, hypotheses through the
     prediction registry, domain skills only — never ability claims).
+20. **Disaster doctrine** — the real risk science: risk = hazard ×
+    exposure × vulnerability as citable doctrine with honest forecast
+    horizons per hazard (quakes in seconds, floods in days, droughts in
+    months); the four-phase cycle (mitigation, preparedness, response,
+    recovery); incident command as operable doctrine over the dispatch
+    console; the tragedy of prevention (invisible mitigation vs visible
+    response — political economy); compound catastrophes emerging from
+    system composition; and recovery as politics (build back better vs
+    restore fast, the stamp answering the hazard-or-negligence question).
+21. **Remaining world systems** — the final families: space programs and
+    orbital infrastructure (satellites feeding phone/GPS/weather/
+    surveillance), astronomy as playable science; the prison system as a
+    playable region with recidivism-measured policy, jury duty,
+    constitutions and expiring emergency powers; the war machine's human
+    systems (supply war, conscription, veterans, POWs, HUMINT tradecraft,
+    the military-industrial complex); taxation, financial crises (runs,
+    bubbles, bailouts), money laundering, pensions, population dynamics;
+    whistleblowing with source protection, citizen encryption, censorship
+    circumvention; public transit, gateways and customs, mental-health
+    institutions, the third sector, social movements; fisheries as
+    commons, invasive species, zoonoses, law of the sea; the entertainment
+    industry, mega-events, fashion cycles, diasporas and remittances,
+    language evolution, and collective commemoration (forgetting as an
+    attributable act).
 
 ## 5. Data Architecture
 
@@ -378,12 +417,14 @@ never a second-class citizen — every feature expresses through the same contra
 ## 7. Build Sequence and Gates
 
 **Phase 0 — Research and prototype lab (worldbuilding-research).**
-Documentary reverse engineering of 27 tracks (Albion, EVE Online, GTA SA,
+Documentary reverse engineering of 32 tracks (Albion, EVE Online, GTA SA,
 GTA V RP, GTA VI, MUDs, CyberCode, tactical/survival sims, RDR2, world/racing
 simulators, life/strategy, hacking/intel, the three engineering BoKs,
 virtual-economies academia, the Marxist-Leninist glossary + Chinese societal
 model, the profession-simulator corpus, the Kojima corpus, the realism-milestone
-canon, expertise science…) → versioned lesson cards with source + verification
+canon, expertise science, energy-system science, nuclear-system science,
+research/engineering formation science, disaster science, the remaining
+world systems…) → versioned lesson cards with source + verification
 date (GTA VI cards additionally carry evidence status; post-release re-verification
 pass after 2026-11-19). UE5 playable prototype as the world-building lab and
 engine-risk reducer (EULA/royalty terms documented; no proprietary assets).

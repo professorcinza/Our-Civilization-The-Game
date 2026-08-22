@@ -2842,6 +2842,878 @@ Per the honest transfer literature (deliberate practice explains a fraction of o
 - **WHEN** any training claim is made
 - **THEN** it SHALL be a named domain skill — general-ability claims are forbidden
 
+### Requirement: Physically Honest Generation Sources
+
+Per the maximum-realism doctrine, every generation asset SHALL carry an honest physical profile: capacity and capacity factor; hydro with reservoir storage following seasonal inflow (composing seasonal production); solar and wind with availability curves following the world's simulated weather (composing extreme weather); thermal and nuclear with fuel logistics (composing routes and blockades) and outage curves under maintenance. The matrix SHALL be the mix decision — diversity as resilience, monoculture as cheap until it is not — and no source SHALL produce outside its physical profile.
+
+#### Scenario: The Weather Rules the Plant
+
+- **WHEN** a solar or wind asset produces
+- **THEN** its output SHALL follow the world's actual simulated weather and season — never a flat rate
+
+#### Scenario: The Reservoir Is a Battery
+
+- **WHEN** hydro inflow varies
+- **THEN** stored water SHALL behave as seasonal energy storage with honest depletion and refill
+
+#### Scenario: Monoculture Fails Honestly
+
+- **WHEN** a region depends on one source
+- **THEN** that source's profile alone SHALL determine when the matrix breaks
+
+### Requirement: Transmission, Dispatch and the Operator Station
+
+The grid SHALL run as constrained graph edges with deterministic merit-order dispatch: lines with capacity (congestion, redispatch — composing network interlocks), the system operator as a player-run institution holding the dispatch console (an asymmetric station over the whole grid), reserve margin as declared policy, and blackouts cascading honestly through overloaded edges (composing failure cascades). Rationing SHALL be a political decision with declared rules — quotas, rotation, and who loses power first.
+
+#### Scenario: Merit Order Dispatches
+
+- **WHEN** demand moves
+- **THEN** dispatch SHALL follow declared merit order on the deterministic layer — visible, contestable, cheap
+
+#### Scenario: The Cascade Trips
+
+- **WHEN** an overloaded edge fails
+- **THEN** the failure SHALL propagate honestly to what it overloads — blackouts are physics, not drama
+
+#### Scenario: Rationing Is Legislation
+
+- **WHEN** supply cannot meet demand
+- **THEN** rationing SHALL be enacted as declared policy with recorded winners and losers
+
+### Requirement: Energy Markets — Auctions, Contracts and the Spot Signal
+
+Energy SHALL be contracted through the mechanism-design machinery: procurement auctions (descending clock, sealed formats) among generators, long-term power-purchase contracts versus the spot price, curtailment disputes (energy generated and wasted as legal and economic content), and the spot price as a regional tick signal composing markets and inflation.
+
+#### Scenario: The Auction Contracts Capacity
+
+- **WHEN** expansion is procured
+- **THEN** the auction mechanism SHALL be declared configuration with its known properties
+
+#### Scenario: PPA Versus Spot
+
+- **WHEN** consumers and generators contract
+- **THEN** long-term certainty and spot exposure SHALL trade off with real consequences on both sides
+
+#### Scenario: Curtailment Is Litigation
+
+- **WHEN** renewable output exceeds line capacity
+- **THEN** the wasted energy SHALL be attributable — and disputable — content
+
+#### Scenario: The Spot Feeds the Signals
+
+- **WHEN** the spot price moves
+- **THEN** it SHALL register as a regional tick signal composing market and inflation analysis
+
+### Requirement: The Clean Transition — Learning Curves, Stranded Assets and Critical Minerals
+
+The transition SHALL be capital allocation under real dynamics: the learning curve (Wright's law — unit cost falls with cumulative installed capacity, citable) making renewables cheaper as the world builds; stranded assets as political weight — yesterday's thermal fighting back through the political-economy machinery; critical minerals (lithium, rare earths) with depletion and rotation curves composing supply-chain exposure and blockades; and carbon pricing as legislation feeding the ecological-civilization epoch curves.
+
+#### Scenario: Cost Falls as the World Builds
+
+- **WHEN** cumulative installed capacity doubles
+- **THEN** unit cost SHALL fall per the learning curve — the emergent tech tree applied to energy
+
+#### Scenario: The Stranded Fight Back
+
+- **WHEN** policy devalues installed assets
+- **THEN** the owners SHALL be political actors contesting the transition through every legal channel
+
+#### Scenario: Minerals Are the New Geography
+
+- **WHEN** the transition demands critical minerals
+- **THEN** their deposits, depletion and blockade exposure SHALL be priced strategic facts
+
+#### Scenario: Carbon Is Law
+
+- **WHEN** carbon pricing is enacted
+- **THEN** emission curves SHALL move and the epoch's green targets SHALL register progress
+
+### Requirement: Distributed Generation and Prosumers
+
+Generation SHALL also be bottom-up: owned spaces produce (rooftop analogs) with net-metering compensation, communities build microgrids, and homesteads go off-grid — the distributed matrix against the centralized one as a live political dispute, composing housing, utilities and institutions.
+
+#### Scenario: The Roof Earns
+
+- **WHEN** an owned space generates
+- **THEN** compensation SHALL flow per declared net-metering rules — the prosumer as actor
+
+#### Scenario: Microgrids Contest the Monopoly
+
+- **WHEN** communities organize their own supply
+- **THEN** the dispute with the central matrix SHALL be political and economic content
+
+### Requirement: Matrix Crises as Announced Threats
+
+The energy system SHALL generate its crisis family as announced world threats: the dark doldrums (a sunless, windless stretch punishing poorly mixed matrices), the reservoir drought (a slow national drama readable in tick signals months ahead), and the cascading blackout (minutes that darken a region, with repair crews as labor gameplay) — all announced through diegetic channels with preparation windows.
+
+#### Scenario: The Dunkelflaute Arrives
+
+- **WHEN** a windless, sunless stretch settles
+- **THEN** the warning SHALL arrive diegetically with a window — the mix decides who suffers
+
+#### Scenario: The Drought Reads Months Ahead
+
+- **WHEN** reservoirs draw down
+- **THEN** the crisis SHALL be legible in tick signals long before it bites — analysis becomes policy
+
+#### Scenario: The Cascade Darkens Minutes
+
+- **WHEN** the cascade trips
+- **THEN** minutes SHALL darken a region, and repair crews SHALL be the labor that restores it
+
+### Requirement: The Reactor as an Honest Operating Envelope
+
+Per the maximum-realism doctrine, nuclear reactors SHALL be operating envelopes with citable physics: reactivity as living state (control rods, moderator, temperature coefficients — power follows the physics, never a slider), reactor types with honest personalities (light-water stability; heavy-water natural uranium; positive-void designs cheaper and more dangerous as an epoch's choice; small modular reactors with passive safety), xenon-135 poisoning (the iodine pit that punishes restart decisions), and decay heat (a shut-down reactor keeps heating — cooling dependence as an honest clock, never a cutscene).
+
+#### Scenario: The Iodine Pit Decides
+
+- **WHEN** power is reduced and restoration is attempted
+- **THEN** xenon buildup SHALL oppose reactivity — restart timing is physics, not preference
+
+#### Scenario: Decay Heat Does Not Care
+
+- **WHEN** the reactor shuts down
+- **THEN** decay heat SHALL continue demanding cooling — losing it starts an honest countdown
+
+#### Scenario: Design Is a Choice
+
+- **WHEN** a reactor type is procured
+- **THEN** its physical personality (stability, passivity, danger) SHALL be the declared, citable trade-off
+
+### Requirement: The Control Room and the Fuel Cycle
+
+The nuclear plant SHALL run as the definitive multi-crew station: licensed operator, shift supervisor and station engineer as distinct asymmetric roles, procedures as doctrine (composing training-grade), SCRAM as the expensive button (restart costs days by xenon), and malfunction cards at the instructor station injecting transients for certified training — the most training-grade profession in the game. The fuel cycle SHALL be a strategic chain: ore depletion (composing critical minerals), enrichment (the proliferation-sensitive node — civil levels versus weapons-usable becoming a detectable political fact via the intelligence cycle, under the sensitive-site rule of fictional analogs), fabrication, burnup, then reprocessing or storage.
+
+#### Scenario: Three Stations, One Reactor
+
+- **WHEN** the plant operates
+- **THEN** the licensed roles SHALL hold distinct information and controls — procedure is the coordination
+
+#### Scenario: Enrichment Is Political
+
+- **WHEN** enrichment rises beyond civil levels
+- **THEN** the fact SHALL be detectable by intelligence work and consequential in-world — fictional analogs only, per the sensitive-site rule
+
+### Requirement: Defense in Depth and the Independent Regulator
+
+Nuclear safety SHALL be operable defense-in-depth (the citable IAEA doctrine): declared barrier layers and redundancy, safety culture as an institutional curve (procedure against production pressure, composing quota-versus-safety), licensing as years-long process under an independent regulator institution (bureaucracy with existential motive), and inter-operator peer review as institutional practice.
+
+#### Scenario: Layers Are Declared
+
+- **WHEN** a plant is licensed
+- **THEN** its barrier layers and redundancies SHALL be declared configuration — auditable after any event
+
+#### Scenario: Culture Is a Curve
+
+- **WHEN** production pressure meets procedure
+- **THEN** the safety-culture curve SHALL move, and its decay SHALL precede incidents honestly
+
+### Requirement: The Ten-Thousand-Year Waste Problem
+
+Spent fuel SHALL be the definitive legacy artifact: pool to dry cask to geological repository as a multi-generational public work (the citable Onkalo case), whose siting and licensing are decades of politics; decommissioning funds as decades-long financial sinks (composing credit and bookkeeping); and the waste record SHALL never erase — every nuclear decision today is archaeology readable by players not yet born (composing the palimpsest, epochs and versioned artifacts).
+
+#### Scenario: The Outliving Asset
+
+- **WHEN** waste is committed to a repository
+- **THEN** the record SHALL persist beyond every other structure in the region — legacy measured in civilizations
+
+#### Scenario: Siting Is a Generation of Politics
+
+- **WHEN** a repository is proposed
+- **THEN** the siting fight SHALL be institutional content measured in decades
+
+### Requirement: Nuclear Economics and the Carbon Debate
+
+Nuclear economics SHALL be honest: brutal capital cost with first-of-a-kind overruns (the citable Vogtle case) and learning to nth-of-a-kind (Wright's law applied), decades of low marginal cost making it the matrix's most valuable long-term contract (composing auctions and PPAs), and the political debate real: nuclear as contested clean energy within the ecological-civilization epoch, with fear and carbon lobbies composing the political-economy machinery on both sides.
+
+#### Scenario: The First Plant Overruns
+
+- **WHEN** the first-of-a-kind is built
+- **THEN** cost and schedule SHALL overrun honestly — and the second SHALL cost less per the curve
+
+#### Scenario: Fear Versus Carbon
+
+- **WHEN** the energy transition is contested
+- **THEN** the nuclear debate SHALL run through institutions and the feed with citable arguments on both sides
+
+### Requirement: Radiation as Body and Place — Nuclear Crises as Announced Threats
+
+Radiation SHALL be body-and-place mechanics: exposure as functional-body condition (accumulated dose, ALARA as work doctrine, acute versus chronic), radionuclide dispersion coupled to the world's weather (composing propagating hazards — the plume follows the wind), exclusion zones as geography marked for generations, decontamination as labor (the liquidator lesson as historical card and in-world profession), and iodine-and-evacuation as preparation windows. Nuclear crises SHALL be announced threats rated on the citable INES scale — the operational transient (human factors), the physical accident (design plus culture) and the beyond-design-basis external event (extreme weather testing declared defenses) — each in-world event auditable with existential political consequence.
+
+#### Scenario: The Plume Follows the Wind
+
+- **WHEN** radionuclides release
+- **THEN** dispersion SHALL follow the world's actual weather — forecastable, trackable, respondively playable
+
+#### Scenario: Dose Is Accumulated Biography
+
+- **WHEN** a worker or responder operates in the zone
+- **THEN** dose SHALL accumulate as body record under ALARA discipline — heroism has a price
+
+#### Scenario: INES Rates the Event
+
+- **WHEN** a nuclear crisis occurs
+- **THEN** the citable scale SHALL rate it, the audit SHALL attribute it, and the politics SHALL be existential
+
+### Requirement: The Unified Five-Step Formation Ladder
+
+Formation of researchers and engineers SHALL be one engine parameterized by each domain's doctrine (curriculum, rites, and what the signature obliges), running five steps: foundations (literacy and domain fundamentals, T-shaped breadth before depth), dual apprenticeship (school-and-bench alternation — capstone design-build-test for engineers, rounds for medics, laboratory rotation for researchers), professional certification with safety-gated access (uncertified characters SHALL find the laboratory locked), sealed autonomy (years under a licensed professional before the binding stamp — the signature that answers for the work before audit, court and council; judgment beyond the code is what gets certified), and formator-of-formators (masters forming masters, closing the lineage cycle).
+
+#### Scenario: One Engine, Every Doctrine
+
+- **WHEN** any domain defines formation
+- **THEN** the same five-step ladder SHALL run with the domain's curriculum, rites and signature obligations
+
+#### Scenario: The Stamp Binds
+
+- **WHEN** sealed work fails
+- **THEN** the signing professional SHALL answer — accountability is the certification's other face
+
+#### Scenario: Safety Gates the Bench
+
+- **WHEN** an uncertified character seeks laboratory access
+- **THEN** the door SHALL stay locked until the safety certification exists
+
+### Requirement: The Laboratory as the Unit of Research Formation
+
+Research SHALL be learned by doing research under a master: the laboratory as the formation unit (the principal investigator as mentor and manager of agenda, funding and people), laboratory rotation for the undecided, the journal club as recurring practice (presenting others' work as retrieval and argumentation training), and replication as pedagogy — first works SHALL replicate classic results, teaching method while auditing the canon (replication failures as citable world events). The laboratory notebook SHALL be a versioned legal artifact deciding priority disputes, and the citation graph SHALL carry standing — with metrics as Goodhart bait (publish-or-perish as real distortion pressure against integrity).
+
+#### Scenario: First Works Replicate
+
+- **WHEN** a researcher forms
+- **THEN** the first tasks SHALL be replications — and a failed replication SHALL be publishable scandal
+
+#### Scenario: The Notebook Decides Priority
+
+- **WHEN** two claimants dispute a discovery
+- **THEN** the versioned notebooks SHALL settle priority on the record
+
+#### Scenario: Metrics Game Badly
+
+- **WHEN** publication metrics become targets
+- **THEN** distortion SHALL emerge (sliced results, salami publishing) and integrity SHALL be the counterweight
+
+### Requirement: Research Funding and Scientific Integrity
+
+Science SHALL be financed as gameplay: grants as peer-reviewed competitions under the mechanism-design machinery, laboratory funding curves, and funding dependence shaping agendas (real content, critically). Integrity SHALL be institutional: fabrication, falsification and plagiarism as attributable acts; retraction as public process; the integrity officer as a role — and quota-against-safety SHALL apply to science (publish-or-perish pressing against rigor).
+
+#### Scenario: The Grant Is a Competition
+
+- **WHEN** laboratories seek funding
+- **THEN** the grant mechanism SHALL be declared configuration with peer review as the evaluator
+
+#### Scenario: Misconduct Is Attributable
+
+- **WHEN** integrity fails
+- **THEN** the act SHALL be attributable, the retraction public, and the career consequences real
+
+### Requirement: Emergent Disciplines at the Frontiers
+
+New fields SHALL emerge at domain boundaries: hybrid competency forms where domains touch (bioengineering, computational law), and a discipline IS founded when enough hybrids publish under a shared identity — the tech-tree-is-the-graph rule applied to the disciplines themselves, with founding figures, inaugural curricula and lineage records as citable history.
+
+#### Scenario: Hybrids Found Fields
+
+- **WHEN** boundary researchers accumulate
+- **THEN** a new discipline SHALL be foundable — with its first textbook as a versioned artifact of record
+
+### Requirement: The Demographic Layer — Pipelines, Brain Drain and Generational Lag
+
+Formation SHALL be a demographic system: credentialed-professional demand as tick signal (shortages legible in labor markets), inter-shard migration of the credentialed as geopolitical brain drain (composing migration), and formation capacity as strategic resource with generational lag — a region's future engineers are decided by its schools a generation earlier (the delayed-policy web applied to people).
+
+#### Scenario: Shortage Reads in the Market
+
+- **WHEN** institutions lack credentialed professionals
+- **THEN** the signal SHALL be legible in wages and project delays
+
+#### Scenario: Brain Drain Is Geopolitics
+
+- **WHEN** shards compete for the credentialed
+- **THEN** migration SHALL move capability between polities with strategic consequence
+
+#### Scenario: Schools Decide 2045
+
+- **WHEN** formation investment is cut
+- **THEN** the engineering shortfall SHALL arrive a generation later, attributably
+
+### Requirement: Real-Player Formation on Public Data
+
+The same pipeline SHALL form real players: replication assignments on real public datasets through the reality feed (the game's homework as real science on open data), journal clubs as real reading groups, domain certifications with transfer measured against baselines and verifiable credentials opt-in — the game as a formation engine for researchers and engineers outside the fiction, under the lab's ethics governance.
+
+#### Scenario: Homework Is Real Science
+
+- **WHEN** a replication assignment runs
+- **THEN** it MAY use real public datasets via the reality feed with provenance and dates
+
+#### Scenario: Transfer Out Is Measured
+
+- **WHEN** a player completes a domain pipeline
+- **THEN** transfer SHALL be measurable against baseline and the credential issuable opt-in
+
+### Requirement: The Risk Formula as Citable Doctrine
+
+Per the real disaster-science doctrine (risk = hazard × exposure × vulnerability, per UNDRR), natural-disaster risk SHALL be a citable decomposition: hazard profiles from honest physics (seismic zones following the world's generated geology; floodplains following its watersheds; wildfire fuel coupled to drought and wind), exposure from what is built where (composing zoning and geography), vulnerability from construction quality, poverty and maintenance. Every countermeasure SHALL attack one of the three terms — and choosing which is politics. Forecast horizons SHALL be honest per hazard: earthquakes give seconds (early-warning racing the waves), floods give hours to days, droughts give months, volcanoes give weeks of unrest — some disasters do not warn, and the world SHALL not lie about it.
+
+#### Scenario: The Decomposition Reads
+
+- **WHEN** an analyst assesses a region's risk
+- **THEN** the hazard, exposure and vulnerability contributions SHALL be separable and citable
+
+#### Scenario: The Horizon Is Honest
+
+- **WHEN** a hazard approaches
+- **THEN** its forecast horizon SHALL match its physics — early warning for quakes is seconds, never days
+
+### Requirement: The Four-Phase Disaster Cycle
+
+Countermeasures SHALL run the real four-phase cycle: mitigation (hazard zoning as law, building codes as versioned doctrine enforced against corruption, levees and retrofits as public works, ecological buffers composing restoration, relocation as the hardest politics), preparedness (early-warning infrastructure with sirens and phone-and-feed alerts, drills with measured transfer at the instructor station, strategic stockpiles, routes and shelters, insurance penetration), response (the first 72 hours honest — isolation, information blackout, utilities failing), and recovery (assessment, displacement, finance, reconstruction politics).
+
+#### Scenario: Codes Enforced or Corrupted
+
+- **WHEN** construction runs under a building code
+- **THEN** enforcement SHALL be real content — the flexed code is citable after the event
+
+#### Scenario: Drills Transfer
+
+- **WHEN** a region rehearses
+- **THEN** the drill SHALL be training-grade practice whose transfer is measurable when the real event comes
+
+#### Scenario: Seventy-Two Honest Hours
+
+- **WHEN** the event strikes
+- **THEN** isolation and cascading utility failure SHALL govern the response window honestly
+
+### Requirement: Incident Command as Operable Doctrine
+
+Disaster response SHALL run the real incident-command doctrine (ICS — unified command, span of control, resource typing) as operable structure: composing the dispatch console, multi-crew stations, mass-line consultation, mutual aid between regions and shards, medical triage (START doctrine), and search-and-rescue — coordination as the trained skill that decides outcomes.
+
+#### Scenario: Unified Command Forms
+
+- **WHEN** agencies respond
+- **THEN** unified command with declared span of control SHALL structure the operation — or its absence SHALL cost
+
+#### Scenario: Mutual Aid Crosses Borders
+
+- **WHEN** capacity is insufficient
+- **THEN** neighboring regions and shards SHALL be able to send typed resources — with the politics included
+
+### Requirement: The Tragedy of Prevention
+
+The political economy of disasters SHALL be real: mitigation that works is invisible — the disaster that did not happen wins no election, while the blanket handed out afterward does. Prevention-versus-response SHALL be a standing political contest (composing the Goodhart and political-economy doctrines), with negligence accumulating risk legibly to analysts (the quiet seismic gap, the deferred retrofit, the fuel load — composing neglect-breeds-threats).
+
+#### Scenario: The Invisible Victory
+
+- **WHEN** mitigation succeeds
+- **THEN** credit SHALL be contested politics — the levee that held versus the hero of the rubble
+
+#### Scenario: Negligence Accumulates
+
+- **WHEN** deferred maintenance and flexed codes persist
+- **THEN** accumulated risk SHALL be readable to analysis before the event, and attributable after
+
+### Requirement: Compound Catastrophes Emerge
+
+Disasters SHALL compound through the specified systems, never by script: quake topples the line (matrix cascade), pumping fails (utilities), water contaminates (epidemic), displacement follows (migration), the regional economy shocks — each link an honest composition of existing mechanics, attributable link by link in the audit.
+
+#### Scenario: The Chain Is Honest
+
+- **WHEN** cascades compound
+- **THEN** each link SHALL follow the underlying systems' real rules — and the audit SHALL trace the chain
+
+### Requirement: Recovery as Politics — Build Back Better or Restore Fast
+
+Recovery SHALL be political economy: damage assessment composing forensics; displacement composing housing and migration; insurance claims with adjusters as profession (disputed payouts as content); the rebuild dilemma — build back better (slower, expensive, epoch-shifting) versus restore fast (cheaper, popular, trauma repeated) — composing epochs and legacy; psychological trauma as curves; and the postmortem's defining question — hazard or negligence? — with the stamp answering: the sealing engineer, the corrupt inspector, the deferred retrofit all citable before institutions.
+
+#### Scenario: Claims Are Contested
+
+- **WHEN** payouts are assessed
+- **THEN** adjusters, disputes and fraud SHALL be playable economic content
+
+#### Scenario: The Rebuild Dilemma
+
+- **WHEN** reconstruction begins
+- **THEN** better-versus-faster SHALL be a real political choice with generational consequence
+
+#### Scenario: The Stamp Answers
+
+- **WHEN** the postmortem assigns cause
+- **THEN** the signing professional and the enforcing institution SHALL be accountable — hazard is fate, negligence is attributable
+
+### Requirement: Space Programs and Orbital Infrastructure
+
+Per the citable mission histories of real space programs, polities SHALL be able to run space programs: rockets and probes as megaproject mission campaigns (composing whole-nation science), orbital infrastructure as the shared high ground — satellites feeding the phone's navigation, weather observation, communications and surveillance (composing the feed, forecasting and intelligence), launch capacity as strategic dependency, orbital debris as an announced threat with cascade risk, and the space race between shards as epoch-defining competition.
+
+#### Scenario: The Satellite Feeds Everything
+
+- **WHEN** orbital infrastructure operates
+- **THEN** navigation, weather observation, communications and surveillance SHALL depend on it — and lose it when debris strikes
+
+#### Scenario: The Race Defines the Epoch
+
+- **WHEN** shards compete beyond the atmosphere
+- **THEN** firsts and capabilities SHALL mark the epoch's record
+
+### Requirement: Astronomy as Playable Science
+
+The sky SHALL be a science surface: observatories as research institutions whose discoveries (comets, asteroids, transient events) enter the knowledge graph through the peer-review pipeline; sky events as narrated world texture; and asteroid detection as planetary-defense early warning with an honest horizon — years of warning, or none.
+
+#### Scenario: The Observatory Publishes
+
+- **WHEN** the sky is observed deliberately
+- **THEN** discoveries SHALL enter the record through research publication
+
+#### Scenario: The Honest Horizon
+
+- **WHEN** an impact threat exists
+- **THEN** the warning horizon SHALL follow orbital physics — years if seen early, none if not
+
+### Requirement: The Prison System as Playable Region
+
+Per real penology (citable), incarceration SHALL be a playable region and policy: prisons with their own economies and hierarchies, prison labor as contested production (composing labor and ROE), punishment versus rehabilitation as declared policy with recidivism as its measurable curve, overcrowding as crisis, and escape as plot with consequence chains; sentences compose with the courts and the New Life Rule.
+
+#### Scenario: The Region Behind Walls
+
+- **WHEN** a character is incarcerated
+- **THEN** the prison SHALL be a full region — economy, hierarchy, politics of its own
+
+#### Scenario: Recidivism Measures the Policy
+
+- **WHEN** a polity declares punish-versus-rehabilitate
+- **THEN** recidivism curves SHALL measure the choice honestly over years
+
+### Requirement: Jury Duty as Citizen Gameplay
+
+Juries SHALL be playable: citizens summoned, evidence weighed under real instruction, bias real and trainable (Heuer's discipline for laypeople — composing analysis bias), deliberation as multi-crew disagreement, and the verdict as judgment composing precedent.
+
+#### Scenario: The Summons Arrives
+
+- **WHEN** a citizen is summoned
+- **THEN** jury service SHALL be playable civic obligation with consequence
+
+#### Scenario: Deliberation Disagrees Honestly
+
+- **WHEN** the jury deliberates
+- **THEN** bias and persuasion SHALL operate visibly — the room is content
+
+### Requirement: Constitutions and Emergency Powers
+
+The constitution SHALL be the supreme versioned artifact: amendment through declared supermajority process, emergency powers as time-boxed auditable exceptions whose renewal is political content, and coups as plot that suspends the document with world-visible consequence.
+
+#### Scenario: The Supreme Artifact
+
+- **WHEN** fundamental rules change
+- **THEN** amendment SHALL run the declared process, versioned forever
+
+#### Scenario: Emergencies Expire
+
+- **WHEN** emergency powers are invoked
+- **THEN** they SHALL be time-boxed, auditable, and renewed only politically
+
+### Requirement: War Logistics — the Supply War
+
+Per the logistics-of-war doctrine, war SHALL be a supply system: fuel, ammunition, food and replacements flowing along contested edges to the front; attrition and friction as honest physics; logistics interdiction as the operational art composing system confrontation; and the supply chain as the readable weakest link.
+
+#### Scenario: The Front Eats Supply
+
+- **WHEN** forces operate
+- **THEN** consumption SHALL flow along edges — starved units degrade honestly
+
+#### Scenario: Interdiction Is the Art
+
+- **WHEN** supply lines are attacked
+- **THEN** the front SHALL feel it through the system — the chain is the target
+
+### Requirement: Conscription as Policy
+
+Conscription SHALL be a policy with human cost: the draft as legislation that breaks careers, families and factions (composing elections and bonds), draft evasion as crime and conscience, and professional versus conscript forces as a declared trade-off of quality, cost and politics.
+
+#### Scenario: The Draft Breaks Lives
+
+- **WHEN** conscription is enacted
+- **THEN** the summoned SHALL face the honest cost — and politics SHALL answer
+
+#### Scenario: Evasion Has Conscience
+
+- **WHEN** citizens refuse
+- **THEN** evasion and conscientious objection SHALL be distinct, consequential paths
+
+### Requirement: Veterans — the Human Cost
+
+Per the citable veterans' research, war SHALL leave its people: PTSD composing the psychological curves with treatment arcs, reintegration as narrated struggle, the veterans' lobby as political faction, and generational trauma as family-curve legacy.
+
+#### Scenario: The War Follows Home
+
+- **WHEN** service ends
+- **THEN** the psychic cost SHALL persist as treatable, narrated condition
+
+#### Scenario: The Lobby Speaks
+
+- **WHEN** veterans organize
+- **THEN** their faction SHALL move budgets and memory politics
+
+### Requirement: Prisoners of War
+
+POWs SHALL exist under the IHL doctrine: capture, camps as institutions subject to audit and exchange, prisoner exchange as negotiated windows, mistreatment as war crime with standing consequence, and the return of captives as narrated reintegration composing veterans.
+
+#### Scenario: Camps Are Auditable
+
+- **WHEN** captives are held
+- **THEN** conditions SHALL be inspectable, and mistreatment SHALL be war crime
+
+#### Scenario: Exchange Is a Window
+
+- **WHEN** parties negotiate
+- **THEN** prisoner exchanges SHALL be declared windows with trust effects
+
+### Requirement: Espionage Tradecraft — HUMINT
+
+Per public tradecraft doctrine (citable historical practice), human intelligence SHALL be a craft: cover identities with maintenance cost, recruitment of assets through their wants and fears (composing npc-minds), dead drops and secure contact, moles and counterintelligence with betrayal as the standing risk, and the agent network as a fragile graph decaying with neglect.
+
+#### Scenario: The Cover Decays
+
+- **WHEN** a cover is neglected
+- **THEN** maintenance debt SHALL accumulate — exposure follows honestly
+
+#### Scenario: Betrayal Is the Standing Risk
+
+- **WHEN** networks run
+- **THEN** every human link SHALL be a betrayal surface — and double games playable
+
+### Requirement: The Military-Industrial Complex
+
+Arms manufacture SHALL be an economic-political sector: weapons as closed-economy production with export policy (composing diplomacy and embargoes), the arms lobby as faction shaping doctrine and budgets, and the revolving door as institutional curve — with Tilly's citable thesis recorded: war-making, state-making and organized crime as kin.
+
+#### Scenario: Exports Are Diplomacy
+
+- **WHEN** arms are sold
+- **THEN** the sale SHALL be a diplomatic act with consequence both ways
+
+#### Scenario: The Lobby Shapes Doctrine
+
+- **WHEN** budgets are written
+- **THEN** the arms faction SHALL be a player — auditable, contestable
+
+### Requirement: Taxation as Gameplay
+
+Taxation SHALL be playable policy and crime: tax design as legislation (progressive and regressive structures, bases and rates composing mechanism design), evasion as economic crime detectable by forensics (composing analysis), enforcement institutions with audit capacity, and tax flight of wealth and talent as migratory response.
+
+#### Scenario: The Code Is Design
+
+- **WHEN** a polity taxes
+- **THEN** the structure SHALL be declared, analyzable design — incidence visible over time
+
+#### Scenario: Evasion Is Forensic Content
+
+- **WHEN** wealth hides
+- **THEN** forensics and audit SHALL be able to trace it — with consequence
+
+### Requirement: Financial Crises — Runs, Bubbles and Bankruptcies
+
+Finance SHALL crisis honestly: bank runs as emergent events (confidence as curve, the queue at the door), bubbles as speculative overvaluation with narrated euphoria (composing prediction markets), bankruptcy as legal process, and the bailout-or-let-fail dilemma as epoch politics.
+
+#### Scenario: The Run Is a Queue
+
+- **WHEN** confidence breaks
+- **THEN** the run SHALL be emergent — first-mover advantage real, panic contagious
+
+#### Scenario: Bail or Fail Is Epoch Politics
+
+- **WHEN** systemically important institutions wobble
+- **THEN** the rescue dilemma SHALL be political content with generational stakes
+
+### Requirement: Money Laundering
+
+Illicit wealth SHALL need laundering: placement, layering and integration as flows composable through businesses, art and betting (composing forensics, contracts and prediction markets), compliance institutions, and dirty money as a taint visible to disciplined analysis.
+
+#### Scenario: Dirty Money Needs Washing
+
+- **WHEN** criminal earnings seek legitimacy
+- **THEN** laundering SHALL require real flows through real businesses
+
+#### Scenario: The Taint Is Detectable
+
+- **WHEN** analysis follows the value
+- **THEN** the laundering chain SHALL be reconstructable — and prosecutable
+
+### Requirement: Pensions and the Generational Promise
+
+Pensions SHALL be the generational math: contribution and payout as a demographic machine (composing population dynamics), underfunding as an honest actuarial curve, reform as perpetual third-rail politics, and the demographic pyramid as the slowest crisis in the world.
+
+#### Scenario: The Actuarial Truth Reads
+
+- **WHEN** a pension fund is examined
+- **THEN** its solvency curve SHALL be analyzable decades ahead
+
+#### Scenario: Reform Is the Third Rail
+
+- **WHEN** benefits are touched
+- **THEN** the politics SHALL be honest — the promise fights back
+
+### Requirement: Population Dynamics
+
+The population SHALL be a living system: birth rates responding to economy, policy and war (the demographic transition as citable doctrine), migration composing diaspora flows, aging as dependency curve, and the census as institutional instrument feeding policy.
+
+#### Scenario: Births Respond
+
+- **WHEN** economy, policy and war shift
+- **THEN** fertility SHALL move on lagged, analyzable curves
+
+#### Scenario: The Pyramid Shifts Slowly
+
+- **WHEN** demographics age
+- **THEN** dependency and labor markets SHALL feel it over generations
+
+### Requirement: Whistleblowing and Source Protection
+
+Leaks SHALL be a frontline: whistleblowing as a protected-but-punished act (the honest dilemma), journalist-source privilege as institutional rule, secure drop channels (composing citizen encryption), retaliation as attributable content, and the leak that changes an epoch.
+
+#### Scenario: The Source Risks Everything
+
+- **WHEN** an insider leaks
+- **THEN** protection and retaliation SHALL both be real, playable stakes
+
+#### Scenario: Privilege Is Institutional
+
+- **WHEN** power demands the source
+- **THEN** the press institution's privilege SHALL be contestable law
+
+### Requirement: Citizen Encryption
+
+Personal privacy SHALL be tooling: civilian cryptography as a usable capability (CyBOK doctrine in citizen form), keys as seizable-and-forgettable artifacts, state access as contested legislation (composing privacy-rights doctrine), and the ordinary citizen's opacity as a live political question.
+
+#### Scenario: The Citizen Can Lock
+
+- **WHEN** private communication is wanted
+- **THEN** usable encryption SHALL exist — and its management be honest about loss
+
+#### Scenario: Access Is Contested Law
+
+- **WHEN** the state wants in
+- **THEN** the access debate SHALL be legislation with standing on both sides
+
+### Requirement: Circumventing Censorship
+
+When power silences — the edit bay, licensing, shutdown — circumvention SHALL exist: mesh and samizdat networks, smuggled signal, the cat-and-mouse of filtering and tunneling, composing institutional reputation and legislation; the silenced always have a costlier path.
+
+#### Scenario: The Silenced Find a Costlier Path
+
+- **WHEN** channels are closed
+- **THEN** costlier circumvention SHALL remain possible — friction, never impossibility
+
+#### Scenario: The Mouse Adapts
+
+- **WHEN** filtering tightens
+- **THEN** adaptation SHALL be an honest arms race of technique
+
+### Requirement: Public Transit as Operable System
+
+Transit SHALL run: lines and timetables as operable networks (composing layout, interlocks and labor shifts), fare policy as politics (the fare debate), service quality as curves, and transit strikes composing collective action.
+
+#### Scenario: The Network Is Operable
+
+- **WHEN** a city moves
+- **THEN** lines, frequencies and headways SHALL be managed throughput — congestion honest
+
+#### Scenario: The Fare Is Politics
+
+- **WHEN** fares are set
+- **THEN** the debate SHALL compose budgets, equity and ridership visibly
+
+### Requirement: Ports, Airports and Customs
+
+Gateways SHALL be operable hubs: cargo and passenger flows composing logistics, customs as an inspection institution (composing smuggling forensics), capacity as throughput gameplay, and the gateway strike as a national crisis.
+
+#### Scenario: The Customs Inspects
+
+- **WHEN** goods and people cross
+- **THEN** inspection SHALL be playable rule-following under pressure — with discretion
+
+#### Scenario: The Gateway Chokes
+
+- **WHEN** a hub strikes or fails
+- **THEN** dependent flows SHALL feel it regionally as tick-visible scarcity
+
+### Requirement: Mental Health Institutions
+
+Mental care SHALL be institutional: therapy as a certified profession composing treatment arcs, institutionalization versus community care as declared policy with histories, destigmatization as a cultural curve, and the asylum-to-community transition as epoch content.
+
+#### Scenario: Therapy Is Certified Practice
+
+- **WHEN** minds need care
+- **THEN** certified therapists SHALL run treatable arcs — the psyche composes the body
+
+#### Scenario: The Policy Declares
+
+- **WHEN** a polity chooses asylum or community
+- **THEN** outcomes SHALL follow honestly, and history SHALL judge citably
+
+### Requirement: The Third Sector
+
+Civil society beyond state and market SHALL exist: NGOs and charities as institutions with missions, funding and accountability; philanthropy composing wealth's legacy; and the nonprofit as an institutional form with its own failure modes.
+
+#### Scenario: The Mission Needs Funding
+
+- **WHEN** an NGO operates
+- **THEN** mission, funding and accountability SHALL be real institutional dynamics
+
+#### Scenario: Philanthropy Seeks Legacy
+
+- **WHEN** the wealthy give
+- **THEN** giving SHALL be standing, influence and tax — all at once
+
+### Requirement: Social Movements and Protest
+
+Beyond strikes, movements SHALL exist: protest waves as contagion through the social graph (composing belief curves and the feed), repression versus concession as the state's dilemma, movement organization as faction-in-formation, and the movement that becomes a party.
+
+#### Scenario: The Wave Contagions
+
+- **WHEN** grievance finds a spark
+- **THEN** protest SHALL spread through the graph honestly — and compose the feed
+
+#### Scenario: Repress or Concede
+
+- **WHEN** the state answers
+- **THEN** both paths SHALL have real costs and analyzable outcomes
+
+### Requirement: Fisheries and the Tragedy of the Commons
+
+Fisheries SHALL be commons management: stocks as ecological curves under harvesting pressure, quotas and licensing as mechanism design, illegal fishing as crime, stock collapse as a slow crisis with decades-long recovery, and community co-management as an alternative institution.
+
+#### Scenario: The Stock Declines Silently
+
+- **WHEN** harvesting exceeds renewal
+- **THEN** collapse SHALL be the slow, legible-in-analysis crisis it really is
+
+#### Scenario: Quotas Are Design
+
+- **WHEN** fisheries are governed
+- **THEN** quota and license mechanisms SHALL be declared, gameable, analyzable
+
+### Requirement: Invasive Species
+
+Ecological invasion SHALL arrive: species carried by trade and shipping (composing logistics), invasion as ecosystem deformation with economic bite (composing agriculture and fauna), and biosecurity inspection as the prevention institution.
+
+#### Scenario: The Ship Carries Stowaways
+
+- **WHEN** trade moves species
+- **THEN** invasion risk SHALL travel the routes honestly
+
+#### Scenario: Prevention Is Inspection
+
+- **WHEN** biosecurity operates
+- **THEN** inspection SHALL be the tradable line between invasions
+
+### Requirement: Zoonoses
+
+Animal-human disease bridges SHALL exist: spillover from wildlife and livestock (composing epidemics and agriculture), veterinary surveillance as the early-warning institution, farming and market practices as risk surfaces, and the pandemic traceable to its spillover origin by epidemiology.
+
+#### Scenario: The Spillover Traces
+
+- **WHEN** a novel pathogen emerges
+- **THEN** epidemiology SHALL be able to trace the origin honestly
+
+#### Scenario: Surveillance Buys Time
+
+- **WHEN** veterinary monitoring runs
+- **THEN** early warning SHALL be the difference contained
+
+### Requirement: The Law of the Sea
+
+Maritime order SHALL exist: exclusive economic zones as declared claims, disputed waters as diplomacy and incident risk, shipping lanes as strategic arteries, piracy as crime with geography, and the maritime tribunal as institution.
+
+#### Scenario: The Claim Declares
+
+- **WHEN** waters are claimed
+- **THEN** zones SHALL be declared, mapped, disputable law
+
+#### Scenario: The Incident Risks
+
+- **WHEN** rivals share the sea
+- **THEN** incidents SHALL be escalation content under diplomatic protocol
+
+### Requirement: The Entertainment Industry
+
+Entertainment SHALL be an industry: cinema, music and shows as production chains (composing art and labor), stars as reputational figures (composing standing), distribution as market power, and the audience's attention as the scarce resource composing the feed.
+
+#### Scenario: The Star Is Standing
+
+- **WHEN** performers rise
+- **THEN** stardom SHALL be standing with all its curves — and all its falls
+
+#### Scenario: Distribution Is Power
+
+- **WHEN** work reaches audiences
+- **THEN** the distribution gate SHALL be contested market power
+
+### Requirement: Mega-Events
+
+Mega-events SHALL be political economy: bidding as competition, cost overruns and displacement as honest history (the citable record), legacy as durable infrastructure versus white elephant, and the event as a national-narrative moment composing the feed.
+
+#### Scenario: The Bid Overpromises
+
+- **WHEN** a region bids
+- **THEN** the cost-benefit honesty SHALL be recorded for the audit to come
+
+#### Scenario: Legacy Is Audited
+
+- **WHEN** the event ends
+- **THEN** legacy SHALL be measured — use it or lose it, citably
+
+### Requirement: Fashion and Trend Cycles
+
+Fashion SHALL cycle: trend emergence and diffusion as social contagion (composing visible status and manufacture), seasons composing the cultural calendar, counterfeits composing forensics, and dress as readable identity composing standing.
+
+#### Scenario: The Trend Diffuses
+
+- **WHEN** a style emerges
+- **THEN** diffusion SHALL run the graph from originators through adopters to the discarded
+
+#### Scenario: The Counterfeit Detected
+
+- **WHEN** status is faked
+- **THEN** forgery SHALL be detectable, prosecutable content
+
+### Requirement: Diasporas and Remittances
+
+Diasporas SHALL be networks: emigrant communities maintaining bonds across shards (composing migration and faith), remittances as cross-economy flows (composing credit), diaspora politics influencing homelands, and return as a narrated arc.
+
+#### Scenario: The Remittance Flows
+
+- **WHEN** emigrants prosper
+- **THEN** remittances SHALL flow homeward as measurable economic veins
+
+#### Scenario: The Diaspora Lobbies
+
+- **WHEN** the homeland decides
+- **THEN** the diaspora's voice SHALL be influence with local consequence
+
+### Requirement: Language Evolution
+
+Languages SHALL live: dialects diverging across regions over narrative time (composing the language-barrier module), creoles emerging at contact frontiers, literacy composing the gateway, and the lingua franca as a network-effect artifact — standards win by adoption.
+
+#### Scenario: The Dialect Diverges
+
+- **WHEN** regions separate in time
+- **THEN** speech SHALL drift measurably — distance becomes dialect
+
+#### Scenario: The Creole Emerges
+
+- **WHEN** languages collide at frontiers
+- **THEN** new speech SHALL be born as living cultural artifact
+
+### Requirement: Collective Commemoration
+
+Memory SHALL be political: memorials as geography (composing the palimpsest), holidays born of disasters and victories, contested memory as historiography composing archives, and forgetting as an attributable act of power.
+
+#### Scenario: The Memorial Is Geography
+
+- **WHEN** a people remembers
+- **THEN** memorials and holidays SHALL mark the land and the calendar
+
+#### Scenario: Forgetting Is Attributable
+
+- **WHEN** memory is removed
+- **THEN** the erasure SHALL be a recorded act — someone chose it
+
 ### Requirement: Science and Research as Operable Practice
 
 World knowledge SHALL be extendable by research: hypothesis, method and result as an operable workflow (the intelligence cycle's sibling), experiments consuming resources and time, publication as a versioned artifact with peer review running through the auditor discipline; validated results become canon — technology available as mechanic modules.

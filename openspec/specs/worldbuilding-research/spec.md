@@ -2,7 +2,7 @@
 
 ## Purpose
 
-A research program of reverse engineering the mechanics of reference games (Albion Online, EVE Online, GTA San Andreas, GTA V RP worldwide, GTA VI, MUDs, CyberCode Online, racing simulators — iRacing, Assetto Corsa Competizione, BeamNG.drive — world simulators — Microsoft Flight Simulator, DCS World — and military/tactical and survival simulators — Arma 3, Escape from Tarkov, Ready or Not, SCUM, Project Zomboid), the profession-simulator corpus (Papers Please, 112 Operator, ETS2/SnowRunner, the retail wave, Hardspace: Shipbreaker, Suzerain, Football Manager, Cart Life), the Kojima corpus (Metal Gear Solid 1–5, Snatcher, Policenauts, Death Stranding, Boktai, P.T.), the realism-milestone canon (Falcon 4.0, Grand Prix Legends, Richard Burns Rally, Dwarf Fortress, STALKER, Far Cry 2, Thief, Silent Hunter III, Kingdom Come, Orbiter, Miasmata, Teardown), the engineering bodies of knowledge as doctrinal canon (SWEBOK v4, SEBoK v2.11, CyBOK v1.1), the academic field of virtual economies, the Marxist-Leninist glossary and the Chinese societal model as political-economy and society doctrine, and a playable prototype of the final engine built on Unreal Engine 5, with the goal of extracting verifiable world-building lessons that feed the Project Lunar specs for world-simulation, npc-minds, plot-generation, scenario-authoring, combat-system, memory-system, narrative-engine and mmo-game. Everything in English; structural headings and SHALL/MUST keywords in English.
+A research program of reverse engineering the mechanics of reference games (Albion Online, EVE Online, GTA San Andreas, GTA V RP worldwide, GTA VI, MUDs, CyberCode Online, racing simulators — iRacing, Assetto Corsa Competizione, BeamNG.drive — world simulators — Microsoft Flight Simulator, DCS World — and military/tactical and survival simulators — Arma 3, Escape from Tarkov, Ready or Not, SCUM, Project Zomboid), the profession-simulator corpus (Papers Please, 112 Operator, ETS2/SnowRunner, the retail wave, Hardspace: Shipbreaker, Suzerain, Football Manager, Cart Life), the Kojima corpus (Metal Gear Solid 1–5, Snatcher, Policenauts, Death Stranding, Boktai, P.T.), the realism-milestone canon (Falcon 4.0, Grand Prix Legends, Richard Burns Rally, Dwarf Fortress, STALKER, Far Cry 2, Thief, Silent Hunter III, Kingdom Come, Orbiter, Miasmata, Teardown), energy-system science (learning curves, grid crises, market designs, ONS/ENTSO-E calibration), nuclear-system science (reactor physics, TMI/Chernobyl/Fukushima, Onkalo, Vogtle, IAEA PRIS), the engineering bodies of knowledge as doctrinal canon (SWEBOK v4, SEBoK v2.11, CyBOK v1.1), the academic field of virtual economies, the Marxist-Leninist glossary and the Chinese societal model as political-economy and society doctrine, and a playable prototype of the final engine built on Unreal Engine 5, with the goal of extracting verifiable world-building lessons that feed the Project Lunar specs for world-simulation, npc-minds, plot-generation, scenario-authoring, combat-system, memory-system, narrative-engine and mmo-game. Everything in English; structural headings and SHALL/MUST keywords in English.
 
 ## Requirements
 
@@ -659,6 +659,96 @@ The research system SHALL document, from primary scientific sources with citatio
 
 - **WHEN** an expertise-science finding has a candidate translation
 - **THEN** it SHALL map to a mmo-game talent-engine requirement or record a discard with rationale
+
+### Requirement: Reverse Engineering of Energy-System Science
+
+The research system SHALL document, from primary and public sources with citations and verification dates, the science and history of real energy systems: learning curves (Wright's law and observed cost declines), grid operations and historical blackouts (the 2001 rationing and dead-volume episodes, the 2003 cascading blackout), market designs (energy auctions, long-term contracts, spot markets, curtailment disputes), transition economics (stranded assets, critical-mineral supply chains) and the public calibration corpora of real grid operators (ONS, ENTSO-E) as reality-feed sources for the civilization-lab emulator. Each finding SHALL produce lesson cards in the standard format mapped to the mmo-game energy-matrix requirements (generation profiles, transmission and dispatch, energy markets, the clean transition, distributed generation, matrix crises) or a justified discard.
+
+#### Scenario: Real Blackouts Documented
+
+- **WHEN** historical grid crises are studied
+- **THEN** each SHALL yield cards on the mechanics that produced them, cited and dated
+
+#### Scenario: Operator Data as Calibration
+
+- **WHEN** public grid-operator data exists
+- **THEN** it SHALL be recorded as a reality-feed calibration source for the emulator
+
+#### Scenario: Learning Curves Cited
+
+- **WHEN** the cost-decline mechanic is grounded
+- **THEN** the card SHALL cite the empirical learning-curve literature
+
+#### Scenario: Translation Mapping
+
+- **WHEN** an energy-system finding has a candidate translation
+- **THEN** it SHALL map to a mmo-game energy-matrix requirement or record a discard with rationale
+
+### Requirement: Reverse Engineering of Nuclear-System Science
+
+The research system SHALL document, from primary and public sources with citations and verification dates, the science and history of nuclear power: reactor physics for gameplay honesty (reactivity, xenon poisoning, decay heat, type personalities), the historical accidents as lesson cards (Three Mile Island — human factors; Chernobyl — design and culture; Fukushima — beyond-design-basis external events), the IAEA defense-in-depth and safety-culture doctrine, the waste problem (the Onkalo repository case, decommissioning economics), the economics of construction (the Vogtle overruns, first-to-nth-of-a-kind learning), proliferation and safeguards as institutional fact, fusion programs as mission campaigns — and the IAEA PRIS public database as a reality-feed calibration source for every reactor in the real world.
+
+#### Scenario: Accidents as Cards
+
+- **WHEN** historical nuclear accidents are studied
+- **THEN** each SHALL yield cards on the mechanics that produced it, cited and dated
+
+#### Scenario: PRIS as Calibration
+
+- **WHEN** real reactor data is needed
+- **THEN** the IAEA PRIS database SHALL be recorded as the public calibration source for the emulator
+
+#### Scenario: Translation Mapping
+
+- **WHEN** a nuclear-system finding has a candidate translation
+- **THEN** it SHALL map to a mmo-game nuclear requirement or record a discard with rationale
+
+### Requirement: Reverse Engineering of Research and Engineering Formation
+
+The research system SHALL document, from primary and public sources with citations and verification dates, the real science and practice of forming researchers and engineers: the dual apprenticeship systems (German alternation, Chinese engineering academies), professional licensure (the engineer-in-training to professional-engineer path, stamps and liability), the doctorate as craft apprenticeship under a principal investigator, the journal club and laboratory rotation as practices, the replication crisis and open-science reforms, laboratory notebooks and priority disputes in the history of science, grant systems and funding-scientist dynamics, and the history of disciplines emerging at boundaries — each producing lesson cards mapped to the mmo-game formation-pipeline requirements or a justified discard.
+
+#### Scenario: Formation Systems Documented
+
+- **WHEN** real formation pipelines are studied
+- **THEN** each (dual system, licensure, doctoral apprenticeship, grant systems) SHALL yield cards with sources and dates
+
+#### Scenario: Translation Mapping
+
+- **WHEN** a formation finding has a candidate translation
+- **THEN** it SHALL map to a mmo-game formation-pipeline requirement or record a discard with rationale
+
+### Requirement: Reverse Engineering of Disaster Science
+
+The research system SHALL document, from primary and public sources with citations and verification dates, the science and doctrine of natural disasters and countermeasures: the risk framework and the Sendai Framework indicators (UNDRR), the incident command system as response doctrine, early-warning systems and their honest horizons (seismic early warning, hydrological forecasting), building codes and their enforcement histories, historical compound catastrophes as case cards, and the public calibration corpora (EM-DAT — the international disaster database; USGS; national meteorological and hydrological services) as reality-feed sources for the civilization-lab's disaster-policy forks.
+
+#### Scenario: The Frameworks Cited
+
+- **WHEN** the risk doctrine and phases are grounded
+- **THEN** the cards SHALL cite UNDRR/Sendai and ICS sources with dates
+
+#### Scenario: EM-DAT as Calibration
+
+- **WHEN** real disaster data is needed
+- **THEN** EM-DAT, USGS and hydrological services SHALL be recorded as public calibration sources
+
+#### Scenario: Translation Mapping
+
+- **WHEN** a disaster-science finding has a candidate translation
+- **THEN** it SHALL map to a mmo-game disaster requirement or record a discard with rationale
+
+### Requirement: Reverse Engineering of the Remaining World Systems
+
+The research system SHALL document, from primary and public sources with citations and verification dates, the remaining world systems absorbed as mechanics: space-program history (mission doctrine, orbital infrastructure economics), penology (punishment versus rehabilitation evidence, recidivism), public HUMINT tradecraft (historical practice, counterintelligence), conscription and veterans research, tax-system design and evasion forensics, financial-crisis history (bank runs, bubbles, bailout dilemmas), money-laundering typologies, pension actuarial science, demographic-transition doctrine, whistleblowing and source-protection law, commons management (fisheries quotas, co-management), invasion ecology and zoonotic epidemiology, maritime law, mega-event economics, sociolinguistics (dialect divergence, creolization), and memory studies (commemoration politics). Each finding SHALL produce lesson cards mapped to the corresponding mmo-game requirements or a justified discard.
+
+#### Scenario: Domain Coverage
+
+- **WHEN** the remaining systems are documented
+- **THEN** each domain above SHALL have lesson cards with sources and verification dates
+
+#### Scenario: Translation Mapping
+
+- **WHEN** a finding has a candidate translation
+- **THEN** it SHALL map to its mmo-game requirement or record a discard with rationale
 
 ### Requirement: UE5-Based Prototype of the Final Engine for World-Building
 
