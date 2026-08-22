@@ -52,6 +52,12 @@ Product direction decision: the game itself will be a Role-Playing MMORPG based 
   42. NPC wants and fears as plot seeds — rolling desires/dreads per NPC that resolve into memory and re-roll; plots emerge from colliding desires, not only player triggers.
   43. Faction agendas, declared and hidden — behavior consistent with both layers; the hidden layer revealed through intelligence work on the graph.
   44. Regional epochs with legacy — world ticks flip sustained regional periods (golden/turmoil) that change production, curves and windows, and leave durable legacy when they end.
+  45. Player housing and owned spaces — narrative spaces in the room lattice, owned and decorated (decor as closed-economy sink), in-world geography, never instanced pockets.
+  46. Player-authored rulesets in owned spaces — Habbo micro-institutions: space owners declare local rules enforced beneath platform protections; law-level institutions govern what spaces cannot.
+  47. Authored quest standard — every quest is a distinct authored narrative with unique mechanics and meaningful unlock chains; never procedural fetch work.
+  48. Announced world threats — world-scale crises surfaced through diegetic channels with warning, forcing contested cooperation with proportionate rewards.
+  49. Branching career trees with prestige — certification trees grounded in the military forces catalog; prestige earned through practice and recognition, never bought.
+  50. Formalized bonds — world-recorded partnerships/mentorships/pacts with mechanical effects and narrated dissolution; gravestone/social-rescue and aggressor-status (skull) scenarios wired into carry-only and heat.
 
 - From: no MMO requirement; multiplayer implied by research lessons only.
 - To: explicit vision-level contract; detailed mechanics (sharding, networking, economy, scale) arrive as future changes against this spec.
@@ -61,3 +67,17 @@ Product direction decision: the game itself will be a Role-Playing MMORPG based 
 - Affected specs: none modified; adds `mmo-game`. worldbuilding-research is referenced (engine path, MUD/CyberCode lessons), not changed.
 - Non-breaking: vision-level requirements; implementation plan unchanged until a future change picks it up.
 - The "engine, not a single game" framing in the project context is refined: the engine remains the core, and the committed product target built on it is this MMORPG.
+  51. The world as palimpsest — every modification is recorded history; player-action archaeology is content, wired to plot-generation.
+  52. Neglect breeds threats — unattended regions darken and accumulate hostility that propagates outward; attention is civilization (presence pacifies).
+  53. Shard spectrum including lawless — adult opt-in no-rules shards as valid configuration; platform protections non-negotiable everywhere.
+  54. Creator economy inside the closed economy — accepted authors earn a share of real flows (never minted money); standing compounds into tiers.
+  55. Identity portability across scenarios — one character, many worlds: avatar, crystals and standing carried through each canon's arrival fiction, without canon leakage.
+  56. Mechanic modules per context — mechanics as declarable modules activated by the context stack (scenario/shard/region/situation); invariant core never switches off; composition only through common primitives (no parallel state); exclusions declared and validated at authoring time.
+  57. Versioned artifacts and code archaeology — in-world artifacts carry change history (blame/diff as archaeology); merge conflicts resolve as recorded negotiation.
+  58. Technical debt as a compounding curve — expedient work accrues interest felt as drag (never a meter); refactoring is explicit investment.
+  59. Breaking changes ripple through dependents — shared artifacts carry contracts; breaking deforms dependent edges; dependencies are priced exposure (supply chain); maintainer burnout rotates.
+  60. Blameless postmortems and the issue trail — failures analyzed without blame produce lessons and corrective issues; tests as executable confidence guards (red-green teaches).
+  61. The dossier is not the world — analysts select fragments; only selected data enters the record; institutions act on the dossier (fallibly, consequentially); omission is an attributable act; surveillance stops at characters, never players' data.
+  62. Analysis bias and influence as operable doctrine — confirmation bias real and trainable (Heuer-grounded); influence operations as audited PSYOPS steering, detectable and attributable.
+  63. Preferred-language rendering — every delivered text in each player's preferred language (narration cached per language, cross-language speech translated and marked); canonical version authoritative for audit; tags/names pass through; in-world language barriers as optional module.
+  64. Voice input as text — speech transcribed to reviewable text before entering the world (text substrate preserved); TTS narration as accessibility rendering; transcription-only processing, no voice storage.

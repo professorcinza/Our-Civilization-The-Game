@@ -16,6 +16,11 @@ The final product SHALL be a Role-Playing MMORPG whose canonical world and conte
 - **WHEN** the MMO world simulates (memory, ticks, plots, NPC minds)
 - **THEN** it SHALL use the specified engine systems rather than bespoke MMO logic
 
+#### Scenario: Scenario Seeds
+
+- **WHEN** a scenario is instantiated
+- **THEN** a shareable seed MAY drive its procedural variation (arrangements, secondary details) over the same canon — two seeds, one truth
+
 ### Requirement: Persistent Multiplayer World
 
 The world SHALL be persistent and shared: it continues to evolve off-screen (world-simulation ticks) while any given player is offline, and events caused by other players SHALL be observable later (rumors, journal entries, world changes) — applying the MUD lessons already captured in worldbuilding-research.
@@ -182,6 +187,11 @@ Per the hybrid synthesis, material consequence SHALL apply to what a character c
 
 - **WHEN** a player insures goods or vehicles
 - **THEN** premiums SHALL act as an economy sink and claims SHALL restore value without creating new money beyond the insured amount
+
+#### Scenario: Gravestone and Social Rescue
+
+- **WHEN** a character falls with carried goods
+- **THEN** the site SHALL remain recoverable for a declared window, during which other actors MAY protect the recovery, bless it (extend the window) or loot it — rescue as a social act with witnesses
 
 ### Requirement: Declared Territory Wars via Player Institutions
 
@@ -480,6 +490,11 @@ Per the RDR2 crime lesson, heat SHALL be regional and identity-mediated: witness
 - **WHEN** an identity-obfuscating measure is used during an offense
 - **THEN** attribution SHALL be delayed or misdirected proportional to the disguise and the character's local notoriety
 
+#### Scenario: Aggressor Status Is Visible
+
+- **WHEN** a character attacks without provocation
+- **THEN** an aggressor status SHALL become visible to witnesses in scope (the skull lesson) — a legal mark, distinct from any moral judgment
+
 ### Requirement: Deliberative Combat — Focus and Formal Duels
 
 Per the Dead Eye and RDR1 duel lessons, combat SHALL support deliberation: focus marking (declaring targets and intents before resolution — the resolution honors the marks, composing with binding entry plans) and formalized confrontation scenes (duels, negotiations, standoffs) with a binding structure of setup, tension and decisive instant where preparation and nerve decide.
@@ -602,6 +617,11 @@ Per the HackHub/Grey Hack lesson, operable doctrinal systems in the cyber domain
 - **WHEN** automation or tooling is authored
 - **THEN** it SHALL exist as in-world scripts — writable, shareable and versioned artifacts under the closed economy
 
+#### Scenario: Logic From World Materials
+
+- **WHEN** in-world mechanisms are built (redstone lesson)
+- **THEN** logic MAY be constructed from world materials and arrangements, not only written code — engineering as narrative craft
+
 ### Requirement: Asynchronous Intrusion and Hardening
 
 Per the Grey Hack lesson, player infrastructure SHALL be attackable while its owner is offline: intrusion attempts resolve against defensive state (hardening, OPSEC posture), the attack-that-happened-while-away surfaces narratively on return (composing with off-screen ticks and sleep), operations carry time-scoped escalation clocks (trace), and exploits decay along curves — the attacker/defender arms race as content engine.
@@ -662,3 +682,318 @@ Per the Civilization lesson, world ticks SHALL be able to flip regional epochs �
 
 - **WHEN** an epoch ends
 - **THEN** it SHALL leave a durable legacy modifier on the region (skills, ruins, institutions, memory) rather than vanishing without trace
+
+### Requirement: Player Housing and Owned Spaces
+
+Per the RuneScape/Habbo lesson, players SHALL own narrative spaces within the world's room lattice: a personal or group space that is theirs to shape, decorated with acquired items (decoration as a closed-economy sink), functioning as identity and social anchor — reachable through the world's normal geography (portals, doors, addresses), never an instanced pocket outside canon.
+
+#### Scenario: The Space Is in the World
+
+- **WHEN** a player's owned space is entered by another
+- **THEN** it SHALL be reached through in-world geography and follow the same simulation rules (curves, witnesses, ticks) as any location
+
+#### Scenario: Decoration Is Economy
+
+- **WHEN** a player decorates their space
+- **THEN** acquired furnishings SHALL flow through the closed economy, and the space's character SHALL be legible to visitors
+
+### Requirement: Player-Authored Rulesets in Owned Spaces
+
+Per the Habbo lesson (roleplay hospitals, armies and mafias invented by players with self-authored rules inside their rooms), owners of spaces SHALL be able to author local rulesets — declared conduct rules for their space, enforced by their own moderation tools beneath the platform's protections. These micro-institutions are the layer beneath formal player-run institutions: the world recognizes the rules of the space, while law-level institutions (mayoralty, judgeship) govern what spaces cannot.
+
+#### Scenario: Local Rules Bind in the Space
+
+- **WHEN** a space's declared rules are broken inside it
+- **THEN** the space's enforcement tools (exclusion, bans) apply, recorded as world events
+
+#### Scenario: Local Rules Never Override Law or Protections
+
+- **WHEN** a local ruleset conflicts with institutional law, age-banding or consent protections
+- **THEN** the platform layer SHALL prevail, and the conflict SHALL be reviewable
+
+### Requirement: Authored Quest Standard
+
+Per the RuneScape lesson, quests SHALL meet the authored-quest standard: each is a distinct authored narrative with its own mechanics and structure (puzzles, investigations, setups), gated by unlock chains of prior accomplishments — never procedural fetch work generated to fill space. Quantity never buys exemption from the standard.
+
+#### Scenario: Every Quest Has a Why
+
+- **WHEN** a quest enters the canon
+- **THEN** it SHALL carry its authored intent (what makes this story worth living) and at least one mechanic unique to it
+
+#### Scenario: Unlock Chains Gate Depth
+
+- **WHEN** a quest requires prior accomplishments
+- **THEN** the chain SHALL be meaningful (capabilities, reputation, relationships earned), not arbitrary level counting
+
+### Requirement: Announced World Threats
+
+Per the Tibia/Ragnarok lesson, the world simulation SHALL produce announced world-scale threats — emergent crises, raids and world bosses surfaced through in-world channels (rumor, institutional alert, press) with enough warning to organize — forcing cooperation across factions and shards, with contested rewards proportionate to the threat.
+
+#### Scenario: The Threat Is Announced In-World
+
+- **WHEN** a world-scale threat forms
+- **THEN** warning SHALL propagate through diegetic channels before it peaks, giving actors time to organize
+
+#### Scenario: The Response Is Contested Cooperation
+
+- **WHEN** multiple parties engage the threat
+- **THEN** cooperation SHALL be necessary for success and the rewards SHALL be contested among contributors
+
+### Requirement: Branching Career Trees With Prestige
+
+Per the Ragnarok lesson, careers SHALL be branching certification trees grounded in the real military forces catalog: paths that specialize, cross and culminate in prestige tiers (senior variants, rebirth-equivalent depth), earned through demonstrated practice and institutional recognition — never bought.
+
+#### Scenario: The Tree Grows From the Catalog
+
+- **WHEN** a career tree is authored
+- **THEN** its branches and requirements SHALL trace to verified units, courses and specializations from the military forces catalog
+
+#### Scenario: Prestige Is Earned
+
+- **WHEN** a prestige tier is reached
+- **THEN** it SHALL certify demonstrated practice and recognition, and SHALL NOT be purchasable
+
+### Requirement: Formalized Bonds
+
+Per the Ragnarok marriage lesson, the world SHALL recognize formalized bonds between characters — partnerships, mentorships, pacts, oaths — as world-recorded contracts with mechanical effects (shared standing, inheritance, obligations, benefits), dissolvable through narrative and institutional process.
+
+#### Scenario: The Bond Is Recorded
+
+- **WHEN** characters formalize a bond
+- **THEN** it SHALL enter the event store with declared terms and effects on standing and obligation
+
+#### Scenario: The Bond Can End
+
+- **WHEN** a bond is dissolved
+- **THEN** the dissolution SHALL carry its narrated consequences (obligations, memory, reputation), never a clean database delete
+
+### Requirement: The World as Palimpsest
+
+Per the Minecraft lesson, world modifications SHALL be recorded history: every lasting change made by any actor persists in the event store and remains discoverable — player-action archaeology is content (finding where someone dug, built, fought or hid something), and the world's material memory composes with witness memory and crystals.
+
+#### Scenario: Modifications Are Discoverable
+
+- **WHEN** a character investigates a changed place
+- **THEN** the history of its modification SHALL be uncoverable through in-world means (traces, records, witnesses), never through out-of-world logs
+
+#### Scenario: Archaeology Is Content
+
+- **WHEN** an old modification is found by someone who did not make it
+- **THEN** the discovery MAY seed narrative (whose work was this, what happened here) wired to plot-generation
+
+### Requirement: Neglect Breeds Threats
+
+Per the Minecraft light-spawning lesson, neglect SHALL generate danger: regions without player attention darken along the attention-fidelity gradient and breed threats — the unattended periphery accumulates hostility, abandonment has a smell, and the world pushes back where nobody looks. This composes attention-based fidelity (cooling regions) with consequence afterlife (unaddressed consequences attracting actors).
+
+#### Scenario: The Dark Periphery Bites Back
+
+- **WHEN** a region stays unattended past a threshold
+- **THEN** threats SHALL accumulate there and eventually propagate outward, surfacing through world ticks
+
+#### Scenario: Attention Is Civilization
+
+- **WHEN** players return sustained attention to a darkened region
+- **THEN** the threat pressure SHALL recede along the same gradient — presence as pacification
+
+### Requirement: Shard Spectrum Including Lawless
+
+Per the 2b2t lesson, the shard spectrum SHALL extend to the lawless: adult, opt-in shards with no community ruleset — no local law, no institutions, no staff arbitration — as valid configuration. Platform protections (age-banding, consent, safety) remain non-negotiable even there: lawless means no in-world law, never unprotected people.
+
+#### Scenario: Lawless Means No In-World Law
+
+- **WHEN** an adult opt-in lawless shard runs
+- **THEN** no community ruleset, institution or staff arbitration SHALL govern in-world conduct — only what players enforce themselves
+
+#### Scenario: Protections Outlive Lawlessness
+
+- **WHEN** protections (age trays, consent, deny-lists) apply on any shard
+- **THEN** they SHALL remain in force regardless of the shard's ruleset
+
+### Requirement: Creator Economy Inside the Closed Economy
+
+Per the Roblox DevEx lesson, accepted content authors SHALL earn from the closed economy: modules, quests and packages that pass review carry a creator share — in-world income and standing proportional to the use their work receives — without minting new value outside the closed economy (earnings are a share of real flows, never a faucet).
+
+#### Scenario: Authors Earn a Share of Real Flows
+
+- **WHEN** accepted content is used and generates economic flow
+- **THEN** the creator share SHALL be a slice of that flow, recorded and traceable — never newly minted money
+
+#### Scenario: Standing Compounds
+
+- **WHEN** an author's body of work accumulates use
+- **THEN** authorial standing SHALL compound into reputation and tier progression (per the quality-gated author tiers)
+
+### Requirement: Identity Portability Across Scenarios
+
+Per the Roblox cross-experience lesson, character identity SHALL be portable across scenarios and shards: the same avatar (with its mirror, crystals and earned history) enters different worlds — carried by the persistent memory pyramid, entering each canon through its own doors (setup questions, arrival narration), never duplicated as a separate person.
+
+#### Scenario: One Character, Many Worlds
+
+- **WHEN** a player enters a new scenario with an established character
+- **THEN** the avatar, crystals and standing SHALL carry over, adapted through the scenario's arrival fiction
+
+#### Scenario: Crystals Cross, Canon Does Not Leak
+
+- **WHEN** carried memory references people or places foreign to the current canon
+- **THEN** it SHALL remain personal memory (dreams, distant past, other lives) without leaking entities into the hosting world
+
+### Requirement: Mechanic Modules per Context
+
+The game SHALL be multi-mechanic by context: mechanics are modular capabilities with declared applicability (domain, era, band, scale), activated by the context stack — scenario plus shard plus region plus situation. An invariant core SHALL never deactivate anywhere (event store, entity curves, soft-body graph, witnesses, memory/crystals, ticks, narrator, protections, closed economy). Every mechanic SHALL compose through the common primitives — writing curves, deforming the graph, recording events, opening windows — never through parallel state; and mutually exclusive modules SHALL declare their exclusions, validated at authoring time.
+
+#### Scenario: The Context Stack Selects Modules
+
+- **WHEN** a case runs (a police operation, a cyber op, a survival arc, a social evening)
+- **THEN** the active mechanic set SHALL derive from the scenario's, shard's, region's and situation's declarations — no global monolith
+
+#### Scenario: Invariants Never Switch Off
+
+- **WHEN** any module set is active
+- **THEN** the invariant core SHALL remain fully in force — protections, closed economy, memory and audit included
+
+#### Scenario: Composition Through Common Primitives
+
+- **WHEN** two mechanics are active together (e.g., contextual ballistics and metabolism in the same march)
+- **THEN** they SHALL compose through curves, graph, events and windows — with no parallel state to reconcile
+
+#### Scenario: Declared Exclusivity
+
+- **WHEN** modules cannot coexist (e.g., the real-tool tier with band A)
+- **THEN** the exclusion SHALL be declared and enforced at authoring/validation time, not discovered in play
+
+### Requirement: Versioned Artifacts and Code Archaeology
+
+Per the real software development lesson (git), in-world artifacts — scripts, tools, documents, mechanisms — SHALL be versioned: every artifact carries its history of changes (who, what, why), readable in-world; blame and diff are archaeology of authorship (composing the palimpsest and diegetic scripting requirements); and when two authors change the same artifact, the merge conflict SHALL resolve as a negotiation, recorded in the event store.
+
+#### Scenario: The Artifact Remembers Its Authors
+
+- **WHEN** a character inspects a versioned artifact
+- **THEN** its change history (authors, intents, forks) SHALL be discoverable through in-world means
+
+#### Scenario: Merge Conflict Is Negotiation
+
+- **WHEN** two authors' changes to one artifact conflict
+- **THEN** resolution SHALL be an explicit negotiated act with recorded outcome — never a silent overwrite
+
+### Requirement: Technical Debt as a Compounding Curve
+
+Per the real software development lesson, expedient work SHALL write technical debt: quick hacks and deferred quality accrue interest along decay curves on the artifact, tool or institution — drag felt in operation, never shown as a meter — until paid down by refactoring as investment. Debt may be carried deliberately (a deadline worth it) with eyes open.
+
+#### Scenario: Interest Accrues on Hacks
+
+- **WHEN** an artifact or institution is patched expediently
+- **THEN** its debt curve SHALL compound, degrading operation until refactored
+
+#### Scenario: Refactoring Is Investment
+
+- **WHEN** debt is paid down through deliberate rework
+- **THEN** the curve SHALL recover at the cost of time and attention now — the trade made explicit in analysis mode
+
+### Requirement: Breaking Changes Ripple Through Dependents
+
+Per the SemVer/dependency lesson, shared artifacts SHALL carry contracts: a breaking change deforms the graph edges of everything depending on the artifact (composing soft-body consequence), version signals declare the intent, and depending on another's artifact exposes you to their fate — the supply chain as attack surface (composing asynchronous intrusion: a compromised dependency compromises its dependents).
+
+#### Scenario: The Ripple Declares Itself
+
+- **WHEN** a shared artifact breaks its contract
+- **THEN** dependents' edges SHALL deform visibly and the blast radius SHALL be derivable from the graph
+
+#### Scenario: Dependencies Are Exposure
+
+- **WHEN** an actor builds on someone else's artifact
+- **THEN** their exposure to that artifact's compromise SHALL be real and priced — trust as attack surface, per the maintainer-rotation curves (burnout degrades maintainership)
+
+### Requirement: Blameless Postmortems and the Issue Trail
+
+Per the SRE lesson, failures SHALL receive blameless postmortems — the structured ritual that crystallizes the causal why without punishing the reporter (composing failure-crystallizes and causal replay); issues SHALL be world-visible work entities (reported, triaged, owned, fixed); and tests SHALL exist as confidence instruments — executable guards an author attaches to an artifact, whose red-green cycle practices understanding (eurekas: writing the test teaches the thing).
+
+#### Scenario: The Postmortem Crystallizes Without Blame
+
+- **WHEN** a significant failure is analyzed
+- **THEN** the postmortem SHALL produce its lesson memory and corrective work as issues, and SHALL NOT assign personal fault as output
+
+#### Scenario: Tests Guard the Artifact
+
+- **WHEN** an artifact with attached tests is changed
+- **THEN** the guards SHALL run and their verdict SHALL gate confidence in the change — a broken guard is information, not punishment
+
+### Requirement: The Dossier Is Not the World
+
+Per the Orwell lesson, intelligence work SHALL operate on selection: analysts browse the raw flow of the world (communications, records, traces) and select fragments — only selected fragments enter the dossier, and selection is interpretation. Institutions SHALL act on the dossier, not on raw reality: a wrong or biased profile produces real institutional action against the wrong reading, recorded as intelligence failure eligible for postmortem. Omission SHALL be an act — withholding exculpatory fragments is a deliberate choice with weight. And surveillance mechanics SHALL apply to in-world characters only, never to players' personal data — avatar-mirror consent is inviolable under this entire requirement.
+
+#### Scenario: Only the Selected Enters the Record
+
+- **WHEN** an analyst works a case
+- **THEN** the dossier SHALL contain the selected fragments and their derivations — never the raw flow wholesale
+
+#### Scenario: Institutions Act on the Dossier
+
+- **WHEN** a dossier reaches an institution
+- **THEN** the institutional response SHALL follow the recorded reading — if the reading is wrong, the response is wrongly aimed, and the failure is analyzable afterward
+
+#### Scenario: Omission Has Weight
+
+- **WHEN** an analyst withholds a fragment that would change the reading
+- **THEN** the omission SHALL be an attributable act, visible in analysis mode and accountable to audit
+
+#### Scenario: Surveillance Stops at the Character
+
+- **WHEN** any surveillance mechanic operates
+- **THEN** its objects SHALL be in-world characters and artifacts — players' personal data and mirror profiles SHALL never become surveillance content
+
+### Requirement: Analysis Bias and Influence as Operable Doctrine
+
+Per the Orwell lesson grounded in the project's doctrine library (Heuer's Psychology of Intelligence Analysis), confirmation bias SHALL be a real force in analysis: hypothesis-confirming selections feel easier and can be honestly wrong — and catching one's own bias is trained skill (training-grade in the intelligence domain, surfacing in analysis mode). Influence operations — cherry-picking and editing fragments to steer opinion (the sequel's mechanic) — SHALL be operable PSYOPS under the narrative auditor: steering is possible, detectable and attributable.
+
+#### Scenario: Bias Is Felt, Then Caught
+
+- **WHEN** an analyst's selections consistently confirm their running hypothesis
+- **THEN** the bias SHALL be real in the resolution, and the analysis mode SHALL expose the pattern to learn from — training transfer for real analytic discipline
+
+#### Scenario: Influence Is Audited Steering
+
+- **WHEN** an actor curates fragments to steer an audience
+- **THEN** the steering SHALL operate (opinion moves per the doctrine), remain detectable by counter-analysis, and be attributable in audit
+
+### Requirement: Preferred-Language Rendering
+
+All delivered text (narration, journal, cards, interface, player speech) SHALL render in each player's preferred language: narration is delivered per language from the bilingual engine with caching (translated once, served many — no per-player retranslation cost); players sharing a scene across languages read each other's speech in their own language, marked as translation; one canonical language version SHALL remain authoritative for audit and memory; control tags and canonical proper nouns SHALL pass through untranslated; and in-world language barriers MAY be enabled as an optional mechanic module (interpreters and translation as content) per the mechanic-modules requirement.
+
+#### Scenario: Everyone Reads Their Language
+
+- **WHEN** players of different preferred languages share a scene
+- **THEN** each SHALL read the narration and the other players' speech in their own language, with translation visibly marked
+
+#### Scenario: The Canon Stays Authoritative
+
+- **WHEN** audit, memory or analysis consumes delivered text
+- **THEN** they SHALL operate on the canonical-language version — translations are renderings, never the record
+
+#### Scenario: Tags and Names Never Mangle
+
+- **WHEN** text containing control tags or canonical proper nouns is rendered
+- **THEN** tags and canonical names SHALL pass through exactly unchanged
+
+#### Scenario: Language Barrier as Optional Content
+
+- **WHEN** a scenario or shard enables in-world language barriers
+- **THEN** interpretation becomes gameplay (interpreters, partial understanding) — declared module, never a global default
+
+### Requirement: Voice Input as Text
+
+Speech SHALL be a first-class input modality alongside manual typing: voice input transcribes to text before it enters the game (the text substrate — audit, memory, curves, translation — consumes only text), with player review and edit before sending, transcription marked as such in the record, and narration MAY be spoken aloud (text-to-speech) as an accessibility output with the text remaining canonical. Voice processing SHALL serve transcription only — no persistent voice storage, per the privacy posture.
+
+#### Scenario: Voice Becomes Reviewable Text
+
+- **WHEN** a player speaks their action or speech
+- **THEN** the transcription SHALL appear for review and editing before entering the world, and the delivered text SHALL be marked voice-origin in the record
+
+#### Scenario: Text Remains Canonical
+
+- **WHEN** narration is spoken via text-to-speech
+- **THEN** the canonical artifact SHALL remain the text — the voice is a rendering, like translation
+
+#### Scenario: Transcription Only, Never Stored Voice
+
+- **WHEN** voice input is processed
+- **THEN** audio SHALL be used for transcription and discarded — never persisted, never replayable

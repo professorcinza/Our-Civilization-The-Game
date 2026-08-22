@@ -107,3 +107,22 @@ The system SHALL allow multiple campaigns per scenario, each with its own persis
 
 - **WHEN** the author lists a scenario's campaigns or removes a campaign
 - **THEN** the system SHALL return the existing campaigns or delete all events and answers of the target campaign
+
+### Requirement: Geography Authoring Standard
+
+Scenarios that define geography SHALL declare, for each region: real-world inspirations recorded as provenance metadata (never copied geometry), the declared compression intent, biome/climate/watershed placement, and the region's narrative payload (curves, agendas, institutions). Authoring-time validation SHALL check the plausibility rules (hydrology, climate gradients, biome adjacency) and the no-replica rule (no 1:1 geodata reproductions), with actionable rejection messages; finalized geography SHALL export to LOCATION story cards consumable by RAG selection.
+
+#### Scenario: Inspiration Is Provenance
+
+- **WHEN** a region draws on a real place
+- **THEN** the inspiration SHALL be recorded as metadata together with the declared compression — the reference informs, never replicates
+
+#### Scenario: Validation Gate
+
+- **WHEN** geography is submitted
+- **THEN** plausibility and no-replica checks SHALL run, and failures SHALL reject with actionable messages
+
+#### Scenario: Geography Becomes Cards
+
+- **WHEN** a region is finalized
+- **THEN** its locations SHALL exist as LOCATION story cards selectable by the RAG budget like any other card

@@ -67,3 +67,22 @@ The system SHALL allow manual generation of an NPC, event or plot on demand thro
 
 - **WHEN** the player requests manual generation
 - **THEN** the system SHALL generate the element respecting the type's context rules and cooldowns
+
+### Requirement: Fronts, Threat Clocks and Season Structure
+
+Plot organization SHALL follow tabletop and writers'-room doctrine, citable to source: threats organized as fronts — collections of dangers with their own impulse and stakes painted ahead of time — advancing via threat clocks that tick on the world's initiative (composing with world-simulation ticks, not waiting for player attention); and long-range structure borrowed from season-based story practice (arcs, midpoints, escalation ladders) as authoring scaffolds for plot arcs. Structure SHALL serve emergence: the plot lock and the NONE rule remain sovereign, and scaffolds SHALL never railroad.
+
+#### Scenario: The Clock Ticks Without the Player
+
+- **WHEN** a front's clock fills through world ticks
+- **THEN** the threat SHALL advance on its own initiative, whether or not any player was watching
+
+#### Scenario: Stakes Are Pre-Painted
+
+- **WHEN** a front is authored
+- **THEN** its stakes and impulse SHALL be declared ahead — the escalation is prepared, its moment emergent
+
+#### Scenario: Seasons Scaffold, Never Rail
+
+- **WHEN** an arc uses season structure
+- **THEN** the scaffold SHALL shape pacing without forcing outcomes — player agency and the NONE rule override structure

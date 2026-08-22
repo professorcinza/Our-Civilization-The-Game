@@ -2,7 +2,7 @@
 
 ## Purpose
 
-A research program of reverse engineering the mechanics of reference games (Albion Online, GTA San Andreas, GTA V RP worldwide, MUDs, CyberCode Online, racing simulators — iRacing, Assetto Corsa Competizione, BeamNG.drive — world simulators — Microsoft Flight Simulator, DCS World — and military/tactical and survival simulators — Arma 3, Escape from Tarkov, Ready or Not, SCUM, Project Zomboid) and a playable prototype of the final engine built on d3wasm (Doom 3 / id Tech 4 ported to WebAssembly+WebGL, GPL-3.0), with the goal of extracting verifiable world-building lessons that feed the Project Lunar specs for world-simulation, npc-minds, plot-generation, scenario-authoring, combat-system, memory-system, narrative-engine and mmo-game. Everything in English; structural headings and SHALL/MUST keywords in English.
+A research program of reverse engineering the mechanics of reference games (Albion Online, EVE Online, GTA San Andreas, GTA V RP worldwide, GTA VI, MUDs, CyberCode Online, racing simulators — iRacing, Assetto Corsa Competizione, BeamNG.drive — world simulators — Microsoft Flight Simulator, DCS World — and military/tactical and survival simulators — Arma 3, Escape from Tarkov, Ready or Not, SCUM, Project Zomboid), the profession-simulator corpus (Papers Please, 112 Operator, ETS2/SnowRunner, the retail wave, Hardspace: Shipbreaker, Suzerain, Football Manager, Cart Life), the Kojima corpus (Metal Gear Solid 1–5, Snatcher, Policenauts, Death Stranding, Boktai, P.T.), the realism-milestone canon (Falcon 4.0, Grand Prix Legends, Richard Burns Rally, Dwarf Fortress, STALKER, Far Cry 2, Thief, Silent Hunter III, Kingdom Come, Orbiter, Miasmata, Teardown), the engineering bodies of knowledge as doctrinal canon (SWEBOK v4, SEBoK v2.11, CyBOK v1.1), the academic field of virtual economies, the Marxist-Leninist glossary and the Chinese societal model as political-economy and society doctrine, and a playable prototype of the final engine built on Unreal Engine 5, with the goal of extracting verifiable world-building lessons that feed the Project Lunar specs for world-simulation, npc-minds, plot-generation, scenario-authoring, combat-system, memory-system, narrative-engine and mmo-game. Everything in English; structural headings and SHALL/MUST keywords in English.
 
 ## Requirements
 
@@ -94,6 +94,127 @@ The research system SHALL document, from public sources (Arma 3, Escape from Tar
 #### Scenario: Verifiable Source
 
 - **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Orwell Mechanics
+
+The research system SHALL document, from public sources (Osmotic Studios' Orwell and Orwell: Ignorance is Strength, official pages, reviews and analyses), the surveillance-thriller mechanics: datachunk selection (the investigator browses citizens' communications — calls, chats, posts, documents — and selects fragments to upload; selection is the core verb), the dossier as constructed profile (institutions act on what was selected, not on raw reality — wrong or biased selections produce wrong profiles that authorities act upon), omission as an action (withholding exculpatory evidence carries moral weight), confirmation bias as gameplay (hypothesis-confirming selection feels right and can be honestly wrong), the sequel's influence editing (cherry-picking and editing to steer opinion — propaganda as mechanic), and the asymmetric-privacy framing. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Selection-Lesson
+
+- **WHEN** the research documents datachunk selection as the core verb
+- **THEN** the card SHALL propose the dossier-not-the-world principle for the intelligence workflow (mmo-game/knowledge-graph)
+
+#### Scenario: Dossier-Consequence Lesson
+
+- **WHEN** the research documents authorities acting on the constructed profile
+- **THEN** the card SHALL propose institutions acting on recorded intelligence — fallible and consequential (mmo-game)
+
+#### Scenario: Influence Lesson
+
+- **WHEN** the research documents the sequel's influence editing
+- **THEN** the card SHALL propose cherry-picking as operable PSYOPS under audit, grounded in the project's doctrine library (mmo-game/narrative-audit)
+
+#### Scenario: Ethics Guardrail Recorded
+
+- **WHEN** the research documents the surveillance asymmetry
+- **THEN** the card SHALL record the scope rule: surveillance mechanics apply to in-world characters only, never to players' personal data (avatar-mirror consent inviolable)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about the game
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Real Software Development Practice
+
+The research system SHALL document, from public sources (git and SemVer documentation, the Agile Manifesto, the Google SRE book, postmortem culture, open-source dynamics literature), the mechanics of real software engineering as a reference system: version control (history, branches, blame, merges and conflicts), code review as a social gate, technical debt and its compounding interest, semantic versioning and breaking changes rippling through dependents, dependency supply chains as attack surface, testing and test-driven development, CI/CD with feature flags and kill switches, issue tracking as visible work, blameless postmortems, estimation under uncertainty (Hofstadter), Conway's law, and open-source maintainer burnout. Each practice SHALL generate a lesson card in the same format as the game tracks — software engineering is real doctrine with public sources, fitting the training-grade philosophy of the project's engineering/cyber domains.
+
+#### Scenario: Engineering Doctrine Lesson
+
+- **WHEN** the research documents a software engineering practice
+- **THEN** the card SHALL propose its translation to the in-world artifact economy (mmo-game) or a justified discard
+
+#### Scenario: Training-Grade Evidence
+
+- **WHEN** a practice is documented from its canonical public source
+- **THEN** the card SHALL record it as operable-doctrine material for the engineering/cyber domains, with source and date
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a practice or number
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Sandbox/Platform Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the sandbox and platform references: Minecraft (the fully editable voxel world with every modification persistent; procedurally generated infinite worlds from shareable seeds; light-based hostile spawning; redstone as in-world logic built from world materials; player-run server cultures; the 2b2t anarchy experiment — emergent history with zero governance; the modding ecosystem and marketplace; survival/hardcore/creative modes) and Roblox (the UGC platform model — millions of user-built experiences on engine+economy+safety rails; Luau scripting; the DevEx creator economy converting creations to real income; avatar and UGC marketplace with community-maintained value lists; age-safety and moderation at scale, including its documented failures; goal-free social roleplay at massive scale among the youngest audience — Brookhaven, Adopt Me; cross-experience identity). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Palimpsest Lesson
+
+- **WHEN** the research documents a fully editable world where every modification persists
+- **THEN** the card SHALL propose the world as palimpsest — recorded modification history with player-action archaeology as content (mmo-game/event-persistence)
+
+#### Scenario: Neglect-Breeds-Threats Lesson
+
+- **WHEN** the research documents light-based hostile spawning
+- **THEN** the card SHALL propose neglect generating danger — unattended regions darkening and breeding threats, composing attention-based fidelity with consequence afterlife (mmo-game/world-simulation)
+
+#### Scenario: Shard-Spectrum Lesson
+
+- **WHEN** the research documents the 2b2t no-rules anarchy
+- **THEN** the card SHALL propose a shard spectrum including the lawless — adult opt-in no-community-rules shards as valid configuration beneath non-negotiable platform protections (mmo-game)
+
+#### Scenario: Creator-Economy Lesson
+
+- **WHEN** the research documents DevEx and community value lists
+- **THEN** the card SHALL propose a creator economy inside the closed economy — accepted module authors earning in-world share (mmo-game)
+
+#### Scenario: Evidence Reinforcements
+
+- **WHEN** the research documents redstone, the platform model, age-safety and goal-free social RP
+- **THEN** the card SHALL record them as evidence for diegetic scripting, the contribution channel, age-banding at scale (with moderation-failure lessons) and band-A social RP demand already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Classic MMO Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the classic MMOs: RuneScape (use-trained skills at scale, quests as authored puzzle-stories with unlock chains, the world as skill-board, wilderness risk gradient by depth, the gravestone death protocol with social rescue, player-owned houses, recurring distractions, rares as cultural economy, Ironman modes), Habbo Hotel (player-owned decorated rooms as identity, furni as economy, roleplay institutions invented by players inside their rooms with self-authored rules, player-made games, the goal-free social sandbox), Tibia (hardcore death costs, the skull system marking aggressors, paid scheduled guild wars, announced world bosses and raids, map-knowledge as community artifact), and Ragnarok Online (branching class trees with rebirth prestige, contested MvP world bosses on timers, scheduled War of Emperium sieges, card slotting as build combinatorics, refinement with break risk, marriage with mechanical benefits, vending streets). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Authored-Rulesets Lesson
+
+- **WHEN** the research documents players inventing roleplay institutions with self-authored rules inside their rooms
+- **THEN** the card SHALL propose player-authored rulesets in owned spaces as the layer beneath formal player-run institutions (mmo-game)
+
+#### Scenario: Housing Lesson
+
+- **WHEN** the research documents player-owned houses and decorated rooms as identity and economy
+- **THEN** the card SHALL propose owned narrative spaces with decoration as a closed-economy sink (mmo-game)
+
+#### Scenario: World-Threat Lesson
+
+- **WHEN** the research documents announced world bosses and scheduled sieges
+- **THEN** the card SHALL propose announced world-scale cooperative threats with contested rewards (mmo-game/world-simulation)
+
+#### Scenario: Career-Trees Lesson
+
+- **WHEN** the research documents branching class trees with rebirth prestige
+- **THEN** the card SHALL propose branching career/certification paths with prestige tiers grounded in the military forces catalog (mmo-game/military-forces-catalog)
+
+#### Scenario: Authored-Quests Lesson
+
+- **WHEN** the research documents quests as authored puzzle-stories
+- **THEN** the card SHALL record the authored-quest standard for the scenario pipeline — unique mechanics per quest, never procedural fetch work (scenario-authoring/mmo-game)
+
+#### Scenario: Reinforcements Recorded
+
+- **WHEN** the research documents the skull system, gravestones, use-trained skills and vending streets
+- **THEN** the card SHALL record them as evidence for heat-with-identity, carry-only death protocol with social rescue, practice-based skills and regional markets already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
 - **THEN** the card SHALL cite the public source (URL) and verification date
 
 ### Requirement: Reverse Engineering of Life/Strategy Game Mechanics
@@ -341,21 +462,212 @@ The research system SHALL document, from public sources (server sites and wikis:
 #### Scenario: Platform Risk Lesson
 
 - **WHEN** the research documents platform dependency risk (Rockstar/Take-Two action against RAGE MP threatening the Russian scene)
-- **THEN** the card SHALL record the argument for the self-owned engine path (d3wasm) as mitigation
+- **THEN** the card SHALL record the mitigation options for platform dependency — the self-owned backend, canon and data, and a documented exit strategy for the UE5 dependency
 
 #### Scenario: Verifiable Source
 
 - **WHEN** a lesson card claims a mechanic about a specific server or country scene
 - **THEN** the card SHALL cite the public source (URL) and verification date
 
-### Requirement: d3wasm-Based Prototype of the Final Engine for World-Building
+### Requirement: Reverse Engineering of GTA VI Mechanics
 
-The project SHALL include a playable in-browser prototype built on **d3wasm** (github.com/gabrielcuvillier/d3wasm — the id Tech 4 / Doom 3 engine ported to WebAssembly via Emscripten with a full WebGL renderer backend, GPL-3.0) as the prototype of the game's final engine. The prototype serves as a world-building laboratory — dark corridors, dynamic flashlights, shadows, interactive lore terminals, positional audio, and script triggers — where every level design element SHALL teach a lesson mappable to the narrative engine (e.g., terminal with lore ≈ story card; script trigger ≈ plot seed; lighting that guides ≈ narrative emphasis). Studying and extending the d3wasm codebase (`neo/` engine sources) SHALL also produce engine-architecture lesson cards (renderer, asset pipeline, scripting, GUI/terminal systems) informing the final engine decision.
+The research system SHALL document, from public sources (Rockstar's official trailers and website, verified frame analyses, technical breakdowns such as Digital Foundry; leaks and rumors marked as such with date), the world-building-relevant mechanics of Grand Theft Auto VI (Rockstar, release date November 19, 2026): the dual-protagonist outlaw duo (Jason and Lucia) with character switching and duo missions; the in-game social media feed (vertical-video app, in-world influencers as event discovery); stance-based dialogue in dynamic encounters (greet, antagonize, rob); body carrying and hiding with crime scenes investigated through witness interrogation and gradual police response; visible weapon carry and carried-load weight; dynamic extreme weather (hurricanes, flooding) interacting with wildlife and movement; the ecological fauna substrate (alligators, snakes, birds in habitat); and the smartphone as the command surface of modern life. Each mechanic SHALL generate a lesson card in the standard format with an additional evidence-status field — officially confirmed, trailer-analysis, or leaked-unverified — and candidate translations mapped to the mmo-game requirements added by the add-gta-vi-mechanics change (or a justified discard). Because the game is unreleased when this track opens, the track SHALL schedule a post-release re-verification pass that replaces trailer-derived inference with shipped-game documentation.
 
-#### Scenario: The Prototype Loads in the Browser
+#### Scenario: Confirmed Versus Leak Discipline
 
-- **WHEN** the prototype is opened in a modern browser (no native build, no plugins)
-- **THEN** it SHALL render a first-person 3D scene with dynamic lighting at 30+ FPS on common hardware, running on the d3wasm WebAssembly/WebGL engine
+- **WHEN** a lesson card claims a GTA VI mechanic
+- **THEN** the card SHALL record its evidence status, and leaked-unverified claims SHALL NOT drive accepted translations without that caveat visible
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a card states a rule or number about GTA VI
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+#### Scenario: Post-Release Re-Verification
+
+- **WHEN** the game ships (after 2026-11-19)
+- **THEN** the track SHALL re-verify every GTA VI card against the released game, retiring or correcting disproven cards and recording the pass date
+
+#### Scenario: Translation Mapping
+
+- **WHEN** a GTA VI mechanic has a candidate translation
+- **THEN** it SHALL map to a mmo-game requirement from the add-gta-vi-mechanics change, or record a discard with rationale
+
+### Requirement: Reverse Engineering of the Engineering Bodies of Knowledge
+
+The research system SHALL document, from the public primary sources (SWEBOK v4 — IEEE Computer Society, October 2024; SEBoK v2.11 — BKCASE, November 2024; CyBOK v1.1 — July 2021), all knowledge areas of the three engineering bodies of knowledge (18 + 26 + 21) as doctrinal canon for the project: each knowledge area producing lesson cards in the standard format with the source version recorded, mapping every absorbed concept to the mmo-game engineering-doctrine requirements or recording a justified discard. The recorded elaboration procedure SHALL be the WriteHERE method (principia-ai/WriteHERE, arXiv 2503.08275 — heterogeneous recursive planning: a task graph decomposed and executed with interleaved retrieval, reasoning and composition, adapting dynamically instead of following a fixed pipeline). The doctrinal boundary stands: BoK knowledge enters as operable in-world doctrine over fictional and sandboxed targets, never as operational attack instruction.
+
+#### Scenario: Every Knowledge Area Has a Card
+
+- **WHEN** the three BoKs are documented
+- **THEN** each of the 65 knowledge areas SHALL have a lesson card with source version and verification date
+
+#### Scenario: WriteHERE Is the Recorded Procedure
+
+- **WHEN** a knowledge area is expanded into requirements
+- **THEN** the expansion SHALL follow the recorded recursive method — decompose, retrieve, reason, compose — with the task graph preserved as provenance
+
+#### Scenario: The Boundary Holds
+
+- **WHEN** CyBOK material becomes game doctrine
+- **THEN** it SHALL operationalize defense and analysis over fictional targets — attack knowledge stays conceptual, never operational instruction
+
+### Requirement: Reverse Engineering of EVE Online Mechanics
+
+The research system SHALL document, from public sources (official developer blogs and patch notes, Council of Stellar Management minutes, journalistic and academic analyses), the world-building mechanics of EVE Online: the single-shard persistent universe operating at scale for two decades, null-security sovereignty and territorial warfare (structures, timers, force projection, coalitions), the fully player-driven economy (extraction-to-industry chains, regional markets, PLEX as tradeable game time bridging real and virtual value), sanctioned deception (scams, betrayal, espionage as legitimate content), developer-player governance (the Council of Stellar Management), and famous emergent events (vast fleet battles, heists, market wars) as evidence of what unmanaged player institutions produce at scale. Each mechanic SHALL generate a lesson card in the standard format with verifiable sources, mapped where applicable to mmo-game (shards, closed economy, declared territory wars, player institutions, cultural shards) or a justified discard.
+
+#### Scenario: Single-Shard-At-Scale Lesson
+
+- **WHEN** the research documents the single-server universe
+- **THEN** the card SHALL map its architecture lessons to the MMO's interest management and shard design (mmo-game) or discard with rationale
+
+#### Scenario: Sanctioned Deception Lesson
+
+- **WHEN** the research documents scams and betrayal as legitimate content
+- **THEN** the card SHALL evaluate what the MMO keeps (deception as carry-only/heat/standing trade-offs) and what it rejects, with rationale
+
+#### Scenario: PLEX Boundary Lesson
+
+- **WHEN** the research documents PLEX bridging real and virtual value
+- **THEN** the card SHALL record what the closed economy and creator economy require to avoid the same real-money pathologies
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about EVE Online
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Virtual Economies Research
+
+The research system SHALL document the academic field of virtual economies and synthetic worlds as doctrinal canon for the MMO's closed economy: foundational economics of synthetic worlds and virtual goods, design levers (faucets, sinks, inflation control), real-money trading and its pathologies (gold farming, sweatshops, illicit markets), price-index and inflation studies of live MMO economies, player-motivation taxonomies from large-scale survey research, and the governance of virtual property and their real legal disputes. Each insight SHALL produce a lesson card in the standard format with academic citation and verification date, mapped to the mmo-game economy and social-layer requirements or a justified discard.
+
+#### Scenario: Faucet-and-Sink Lesson
+
+- **WHEN** the research documents economy design levers
+- **THEN** the card SHALL map them onto the closed-economy invariant (what translates, what the no-faucet rule forbids)
+
+#### Scenario: RMT Pathology Lesson
+
+- **WHEN** the research documents real-money-trading pathologies
+- **THEN** the card SHALL record which closed-economy and creator-economy boundaries exist to prevent them, and evaluate their sufficiency
+
+#### Scenario: Motivation Taxonomy Lesson
+
+- **WHEN** the research documents player-motivation taxonomies
+- **THEN** the card SHALL map motivations to the social layer and progression-by-memory design (mmo-game) or discard with rationale
+
+#### Scenario: Academic Citation
+
+- **WHEN** a card states a research finding
+- **THEN** it SHALL cite the academic source and verification date
+
+### Requirement: Reverse Engineering of the Marxist-Leninist Glossary and the Chinese Model as Reference Civilization
+
+The research system SHALL document, from the Glossário Marxista-Leninista series as published by História Pública (Ian Neves, with Soberana TV) — the compiled ~30-concept video (youtube.com/watch?v=ocHvPU27E4A — timestamps e.g. value, commodity fetishism 01:45:33, surplus value 01:56:05, productive and unproductive labor 02:07:37, crisis), the TikTok account @historiapublica and Instagram @historiapublica_, confirmed parts including classes (1), lumpemproletariado (10), private property (12), the state (13), principles of communism (21), value theory (35), surplus value (39) and immaterial labor (45), plus the class-consciousness videos (bourgeois consciousness, the proletariat as revolutionary class) — and the series' companion bibliography, the economic concepts of the Marxist-Leninist school as doctrinal canon for the MMO's political-economy module: each part producing a lesson card in the standard format with source URL and verification date, mapped to the mmo-game political-economy requirements (labor-value substrate, means of production and emergent class, the surplus-value loop including labor-power versus labor and constant-versus-variable capital, fetishism and analysis, immaterial labor and the precariat, modes of production as epochs) or a justified discard. Because platform enumeration is partial, the corpus SHALL grow progressively: newly verified parts add cards without re-opening accepted ones. The track SHALL additionally document the Chinese model as the reference civilization in every dimension: the societal organization (vanguard polity, socialist market economy, hukou, danwei, grid governance, institutional reputation, whole-nation system, common prosperity — mapped to the societal-configuration requirements) and the extended dimensions — military (system confrontation, active defense, civil-military fusion, dual command), scientific (the new whole-nation system, megaprojects, talent programs), technological (industrial policy, five-year roadmaps, standards strategy, self-reliance under blockade), ecological (ecological civilization, red lines), governance (campaign-style governance) and formation (cadre system, examination ladder, posting rotation, criticism and self-criticism) — each producing lesson cards mapped to the mmo-game civilization-dimension requirements or a justified discard, and composing with civilization-lab's real-simulator purpose. The school-neutrality rule holds throughout: the school and the model are citable references among rivals, their properties operable where their assumptions hold, with deeper primary sources recorded in the bibliography for provenance.
+
+#### Scenario: Every Glossary Concept Has a Card
+
+- **WHEN** a series part is documented
+- **THEN** each economic concept SHALL produce a lesson card citing the part's URL (video timestamp where applicable) and verification date
+
+#### Scenario: Every Reference-Civilization Dimension Has Cards
+
+- **WHEN** the Chinese model is documented as reference civilization
+- **THEN** each dimension (economic, military, societal, scientific, technological, ecological, governance, formation) SHALL produce lesson cards citing programmatic or scholarly sources and verification dates
+
+#### Scenario: School Neutrality Holds
+
+- **WHEN** the track maps concepts to mechanics
+- **THEN** the school and the model SHALL be citable references among rivals — the world tests their properties, never enshrines them
+
+#### Scenario: Primary Sources Recorded
+
+- **WHEN** a concept needs depth beyond the glossary or programmatic documents
+- **THEN** the card SHALL cite the companion bibliography's primary text and verification date
+
+### Requirement: Reverse Engineering of Profession-Simulator Mechanics
+
+The research system SHALL document, from public sources (official pages, patch notes, developer postmortems, reviews, wikis), the mechanics of the profession-simulator corpus: inspection under living rulebooks (Papers, Please; Contraband Police; Beholder), dispatch and coordination stations (112/911 Operator; Emergency; Flashing Lights), trade diagnosis (Car Mechanic Simulator; House Flipper; Project Hospital), facility layout as flow (Airport CEO; Two Point Hospital), the retail wave (Supermarket Simulator; Gas Station Simulator; TCG Card Shop Simulator; Internet Cafe Simulator; Dealer's Life), transport and terrain (Euro/American Truck Simulator; SnowRunner; Bus Simulator), agriculture and extraction (Farming Simulator; Gold Rush; Hydroneer), the underworld trades (Thief Simulator; Drug Dealer Simulator; Hacknet; Uplink; Grey Hack), courtroom drama (L.A. Noire; Ace Attorney; We. The Revolution), editorial media (Not For Broadcast; The Westport Independent; Headliner), third-place sociality (VA-11 Hall-A; Coffee Talk; PowerWash Simulator co-op), governance depth (Democracy 4; Suzerain; Power & Revolution; Cities: Skylines), sport management (Football Manager; Out of the Park Baseball; Total Extreme Wrestling), engineering playgrounds (Kerbal Space Program; Stationeers; SpaceChem; Hardspace: Shipbreaker), health economics (Big Pharma), formation and transfer (the DCS instructor model; Rocksmith; Job Simulator's parody onboarding) and the poverty lens (Cart Life). Each mechanic SHALL generate a lesson card in the standard format with verifiable sources, mapped to the mmo-game profession-cluster requirements (inspection and discretion, dispatch stations, diagnosis loop, authored layout, retail economics, shifts and quotas, debt bondage, bonded vehicles, contract board, casing, courtroom drama, listening-post third places, governance depth, the pharmaceutical dilemma, the instructor station, censorship and the edit bay) or a justified discard.
+
+#### Scenario: Corpus Families Covered
+
+- **WHEN** the corpus is documented
+- **THEN** each family above SHALL have lesson cards covering its defining mechanics
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a card claims a mechanic about a specific game
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+#### Scenario: Translation Mapping
+
+- **WHEN** a profession-simulator mechanic has a candidate translation
+- **THEN** it SHALL map to a mmo-game profession-cluster requirement or record a discard with rationale
+
+### Requirement: Reverse Engineering of the Kojima Corpus Mechanics
+
+The research system SHALL document, from public sources (official guides, the director's commentary and design interviews, GDC talks, postmortems, critical analyses), the mechanics of the Kojima corpus: Metal Gear 1–2 and Metal Gear Solid 1–5 (stealth systems, the codec, survival, the war economy, adaptive enemy AI, Fulton extraction, Mother Base), Peace Walker (base management and co-op), Snatcher and Policenauts (investigative narrative, identity twists), Death Stranding 1–2 (asynchronous strand multiplayer, likes, traversal and load, timefall, connection as progression), Boktai (real-solar-sensor input) and P.T. (the communal puzzle loop). Each mechanic SHALL generate a lesson card in the standard format with verifiable sources, mapped to the mmo-game Kojima-cluster requirements (strand cooperation, inconvertible likes, connection infrastructure, directed-decay weather, repertoire adaptation, extraction as recruitment, the institution as base, the advisor roster, ephemeral perception, communal puzzles, the in-world fourth wall, implanted memory) or a justified discard.
+
+#### Scenario: Corpus Coverage
+
+- **WHEN** the corpus is documented
+- **THEN** each game family above SHALL have lesson cards covering its defining mechanics
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a card claims a mechanic about a specific game
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+#### Scenario: Translation Mapping
+
+- **WHEN** a Kojima mechanic has a candidate translation
+- **THEN** it SHALL map to a mmo-game Kojima-cluster requirement or record a discard with rationale
+
+### Requirement: Reverse Engineering of Realism-Milestone Mechanics
+
+The research system SHALL document, from public sources (manuals, developer postmortems, technical write-ups, interviews, mod-community documentation), the mechanics of the realism-milestone canon — the games that pushed realism furthest at their time: Flight Simulator 1.0 (1982), Falcon 3.0/4.0 (dynamic campaign), DCS World (study-sim systems), Microsoft Flight Simulator 2020 (Earth-scale data streaming), Orbiter (Newtonian spaceflight), M1 Tank Platoon and Steel Beasts (computed gunnery), Silent Hunter III (stationed submarine systems), Thief (light/sound stealth physics), Indianapolis 500 (1989), Grand Prix Legends, Richard Burns Rally (state-driven tires), iRacing (sanctioned series and stewards), BeamNG.drive (soft-body deformation), Dwarf Fortress (generated deep history), STALKER (offline NPC ecology), Far Cry 2 (propagating hazards, degradation), Miasmata (triangulation cartography), Teardown (voxel destruction), Kingdom Come: Deliverance (historical fidelity, illiteracy), OpenTTD (network interlocks). Each mechanic SHALL generate a lesson card in the standard format with verifiable sources, mapped to the mmo-game realism requirements (maximum-realism doctrine, dynamic campaign, failure cascades, firing solutions, listening, light/sound substrate, sanctioned competition, operating envelopes, deformation, deep history, propagating hazards, fallible cartography, literacy gateway, network interlocks) or a justified discard.
+
+#### Scenario: Canon Coverage
+
+- **WHEN** the canon is documented
+- **THEN** each milestone game above SHALL have lesson cards covering its defining realism mechanics
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a card claims a mechanic about a milestone game
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+#### Scenario: Translation Mapping
+
+- **WHEN** a realism mechanic has a candidate translation
+- **THEN** it SHALL map to a mmo-game realism requirement or record a discard with rationale
+
+### Requirement: Reverse Engineering of Expertise Science
+
+The research system SHALL document, from primary scientific sources with citations and verification dates, the expertise-formation science behind the talent engine: Ericsson's deliberate practice and its limits, Macnamara's meta-analytic transfer findings, Bjork's desirable difficulties with the spacing and testing effects, Ruthsatz's prodigy research, the Polgár environment experiment, Deci & Ryan's self-determination theory, Lepper's overjustification findings, Csikszentmihalyi's flow, Galenson's conceptual-versus-experimental innovators, and the critical-period literature. Each source SHALL produce lesson cards mapped to the mmo-game talent-engine requirements, with the honesty boundary recorded: domain skills only, near transfer measured, no brain-training claims.
+
+#### Scenario: Primary Scientific Sources
+
+- **WHEN** a card states a finding
+- **THEN** it SHALL cite the primary scientific source and verification date
+
+#### Scenario: The Honesty Boundary
+
+- **WHEN** findings become mechanics
+- **THEN** the domain-skills-only and measured-transfer boundary SHALL be recorded on the cards
+
+#### Scenario: Translation Mapping
+
+- **WHEN** an expertise-science finding has a candidate translation
+- **THEN** it SHALL map to a mmo-game talent-engine requirement or record a discard with rationale
+
+### Requirement: UE5-Based Prototype of the Final Engine for World-Building
+
+The project SHALL include a playable prototype built on **Unreal Engine 5** as the prototype of the game's final engine, exercising the fidelity stack for maximum realism: Nanite, Lumen, World Partition (streamed open-world regions), Chaos (destruction and vehicle physics), MetaHuman (character fidelity) and the Mass framework (ambient crowd simulation), plus the replication stack for multiplayer presence. The prototype serves as a world-building laboratory where every element SHALL teach a lesson mappable to the narrative engine (interactive lore terminals ≈ story cards; script triggers ≈ plot seeds; lighting that guides ≈ narrative emphasis). Studying the UE5 subsystems SHALL also produce engine-architecture lesson cards (World Partition streaming, replication graphs, Mass state trees, PCG) informing the MMO build, and the UE5 EULA terms (source availability, royalty after the revenue threshold, content rules) SHALL be documented as standing constraints.
+
+#### Scenario: The Prototype Renders Maximum Realism
+
+- **WHEN** the prototype is opened on floor-spec hardware
+- **THEN** it SHALL render a first-person 3D scene with Nanite/Lumen fidelity at the declared frame-rate target
 
 #### Scenario: Interaction with Lore
 
@@ -364,19 +676,17 @@ The project SHALL include a playable in-browser prototype built on **d3wasm** (g
 
 #### Scenario: Engine Architecture Lessons
 
-- **WHEN** the d3wasm codebase (id Tech 4 subsystems: scripting, GUI, asset pipeline, renderer) is studied
-- **THEN** lesson cards SHALL capture which architectural decisions apply to the final engine of a narrative RPG (or a justified discard)
+- **WHEN** the UE5 subsystems (World Partition, replication, Mass, PCG) are studied
+- **THEN** lesson cards SHALL capture which architectural decisions apply to the MMO client and server topology
 
-#### Scenario: GPL Boundary Is Respected
+#### Scenario: EULA Constraints Documented
 
-- **WHEN** the prototype incorporates d3wasm engine code (GPL-3.0)
-- **THEN** the prototype's own code SHALL be licensed GPL-3.0-compatible
-- **AND** no original Doom 3 game assets (maps, textures, models, sounds, `.pk4` content) SHALL enter the repository — original or freely licensed assets only
-- **AND** the trade-off that a final engine derived from d3wasm inherits GPL-3.0 copyleft SHALL be documented before adoption
+- **WHEN** the prototype incorporates UE5
+- **THEN** the EULA obligations (royalty terms, source-access rules, content restrictions) SHALL be documented before the first public distribution
 
 ### Requirement: Versioned Lesson Cards
 
-Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, racing sims, world sims, tactical/survival sims, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson.
+Lessons from the tracks (Albion, GTA SA, GTA V RP, GTA VI, MUDs, CyberCode, racing sims, world sims, tactical/survival sims, Doom 3) SHALL be persisted in a versioned dataset (`data/worldbuilding/lessons.json`) with fields: source game, mechanic, evidence/source, candidate translation, status (proposed/accepted/discarded), and target spec. Accepted cards SHALL reference the target spec requirement that absorbs the lesson. GTA VI cards SHALL additionally carry the evidence-status field (officially confirmed / trailer-analysis / leaked-unverified) required by that track.
 
 #### Scenario: Traceable Accepted Card
 
@@ -386,7 +696,7 @@ Lessons from the tracks (Albion, GTA SA, GTA V RP, MUDs, CyberCode, racing sims,
 
 ### Requirement: No Asset Violations
 
-The research program SHALL use only documentary observation of mechanics (public sources) and original implementation in the prototype; no asset, code, model, texture, or audio extracted from the reference games SHALL enter the repository. The single licensed-code exception is the d3wasm engine itself (GPL-3.0, documented), used as the prototype's engine base; game assets remain original or free with a documented permissive license — the GPL-3.0 of the engine code does not extend to using proprietary game data.
+The research program SHALL use only documentary observation of mechanics (public sources) and original implementation in the prototype; no asset, code, model, texture, or audio extracted from the reference games SHALL enter the repository. Engine-provided assets (UE5 content, marketplace or licensed third-party packs) SHALL be used only under documented license terms; game assets otherwise remain original or free with a documented permissive license.
 
 #### Scenario: Asset Audit
 

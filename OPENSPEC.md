@@ -1110,6 +1110,11 @@ The final product SHALL be a Role-Playing MMORPG whose canonical world and conte
 - **WHEN** the MMO world simulates (memory, ticks, plots, NPC minds)
 - **THEN** it SHALL use the specified engine systems rather than bespoke MMO logic
 
+###### Scenario: Scenario Seeds
+
+- **WHEN** a scenario is instantiated
+- **THEN** a shareable seed MAY drive its procedural variation (arrangements, secondary details) over the same canon — two seeds, one truth
+
 ##### Requirement: Persistent Multiplayer World
 
 The world SHALL be persistent and shared: it continues to evolve off-screen (world-simulation ticks) while any given player is offline, and events caused by other players SHALL be observable later (rumors, journal entries, world changes) — applying the MUD lessons already captured in worldbuilding-research.
@@ -1276,6 +1281,11 @@ Per the hybrid synthesis, material consequence SHALL apply to what a character c
 
 - **WHEN** a player insures goods or vehicles
 - **THEN** premiums SHALL act as an economy sink and claims SHALL restore value without creating new money beyond the insured amount
+
+###### Scenario: Gravestone and Social Rescue
+
+- **WHEN** a character falls with carried goods
+- **THEN** the site SHALL remain recoverable for a declared window, during which other actors MAY protect the recovery, bless it (extend the window) or loot it — rescue as a social act with witnesses
 
 ##### Requirement: Declared Territory Wars via Player Institutions
 
@@ -1574,6 +1584,11 @@ Per the RDR2 crime lesson, heat SHALL be regional and identity-mediated: witness
 - **WHEN** an identity-obfuscating measure is used during an offense
 - **THEN** attribution SHALL be delayed or misdirected proportional to the disguise and the character's local notoriety
 
+###### Scenario: Aggressor Status Is Visible
+
+- **WHEN** a character attacks without provocation
+- **THEN** an aggressor status SHALL become visible to witnesses in scope (the skull lesson) — a legal mark, distinct from any moral judgment
+
 ##### Requirement: Deliberative Combat — Focus and Formal Duels
 
 Per the Dead Eye and RDR1 duel lessons, combat SHALL support deliberation: focus marking (declaring targets and intents before resolution — the resolution honors the marks, composing with binding entry plans) and formalized confrontation scenes (duels, negotiations, standoffs) with a binding structure of setup, tension and decisive instant where preparation and nerve decide.
@@ -1696,6 +1711,11 @@ Per the HackHub/Grey Hack lesson, operable doctrinal systems in the cyber domain
 - **WHEN** automation or tooling is authored
 - **THEN** it SHALL exist as in-world scripts — writable, shareable and versioned artifacts under the closed economy
 
+###### Scenario: Logic From World Materials
+
+- **WHEN** in-world mechanisms are built (redstone lesson)
+- **THEN** logic MAY be constructed from world materials and arrangements, not only written code — engineering as narrative craft
+
 ##### Requirement: Asynchronous Intrusion and Hardening
 
 Per the Grey Hack lesson, player infrastructure SHALL be attackable while its owner is offline: intrusion attempts resolve against defensive state (hardening, OPSEC posture), the attack-that-happened-while-away surfaces narratively on return (composing with off-screen ticks and sleep), operations carry time-scoped escalation clocks (trace), and exploits decay along curves — the attacker/defender arms race as content engine.
@@ -1756,6 +1776,321 @@ Per the Civilization lesson, world ticks SHALL be able to flip regional epochs �
 
 - **WHEN** an epoch ends
 - **THEN** it SHALL leave a durable legacy modifier on the region (skills, ruins, institutions, memory) rather than vanishing without trace
+
+##### Requirement: Player Housing and Owned Spaces
+
+Per the RuneScape/Habbo lesson, players SHALL own narrative spaces within the world's room lattice: a personal or group space that is theirs to shape, decorated with acquired items (decoration as a closed-economy sink), functioning as identity and social anchor — reachable through the world's normal geography (portals, doors, addresses), never an instanced pocket outside canon.
+
+###### Scenario: The Space Is in the World
+
+- **WHEN** a player's owned space is entered by another
+- **THEN** it SHALL be reached through in-world geography and follow the same simulation rules (curves, witnesses, ticks) as any location
+
+###### Scenario: Decoration Is Economy
+
+- **WHEN** a player decorates their space
+- **THEN** acquired furnishings SHALL flow through the closed economy, and the space's character SHALL be legible to visitors
+
+##### Requirement: Player-Authored Rulesets in Owned Spaces
+
+Per the Habbo lesson (roleplay hospitals, armies and mafias invented by players with self-authored rules inside their rooms), owners of spaces SHALL be able to author local rulesets — declared conduct rules for their space, enforced by their own moderation tools beneath the platform's protections. These micro-institutions are the layer beneath formal player-run institutions: the world recognizes the rules of the space, while law-level institutions (mayoralty, judgeship) govern what spaces cannot.
+
+###### Scenario: Local Rules Bind in the Space
+
+- **WHEN** a space's declared rules are broken inside it
+- **THEN** the space's enforcement tools (exclusion, bans) apply, recorded as world events
+
+###### Scenario: Local Rules Never Override Law or Protections
+
+- **WHEN** a local ruleset conflicts with institutional law, age-banding or consent protections
+- **THEN** the platform layer SHALL prevail, and the conflict SHALL be reviewable
+
+##### Requirement: Authored Quest Standard
+
+Per the RuneScape lesson, quests SHALL meet the authored-quest standard: each is a distinct authored narrative with its own mechanics and structure (puzzles, investigations, setups), gated by unlock chains of prior accomplishments — never procedural fetch work generated to fill space. Quantity never buys exemption from the standard.
+
+###### Scenario: Every Quest Has a Why
+
+- **WHEN** a quest enters the canon
+- **THEN** it SHALL carry its authored intent (what makes this story worth living) and at least one mechanic unique to it
+
+###### Scenario: Unlock Chains Gate Depth
+
+- **WHEN** a quest requires prior accomplishments
+- **THEN** the chain SHALL be meaningful (capabilities, reputation, relationships earned), not arbitrary level counting
+
+##### Requirement: Announced World Threats
+
+Per the Tibia/Ragnarok lesson, the world simulation SHALL produce announced world-scale threats — emergent crises, raids and world bosses surfaced through in-world channels (rumor, institutional alert, press) with enough warning to organize — forcing cooperation across factions and shards, with contested rewards proportionate to the threat.
+
+###### Scenario: The Threat Is Announced In-World
+
+- **WHEN** a world-scale threat forms
+- **THEN** warning SHALL propagate through diegetic channels before it peaks, giving actors time to organize
+
+###### Scenario: The Response Is Contested Cooperation
+
+- **WHEN** multiple parties engage the threat
+- **THEN** cooperation SHALL be necessary for success and the rewards SHALL be contested among contributors
+
+##### Requirement: Branching Career Trees With Prestige
+
+Per the Ragnarok lesson, careers SHALL be branching certification trees grounded in the real military forces catalog: paths that specialize, cross and culminate in prestige tiers (senior variants, rebirth-equivalent depth), earned through demonstrated practice and institutional recognition — never bought.
+
+###### Scenario: The Tree Grows From the Catalog
+
+- **WHEN** a career tree is authored
+- **THEN** its branches and requirements SHALL trace to verified units, courses and specializations from the military forces catalog
+
+###### Scenario: Prestige Is Earned
+
+- **WHEN** a prestige tier is reached
+- **THEN** it SHALL certify demonstrated practice and recognition, and SHALL NOT be purchasable
+
+##### Requirement: Formalized Bonds
+
+Per the Ragnarok marriage lesson, the world SHALL recognize formalized bonds between characters — partnerships, mentorships, pacts, oaths — as world-recorded contracts with mechanical effects (shared standing, inheritance, obligations, benefits), dissolvable through narrative and institutional process.
+
+###### Scenario: The Bond Is Recorded
+
+- **WHEN** characters formalize a bond
+- **THEN** it SHALL enter the event store with declared terms and effects on standing and obligation
+
+###### Scenario: The Bond Can End
+
+- **WHEN** a bond is dissolved
+- **THEN** the dissolution SHALL carry its narrated consequences (obligations, memory, reputation), never a clean database delete
+
+##### Requirement: The World as Palimpsest
+
+Per the Minecraft lesson, world modifications SHALL be recorded history: every lasting change made by any actor persists in the event store and remains discoverable — player-action archaeology is content (finding where someone dug, built, fought or hid something), and the world's material memory composes with witness memory and crystals.
+
+###### Scenario: Modifications Are Discoverable
+
+- **WHEN** a character investigates a changed place
+- **THEN** the history of its modification SHALL be uncoverable through in-world means (traces, records, witnesses), never through out-of-world logs
+
+###### Scenario: Archaeology Is Content
+
+- **WHEN** an old modification is found by someone who did not make it
+- **THEN** the discovery MAY seed narrative (whose work was this, what happened here) wired to plot-generation
+
+##### Requirement: Neglect Breeds Threats
+
+Per the Minecraft light-spawning lesson, neglect SHALL generate danger: regions without player attention darken along the attention-fidelity gradient and breed threats — the unattended periphery accumulates hostility, abandonment has a smell, and the world pushes back where nobody looks. This composes attention-based fidelity (cooling regions) with consequence afterlife (unaddressed consequences attracting actors).
+
+###### Scenario: The Dark Periphery Bites Back
+
+- **WHEN** a region stays unattended past a threshold
+- **THEN** threats SHALL accumulate there and eventually propagate outward, surfacing through world ticks
+
+###### Scenario: Attention Is Civilization
+
+- **WHEN** players return sustained attention to a darkened region
+- **THEN** the threat pressure SHALL recede along the same gradient — presence as pacification
+
+##### Requirement: Shard Spectrum Including Lawless
+
+Per the 2b2t lesson, the shard spectrum SHALL extend to the lawless: adult, opt-in shards with no community ruleset — no local law, no institutions, no staff arbitration — as valid configuration. Platform protections (age-banding, consent, safety) remain non-negotiable even there: lawless means no in-world law, never unprotected people.
+
+###### Scenario: Lawless Means No In-World Law
+
+- **WHEN** an adult opt-in lawless shard runs
+- **THEN** no community ruleset, institution or staff arbitration SHALL govern in-world conduct — only what players enforce themselves
+
+###### Scenario: Protections Outlive Lawlessness
+
+- **WHEN** protections (age trays, consent, deny-lists) apply on any shard
+- **THEN** they SHALL remain in force regardless of the shard's ruleset
+
+##### Requirement: Creator Economy Inside the Closed Economy
+
+Per the Roblox DevEx lesson, accepted content authors SHALL earn from the closed economy: modules, quests and packages that pass review carry a creator share — in-world income and standing proportional to the use their work receives — without minting new value outside the closed economy (earnings are a share of real flows, never a faucet).
+
+###### Scenario: Authors Earn a Share of Real Flows
+
+- **WHEN** accepted content is used and generates economic flow
+- **THEN** the creator share SHALL be a slice of that flow, recorded and traceable — never newly minted money
+
+###### Scenario: Standing Compounds
+
+- **WHEN** an author's body of work accumulates use
+- **THEN** authorial standing SHALL compound into reputation and tier progression (per the quality-gated author tiers)
+
+##### Requirement: Identity Portability Across Scenarios
+
+Per the Roblox cross-experience lesson, character identity SHALL be portable across scenarios and shards: the same avatar (with its mirror, crystals and earned history) enters different worlds — carried by the persistent memory pyramid, entering each canon through its own doors (setup questions, arrival narration), never duplicated as a separate person.
+
+###### Scenario: One Character, Many Worlds
+
+- **WHEN** a player enters a new scenario with an established character
+- **THEN** the avatar, crystals and standing SHALL carry over, adapted through the scenario's arrival fiction
+
+###### Scenario: Crystals Cross, Canon Does Not Leak
+
+- **WHEN** carried memory references people or places foreign to the current canon
+- **THEN** it SHALL remain personal memory (dreams, distant past, other lives) without leaking entities into the hosting world
+
+##### Requirement: Mechanic Modules per Context
+
+The game SHALL be multi-mechanic by context: mechanics are modular capabilities with declared applicability (domain, era, band, scale), activated by the context stack — scenario plus shard plus region plus situation. An invariant core SHALL never deactivate anywhere (event store, entity curves, soft-body graph, witnesses, memory/crystals, ticks, narrator, protections, closed economy). Every mechanic SHALL compose through the common primitives — writing curves, deforming the graph, recording events, opening windows — never through parallel state; and mutually exclusive modules SHALL declare their exclusions, validated at authoring time.
+
+###### Scenario: The Context Stack Selects Modules
+
+- **WHEN** a case runs (a police operation, a cyber op, a survival arc, a social evening)
+- **THEN** the active mechanic set SHALL derive from the scenario's, shard's, region's and situation's declarations — no global monolith
+
+###### Scenario: Invariants Never Switch Off
+
+- **WHEN** any module set is active
+- **THEN** the invariant core SHALL remain fully in force — protections, closed economy, memory and audit included
+
+###### Scenario: Composition Through Common Primitives
+
+- **WHEN** two mechanics are active together (e.g., contextual ballistics and metabolism in the same march)
+- **THEN** they SHALL compose through curves, graph, events and windows — with no parallel state to reconcile
+
+###### Scenario: Declared Exclusivity
+
+- **WHEN** modules cannot coexist (e.g., the real-tool tier with band A)
+- **THEN** the exclusion SHALL be declared and enforced at authoring/validation time, not discovered in play
+
+##### Requirement: Versioned Artifacts and Code Archaeology
+
+Per the real software development lesson (git), in-world artifacts — scripts, tools, documents, mechanisms — SHALL be versioned: every artifact carries its history of changes (who, what, why), readable in-world; blame and diff are archaeology of authorship (composing the palimpsest and diegetic scripting requirements); and when two authors change the same artifact, the merge conflict SHALL resolve as a negotiation, recorded in the event store.
+
+###### Scenario: The Artifact Remembers Its Authors
+
+- **WHEN** a character inspects a versioned artifact
+- **THEN** its change history (authors, intents, forks) SHALL be discoverable through in-world means
+
+###### Scenario: Merge Conflict Is Negotiation
+
+- **WHEN** two authors' changes to one artifact conflict
+- **THEN** resolution SHALL be an explicit negotiated act with recorded outcome — never a silent overwrite
+
+##### Requirement: Technical Debt as a Compounding Curve
+
+Per the real software development lesson, expedient work SHALL write technical debt: quick hacks and deferred quality accrue interest along decay curves on the artifact, tool or institution — drag felt in operation, never shown as a meter — until paid down by refactoring as investment. Debt may be carried deliberately (a deadline worth it) with eyes open.
+
+###### Scenario: Interest Accrues on Hacks
+
+- **WHEN** an artifact or institution is patched expediently
+- **THEN** its debt curve SHALL compound, degrading operation until refactored
+
+###### Scenario: Refactoring Is Investment
+
+- **WHEN** debt is paid down through deliberate rework
+- **THEN** the curve SHALL recover at the cost of time and attention now — the trade made explicit in analysis mode
+
+##### Requirement: Breaking Changes Ripple Through Dependents
+
+Per the SemVer/dependency lesson, shared artifacts SHALL carry contracts: a breaking change deforms the graph edges of everything depending on the artifact (composing soft-body consequence), version signals declare the intent, and depending on another's artifact exposes you to their fate — the supply chain as attack surface (composing asynchronous intrusion: a compromised dependency compromises its dependents).
+
+###### Scenario: The Ripple Declares Itself
+
+- **WHEN** a shared artifact breaks its contract
+- **THEN** dependents' edges SHALL deform visibly and the blast radius SHALL be derivable from the graph
+
+###### Scenario: Dependencies Are Exposure
+
+- **WHEN** an actor builds on someone else's artifact
+- **THEN** their exposure to that artifact's compromise SHALL be real and priced — trust as attack surface, per the maintainer-rotation curves (burnout degrades maintainership)
+
+##### Requirement: Blameless Postmortems and the Issue Trail
+
+Per the SRE lesson, failures SHALL receive blameless postmortems — the structured ritual that crystallizes the causal why without punishing the reporter (composing failure-crystallizes and causal replay); issues SHALL be world-visible work entities (reported, triaged, owned, fixed); and tests SHALL exist as confidence instruments — executable guards an author attaches to an artifact, whose red-green cycle practices understanding (eurekas: writing the test teaches the thing).
+
+###### Scenario: The Postmortem Crystallizes Without Blame
+
+- **WHEN** a significant failure is analyzed
+- **THEN** the postmortem SHALL produce its lesson memory and corrective work as issues, and SHALL NOT assign personal fault as output
+
+###### Scenario: Tests Guard the Artifact
+
+- **WHEN** an artifact with attached tests is changed
+- **THEN** the guards SHALL run and their verdict SHALL gate confidence in the change — a broken guard is information, not punishment
+
+##### Requirement: The Dossier Is Not the World
+
+Per the Orwell lesson, intelligence work SHALL operate on selection: analysts browse the raw flow of the world (communications, records, traces) and select fragments — only selected fragments enter the dossier, and selection is interpretation. Institutions SHALL act on the dossier, not on raw reality: a wrong or biased profile produces real institutional action against the wrong reading, recorded as intelligence failure eligible for postmortem. Omission SHALL be an act — withholding exculpatory fragments is a deliberate choice with weight. And surveillance mechanics SHALL apply to in-world characters only, never to players' personal data — avatar-mirror consent is inviolable under this entire requirement.
+
+###### Scenario: Only the Selected Enters the Record
+
+- **WHEN** an analyst works a case
+- **THEN** the dossier SHALL contain the selected fragments and their derivations — never the raw flow wholesale
+
+###### Scenario: Institutions Act on the Dossier
+
+- **WHEN** a dossier reaches an institution
+- **THEN** the institutional response SHALL follow the recorded reading — if the reading is wrong, the response is wrongly aimed, and the failure is analyzable afterward
+
+###### Scenario: Omission Has Weight
+
+- **WHEN** an analyst withholds a fragment that would change the reading
+- **THEN** the omission SHALL be an attributable act, visible in analysis mode and accountable to audit
+
+###### Scenario: Surveillance Stops at the Character
+
+- **WHEN** any surveillance mechanic operates
+- **THEN** its objects SHALL be in-world characters and artifacts — players' personal data and mirror profiles SHALL never become surveillance content
+
+##### Requirement: Analysis Bias and Influence as Operable Doctrine
+
+Per the Orwell lesson grounded in the project's doctrine library (Heuer's Psychology of Intelligence Analysis), confirmation bias SHALL be a real force in analysis: hypothesis-confirming selections feel easier and can be honestly wrong — and catching one's own bias is trained skill (training-grade in the intelligence domain, surfacing in analysis mode). Influence operations — cherry-picking and editing fragments to steer opinion (the sequel's mechanic) — SHALL be operable PSYOPS under the narrative auditor: steering is possible, detectable and attributable.
+
+###### Scenario: Bias Is Felt, Then Caught
+
+- **WHEN** an analyst's selections consistently confirm their running hypothesis
+- **THEN** the bias SHALL be real in the resolution, and the analysis mode SHALL expose the pattern to learn from — training transfer for real analytic discipline
+
+###### Scenario: Influence Is Audited Steering
+
+- **WHEN** an actor curates fragments to steer an audience
+- **THEN** the steering SHALL operate (opinion moves per the doctrine), remain detectable by counter-analysis, and be attributable in audit
+
+##### Requirement: Preferred-Language Rendering
+
+All delivered text (narration, journal, cards, interface, player speech) SHALL render in each player's preferred language: narration is delivered per language from the bilingual engine with caching (translated once, served many — no per-player retranslation cost); players sharing a scene across languages read each other's speech in their own language, marked as translation; one canonical language version SHALL remain authoritative for audit and memory; control tags and canonical proper nouns SHALL pass through untranslated; and in-world language barriers MAY be enabled as an optional mechanic module (interpreters and translation as content) per the mechanic-modules requirement.
+
+###### Scenario: Everyone Reads Their Language
+
+- **WHEN** players of different preferred languages share a scene
+- **THEN** each SHALL read the narration and the other players' speech in their own language, with translation visibly marked
+
+###### Scenario: The Canon Stays Authoritative
+
+- **WHEN** audit, memory or analysis consumes delivered text
+- **THEN** they SHALL operate on the canonical-language version — translations are renderings, never the record
+
+###### Scenario: Tags and Names Never Mangle
+
+- **WHEN** text containing control tags or canonical proper nouns is rendered
+- **THEN** tags and canonical names SHALL pass through exactly unchanged
+
+###### Scenario: Language Barrier as Optional Content
+
+- **WHEN** a scenario or shard enables in-world language barriers
+- **THEN** interpretation becomes gameplay (interpreters, partial understanding) — declared module, never a global default
+
+##### Requirement: Voice Input as Text
+
+Speech SHALL be a first-class input modality alongside manual typing: voice input transcribes to text before it enters the game (the text substrate — audit, memory, curves, translation — consumes only text), with player review and edit before sending, transcription marked as such in the record, and narration MAY be spoken aloud (text-to-speech) as an accessibility output with the text remaining canonical. Voice processing SHALL serve transcription only — no persistent voice storage, per the privacy posture.
+
+###### Scenario: Voice Becomes Reviewable Text
+
+- **WHEN** a player speaks their action or speech
+- **THEN** the transcription SHALL appear for review and editing before entering the world, and the delivered text SHALL be marked voice-origin in the record
+
+###### Scenario: Text Remains Canonical
+
+- **WHEN** narration is spoken via text-to-speech
+- **THEN** the canonical artifact SHALL remain the text — the voice is a rendering, like translation
+
+###### Scenario: Transcription Only, Never Stored Voice
+
+- **WHEN** voice input is processed
+- **THEN** audio SHALL be used for transcription and discarded — never persisted, never replayable
 
 <!-- source: specs/narrative-audit/spec.md -->
 
@@ -2524,6 +2859,127 @@ The research system SHALL document, from public sources (Arma 3, Escape from Tar
 ###### Scenario: Verifiable Source
 
 - **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Orwell Mechanics
+
+The research system SHALL document, from public sources (Osmotic Studios' Orwell and Orwell: Ignorance is Strength, official pages, reviews and analyses), the surveillance-thriller mechanics: datachunk selection (the investigator browses citizens' communications — calls, chats, posts, documents — and selects fragments to upload; selection is the core verb), the dossier as constructed profile (institutions act on what was selected, not on raw reality — wrong or biased selections produce wrong profiles that authorities act upon), omission as an action (withholding exculpatory evidence carries moral weight), confirmation bias as gameplay (hypothesis-confirming selection feels right and can be honestly wrong), the sequel's influence editing (cherry-picking and editing to steer opinion — propaganda as mechanic), and the asymmetric-privacy framing. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Selection-Lesson
+
+- **WHEN** the research documents datachunk selection as the core verb
+- **THEN** the card SHALL propose the dossier-not-the-world principle for the intelligence workflow (mmo-game/knowledge-graph)
+
+###### Scenario: Dossier-Consequence Lesson
+
+- **WHEN** the research documents authorities acting on the constructed profile
+- **THEN** the card SHALL propose institutions acting on recorded intelligence — fallible and consequential (mmo-game)
+
+###### Scenario: Influence Lesson
+
+- **WHEN** the research documents the sequel's influence editing
+- **THEN** the card SHALL propose cherry-picking as operable PSYOPS under audit, grounded in the project's doctrine library (mmo-game/narrative-audit)
+
+###### Scenario: Ethics Guardrail Recorded
+
+- **WHEN** the research documents the surveillance asymmetry
+- **THEN** the card SHALL record the scope rule: surveillance mechanics apply to in-world characters only, never to players' personal data (avatar-mirror consent inviolable)
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about the game
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Real Software Development Practice
+
+The research system SHALL document, from public sources (git and SemVer documentation, the Agile Manifesto, the Google SRE book, postmortem culture, open-source dynamics literature), the mechanics of real software engineering as a reference system: version control (history, branches, blame, merges and conflicts), code review as a social gate, technical debt and its compounding interest, semantic versioning and breaking changes rippling through dependents, dependency supply chains as attack surface, testing and test-driven development, CI/CD with feature flags and kill switches, issue tracking as visible work, blameless postmortems, estimation under uncertainty (Hofstadter), Conway's law, and open-source maintainer burnout. Each practice SHALL generate a lesson card in the same format as the game tracks — software engineering is real doctrine with public sources, fitting the training-grade philosophy of the project's engineering/cyber domains.
+
+###### Scenario: Engineering Doctrine Lesson
+
+- **WHEN** the research documents a software engineering practice
+- **THEN** the card SHALL propose its translation to the in-world artifact economy (mmo-game) or a justified discard
+
+###### Scenario: Training-Grade Evidence
+
+- **WHEN** a practice is documented from its canonical public source
+- **THEN** the card SHALL record it as operable-doctrine material for the engineering/cyber domains, with source and date
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a practice or number
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Sandbox/Platform Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the sandbox and platform references: Minecraft (the fully editable voxel world with every modification persistent; procedurally generated infinite worlds from shareable seeds; light-based hostile spawning; redstone as in-world logic built from world materials; player-run server cultures; the 2b2t anarchy experiment — emergent history with zero governance; the modding ecosystem and marketplace; survival/hardcore/creative modes) and Roblox (the UGC platform model — millions of user-built experiences on engine+economy+safety rails; Luau scripting; the DevEx creator economy converting creations to real income; avatar and UGC marketplace with community-maintained value lists; age-safety and moderation at scale, including its documented failures; goal-free social roleplay at massive scale among the youngest audience — Brookhaven, Adopt Me; cross-experience identity). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Palimpsest Lesson
+
+- **WHEN** the research documents a fully editable world where every modification persists
+- **THEN** the card SHALL propose the world as palimpsest — recorded modification history with player-action archaeology as content (mmo-game/event-persistence)
+
+###### Scenario: Neglect-Breeds-Threats Lesson
+
+- **WHEN** the research documents light-based hostile spawning
+- **THEN** the card SHALL propose neglect generating danger — unattended regions darkening and breeding threats, composing attention-based fidelity with consequence afterlife (mmo-game/world-simulation)
+
+###### Scenario: Shard-Spectrum Lesson
+
+- **WHEN** the research documents the 2b2t no-rules anarchy
+- **THEN** the card SHALL propose a shard spectrum including the lawless — adult opt-in no-community-rules shards as valid configuration beneath non-negotiable platform protections (mmo-game)
+
+###### Scenario: Creator-Economy Lesson
+
+- **WHEN** the research documents DevEx and community value lists
+- **THEN** the card SHALL propose a creator economy inside the closed economy — accepted module authors earning in-world share (mmo-game)
+
+###### Scenario: Evidence Reinforcements
+
+- **WHEN** the research documents redstone, the platform model, age-safety and goal-free social RP
+- **THEN** the card SHALL record them as evidence for diegetic scripting, the contribution channel, age-banding at scale (with moderation-failure lessons) and band-A social RP demand already specified
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+##### Requirement: Reverse Engineering of Classic MMO Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the classic MMOs: RuneScape (use-trained skills at scale, quests as authored puzzle-stories with unlock chains, the world as skill-board, wilderness risk gradient by depth, the gravestone death protocol with social rescue, player-owned houses, recurring distractions, rares as cultural economy, Ironman modes), Habbo Hotel (player-owned decorated rooms as identity, furni as economy, roleplay institutions invented by players inside their rooms with self-authored rules, player-made games, the goal-free social sandbox), Tibia (hardcore death costs, the skull system marking aggressors, paid scheduled guild wars, announced world bosses and raids, map-knowledge as community artifact), and Ragnarok Online (branching class trees with rebirth prestige, contested MvP world bosses on timers, scheduled War of Emperium sieges, card slotting as build combinatorics, refinement with break risk, marriage with mechanical benefits, vending streets). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+###### Scenario: Authored-Rulesets Lesson
+
+- **WHEN** the research documents players inventing roleplay institutions with self-authored rules inside their rooms
+- **THEN** the card SHALL propose player-authored rulesets in owned spaces as the layer beneath formal player-run institutions (mmo-game)
+
+###### Scenario: Housing Lesson
+
+- **WHEN** the research documents player-owned houses and decorated rooms as identity and economy
+- **THEN** the card SHALL propose owned narrative spaces with decoration as a closed-economy sink (mmo-game)
+
+###### Scenario: World-Threat Lesson
+
+- **WHEN** the research documents announced world bosses and scheduled sieges
+- **THEN** the card SHALL propose announced world-scale cooperative threats with contested rewards (mmo-game/world-simulation)
+
+###### Scenario: Career-Trees Lesson
+
+- **WHEN** the research documents branching class trees with rebirth prestige
+- **THEN** the card SHALL propose branching career/certification paths with prestige tiers grounded in the military forces catalog (mmo-game/military-forces-catalog)
+
+###### Scenario: Authored-Quests Lesson
+
+- **WHEN** the research documents quests as authored puzzle-stories
+- **THEN** the card SHALL record the authored-quest standard for the scenario pipeline — unique mechanics per quest, never procedural fetch work (scenario-authoring/mmo-game)
+
+###### Scenario: Reinforcements Recorded
+
+- **WHEN** the research documents the skull system, gravestones, use-trained skills and vending streets
+- **THEN** the card SHALL record them as evidence for heat-with-identity, carry-only death protocol with social rescue, practice-based skills and regional markets already specified
+
+###### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
 - **THEN** the card SHALL cite the public source (URL) and verification date
 
 ##### Requirement: Reverse Engineering of Life/Strategy Game Mechanics
@@ -3490,6 +3946,12 @@ Product direction decision: the game itself will be a Role-Playing MMORPG based 
   42. NPC wants and fears as plot seeds — rolling desires/dreads per NPC that resolve into memory and re-roll; plots emerge from colliding desires, not only player triggers.
   43. Faction agendas, declared and hidden — behavior consistent with both layers; the hidden layer revealed through intelligence work on the graph.
   44. Regional epochs with legacy — world ticks flip sustained regional periods (golden/turmoil) that change production, curves and windows, and leave durable legacy when they end.
+  45. Player housing and owned spaces — narrative spaces in the room lattice, owned and decorated (decor as closed-economy sink), in-world geography, never instanced pockets.
+  46. Player-authored rulesets in owned spaces — Habbo micro-institutions: space owners declare local rules enforced beneath platform protections; law-level institutions govern what spaces cannot.
+  47. Authored quest standard — every quest is a distinct authored narrative with unique mechanics and meaningful unlock chains; never procedural fetch work.
+  48. Announced world threats — world-scale crises surfaced through diegetic channels with warning, forcing contested cooperation with proportionate rewards.
+  49. Branching career trees with prestige — certification trees grounded in the military forces catalog; prestige earned through practice and recognition, never bought.
+  50. Formalized bonds — world-recorded partnerships/mentorships/pacts with mechanical effects and narrated dissolution; gravestone/social-rescue and aggressor-status (skull) scenarios wired into carry-only and heat.
 
 - From: no MMO requirement; multiplayer implied by research lessons only.
 - To: explicit vision-level contract; detailed mechanics (sharding, networking, economy, scale) arrive as future changes against this spec.
@@ -3499,6 +3961,20 @@ Product direction decision: the game itself will be a Role-Playing MMORPG based 
 - Affected specs: none modified; adds `mmo-game`. worldbuilding-research is referenced (engine path, MUD/CyberCode lessons), not changed.
 - Non-breaking: vision-level requirements; implementation plan unchanged until a future change picks it up.
 - The "engine, not a single game" framing in the project context is refined: the engine remains the core, and the committed product target built on it is this MMORPG.
+  51. The world as palimpsest — every modification is recorded history; player-action archaeology is content, wired to plot-generation.
+  52. Neglect breeds threats — unattended regions darken and accumulate hostility that propagates outward; attention is civilization (presence pacifies).
+  53. Shard spectrum including lawless — adult opt-in no-rules shards as valid configuration; platform protections non-negotiable everywhere.
+  54. Creator economy inside the closed economy — accepted authors earn a share of real flows (never minted money); standing compounds into tiers.
+  55. Identity portability across scenarios — one character, many worlds: avatar, crystals and standing carried through each canon's arrival fiction, without canon leakage.
+  56. Mechanic modules per context — mechanics as declarable modules activated by the context stack (scenario/shard/region/situation); invariant core never switches off; composition only through common primitives (no parallel state); exclusions declared and validated at authoring time.
+  57. Versioned artifacts and code archaeology — in-world artifacts carry change history (blame/diff as archaeology); merge conflicts resolve as recorded negotiation.
+  58. Technical debt as a compounding curve — expedient work accrues interest felt as drag (never a meter); refactoring is explicit investment.
+  59. Breaking changes ripple through dependents — shared artifacts carry contracts; breaking deforms dependent edges; dependencies are priced exposure (supply chain); maintainer burnout rotates.
+  60. Blameless postmortems and the issue trail — failures analyzed without blame produce lessons and corrective issues; tests as executable confidence guards (red-green teaches).
+  61. The dossier is not the world — analysts select fragments; only selected data enters the record; institutions act on the dossier (fallibly, consequentially); omission is an attributable act; surveillance stops at characters, never players' data.
+  62. Analysis bias and influence as operable doctrine — confirmation bias real and trainable (Heuer-grounded); influence operations as audited PSYOPS steering, detectable and attributable.
+  63. Preferred-language rendering — every delivered text in each player's preferred language (narration cached per language, cross-language speech translated and marked); canonical version authoritative for audit; tags/names pass through; in-world language barriers as optional module.
+  64. Voice input as text — speech transcribed to reviewable text before entering the world (text substrate preserved); TTS narration as accessibility rendering; transcription-only processing, no voice storage.
 
 #### `tasks.md`
 
@@ -3536,6 +4012,11 @@ The final product SHALL be a Role-Playing MMORPG whose canonical world and conte
 
 - **WHEN** the MMO world simulates (memory, ticks, plots, NPC minds)
 - **THEN** it SHALL use the specified engine systems rather than bespoke MMO logic
+
+#### Scenario: Scenario Seeds
+
+- **WHEN** a scenario is instantiated
+- **THEN** a shareable seed MAY drive its procedural variation (arrangements, secondary details) over the same canon — two seeds, one truth
 
 ### Requirement: Persistent Multiplayer World
 
@@ -3703,6 +4184,11 @@ Per the hybrid synthesis, material consequence SHALL apply to what a character c
 
 - **WHEN** a player insures goods or vehicles
 - **THEN** premiums SHALL act as an economy sink and claims SHALL restore value without creating new money beyond the insured amount
+
+#### Scenario: Gravestone and Social Rescue
+
+- **WHEN** a character falls with carried goods
+- **THEN** the site SHALL remain recoverable for a declared window, during which other actors MAY protect the recovery, bless it (extend the window) or loot it — rescue as a social act with witnesses
 
 ### Requirement: Declared Territory Wars via Player Institutions
 
@@ -4001,6 +4487,11 @@ Per the RDR2 crime lesson, heat SHALL be regional and identity-mediated: witness
 - **WHEN** an identity-obfuscating measure is used during an offense
 - **THEN** attribution SHALL be delayed or misdirected proportional to the disguise and the character's local notoriety
 
+#### Scenario: Aggressor Status Is Visible
+
+- **WHEN** a character attacks without provocation
+- **THEN** an aggressor status SHALL become visible to witnesses in scope (the skull lesson) — a legal mark, distinct from any moral judgment
+
 ### Requirement: Deliberative Combat — Focus and Formal Duels
 
 Per the Dead Eye and RDR1 duel lessons, combat SHALL support deliberation: focus marking (declaring targets and intents before resolution — the resolution honors the marks, composing with binding entry plans) and formalized confrontation scenes (duels, negotiations, standoffs) with a binding structure of setup, tension and decisive instant where preparation and nerve decide.
@@ -4123,6 +4614,11 @@ Per the HackHub/Grey Hack lesson, operable doctrinal systems in the cyber domain
 - **WHEN** automation or tooling is authored
 - **THEN** it SHALL exist as in-world scripts — writable, shareable and versioned artifacts under the closed economy
 
+#### Scenario: Logic From World Materials
+
+- **WHEN** in-world mechanisms are built (redstone lesson)
+- **THEN** logic MAY be constructed from world materials and arrangements, not only written code — engineering as narrative craft
+
 ### Requirement: Asynchronous Intrusion and Hardening
 
 Per the Grey Hack lesson, player infrastructure SHALL be attackable while its owner is offline: intrusion attempts resolve against defensive state (hardening, OPSEC posture), the attack-that-happened-while-away surfaces narratively on return (composing with off-screen ticks and sleep), operations carry time-scoped escalation clocks (trace), and exploits decay along curves — the attacker/defender arms race as content engine.
@@ -4184,6 +4680,321 @@ Per the Civilization lesson, world ticks SHALL be able to flip regional epochs �
 - **WHEN** an epoch ends
 - **THEN** it SHALL leave a durable legacy modifier on the region (skills, ruins, institutions, memory) rather than vanishing without trace
 
+### Requirement: Player Housing and Owned Spaces
+
+Per the RuneScape/Habbo lesson, players SHALL own narrative spaces within the world's room lattice: a personal or group space that is theirs to shape, decorated with acquired items (decoration as a closed-economy sink), functioning as identity and social anchor — reachable through the world's normal geography (portals, doors, addresses), never an instanced pocket outside canon.
+
+#### Scenario: The Space Is in the World
+
+- **WHEN** a player's owned space is entered by another
+- **THEN** it SHALL be reached through in-world geography and follow the same simulation rules (curves, witnesses, ticks) as any location
+
+#### Scenario: Decoration Is Economy
+
+- **WHEN** a player decorates their space
+- **THEN** acquired furnishings SHALL flow through the closed economy, and the space's character SHALL be legible to visitors
+
+### Requirement: Player-Authored Rulesets in Owned Spaces
+
+Per the Habbo lesson (roleplay hospitals, armies and mafias invented by players with self-authored rules inside their rooms), owners of spaces SHALL be able to author local rulesets — declared conduct rules for their space, enforced by their own moderation tools beneath the platform's protections. These micro-institutions are the layer beneath formal player-run institutions: the world recognizes the rules of the space, while law-level institutions (mayoralty, judgeship) govern what spaces cannot.
+
+#### Scenario: Local Rules Bind in the Space
+
+- **WHEN** a space's declared rules are broken inside it
+- **THEN** the space's enforcement tools (exclusion, bans) apply, recorded as world events
+
+#### Scenario: Local Rules Never Override Law or Protections
+
+- **WHEN** a local ruleset conflicts with institutional law, age-banding or consent protections
+- **THEN** the platform layer SHALL prevail, and the conflict SHALL be reviewable
+
+### Requirement: Authored Quest Standard
+
+Per the RuneScape lesson, quests SHALL meet the authored-quest standard: each is a distinct authored narrative with its own mechanics and structure (puzzles, investigations, setups), gated by unlock chains of prior accomplishments — never procedural fetch work generated to fill space. Quantity never buys exemption from the standard.
+
+#### Scenario: Every Quest Has a Why
+
+- **WHEN** a quest enters the canon
+- **THEN** it SHALL carry its authored intent (what makes this story worth living) and at least one mechanic unique to it
+
+#### Scenario: Unlock Chains Gate Depth
+
+- **WHEN** a quest requires prior accomplishments
+- **THEN** the chain SHALL be meaningful (capabilities, reputation, relationships earned), not arbitrary level counting
+
+### Requirement: Announced World Threats
+
+Per the Tibia/Ragnarok lesson, the world simulation SHALL produce announced world-scale threats — emergent crises, raids and world bosses surfaced through in-world channels (rumor, institutional alert, press) with enough warning to organize — forcing cooperation across factions and shards, with contested rewards proportionate to the threat.
+
+#### Scenario: The Threat Is Announced In-World
+
+- **WHEN** a world-scale threat forms
+- **THEN** warning SHALL propagate through diegetic channels before it peaks, giving actors time to organize
+
+#### Scenario: The Response Is Contested Cooperation
+
+- **WHEN** multiple parties engage the threat
+- **THEN** cooperation SHALL be necessary for success and the rewards SHALL be contested among contributors
+
+### Requirement: Branching Career Trees With Prestige
+
+Per the Ragnarok lesson, careers SHALL be branching certification trees grounded in the real military forces catalog: paths that specialize, cross and culminate in prestige tiers (senior variants, rebirth-equivalent depth), earned through demonstrated practice and institutional recognition — never bought.
+
+#### Scenario: The Tree Grows From the Catalog
+
+- **WHEN** a career tree is authored
+- **THEN** its branches and requirements SHALL trace to verified units, courses and specializations from the military forces catalog
+
+#### Scenario: Prestige Is Earned
+
+- **WHEN** a prestige tier is reached
+- **THEN** it SHALL certify demonstrated practice and recognition, and SHALL NOT be purchasable
+
+### Requirement: Formalized Bonds
+
+Per the Ragnarok marriage lesson, the world SHALL recognize formalized bonds between characters — partnerships, mentorships, pacts, oaths — as world-recorded contracts with mechanical effects (shared standing, inheritance, obligations, benefits), dissolvable through narrative and institutional process.
+
+#### Scenario: The Bond Is Recorded
+
+- **WHEN** characters formalize a bond
+- **THEN** it SHALL enter the event store with declared terms and effects on standing and obligation
+
+#### Scenario: The Bond Can End
+
+- **WHEN** a bond is dissolved
+- **THEN** the dissolution SHALL carry its narrated consequences (obligations, memory, reputation), never a clean database delete
+
+### Requirement: The World as Palimpsest
+
+Per the Minecraft lesson, world modifications SHALL be recorded history: every lasting change made by any actor persists in the event store and remains discoverable — player-action archaeology is content (finding where someone dug, built, fought or hid something), and the world's material memory composes with witness memory and crystals.
+
+#### Scenario: Modifications Are Discoverable
+
+- **WHEN** a character investigates a changed place
+- **THEN** the history of its modification SHALL be uncoverable through in-world means (traces, records, witnesses), never through out-of-world logs
+
+#### Scenario: Archaeology Is Content
+
+- **WHEN** an old modification is found by someone who did not make it
+- **THEN** the discovery MAY seed narrative (whose work was this, what happened here) wired to plot-generation
+
+### Requirement: Neglect Breeds Threats
+
+Per the Minecraft light-spawning lesson, neglect SHALL generate danger: regions without player attention darken along the attention-fidelity gradient and breed threats — the unattended periphery accumulates hostility, abandonment has a smell, and the world pushes back where nobody looks. This composes attention-based fidelity (cooling regions) with consequence afterlife (unaddressed consequences attracting actors).
+
+#### Scenario: The Dark Periphery Bites Back
+
+- **WHEN** a region stays unattended past a threshold
+- **THEN** threats SHALL accumulate there and eventually propagate outward, surfacing through world ticks
+
+#### Scenario: Attention Is Civilization
+
+- **WHEN** players return sustained attention to a darkened region
+- **THEN** the threat pressure SHALL recede along the same gradient — presence as pacification
+
+### Requirement: Shard Spectrum Including Lawless
+
+Per the 2b2t lesson, the shard spectrum SHALL extend to the lawless: adult, opt-in shards with no community ruleset — no local law, no institutions, no staff arbitration — as valid configuration. Platform protections (age-banding, consent, safety) remain non-negotiable even there: lawless means no in-world law, never unprotected people.
+
+#### Scenario: Lawless Means No In-World Law
+
+- **WHEN** an adult opt-in lawless shard runs
+- **THEN** no community ruleset, institution or staff arbitration SHALL govern in-world conduct — only what players enforce themselves
+
+#### Scenario: Protections Outlive Lawlessness
+
+- **WHEN** protections (age trays, consent, deny-lists) apply on any shard
+- **THEN** they SHALL remain in force regardless of the shard's ruleset
+
+### Requirement: Creator Economy Inside the Closed Economy
+
+Per the Roblox DevEx lesson, accepted content authors SHALL earn from the closed economy: modules, quests and packages that pass review carry a creator share — in-world income and standing proportional to the use their work receives — without minting new value outside the closed economy (earnings are a share of real flows, never a faucet).
+
+#### Scenario: Authors Earn a Share of Real Flows
+
+- **WHEN** accepted content is used and generates economic flow
+- **THEN** the creator share SHALL be a slice of that flow, recorded and traceable — never newly minted money
+
+#### Scenario: Standing Compounds
+
+- **WHEN** an author's body of work accumulates use
+- **THEN** authorial standing SHALL compound into reputation and tier progression (per the quality-gated author tiers)
+
+### Requirement: Identity Portability Across Scenarios
+
+Per the Roblox cross-experience lesson, character identity SHALL be portable across scenarios and shards: the same avatar (with its mirror, crystals and earned history) enters different worlds — carried by the persistent memory pyramid, entering each canon through its own doors (setup questions, arrival narration), never duplicated as a separate person.
+
+#### Scenario: One Character, Many Worlds
+
+- **WHEN** a player enters a new scenario with an established character
+- **THEN** the avatar, crystals and standing SHALL carry over, adapted through the scenario's arrival fiction
+
+#### Scenario: Crystals Cross, Canon Does Not Leak
+
+- **WHEN** carried memory references people or places foreign to the current canon
+- **THEN** it SHALL remain personal memory (dreams, distant past, other lives) without leaking entities into the hosting world
+
+### Requirement: Mechanic Modules per Context
+
+The game SHALL be multi-mechanic by context: mechanics are modular capabilities with declared applicability (domain, era, band, scale), activated by the context stack — scenario plus shard plus region plus situation. An invariant core SHALL never deactivate anywhere (event store, entity curves, soft-body graph, witnesses, memory/crystals, ticks, narrator, protections, closed economy). Every mechanic SHALL compose through the common primitives — writing curves, deforming the graph, recording events, opening windows — never through parallel state; and mutually exclusive modules SHALL declare their exclusions, validated at authoring time.
+
+#### Scenario: The Context Stack Selects Modules
+
+- **WHEN** a case runs (a police operation, a cyber op, a survival arc, a social evening)
+- **THEN** the active mechanic set SHALL derive from the scenario's, shard's, region's and situation's declarations — no global monolith
+
+#### Scenario: Invariants Never Switch Off
+
+- **WHEN** any module set is active
+- **THEN** the invariant core SHALL remain fully in force — protections, closed economy, memory and audit included
+
+#### Scenario: Composition Through Common Primitives
+
+- **WHEN** two mechanics are active together (e.g., contextual ballistics and metabolism in the same march)
+- **THEN** they SHALL compose through curves, graph, events and windows — with no parallel state to reconcile
+
+#### Scenario: Declared Exclusivity
+
+- **WHEN** modules cannot coexist (e.g., the real-tool tier with band A)
+- **THEN** the exclusion SHALL be declared and enforced at authoring/validation time, not discovered in play
+
+### Requirement: Versioned Artifacts and Code Archaeology
+
+Per the real software development lesson (git), in-world artifacts — scripts, tools, documents, mechanisms — SHALL be versioned: every artifact carries its history of changes (who, what, why), readable in-world; blame and diff are archaeology of authorship (composing the palimpsest and diegetic scripting requirements); and when two authors change the same artifact, the merge conflict SHALL resolve as a negotiation, recorded in the event store.
+
+#### Scenario: The Artifact Remembers Its Authors
+
+- **WHEN** a character inspects a versioned artifact
+- **THEN** its change history (authors, intents, forks) SHALL be discoverable through in-world means
+
+#### Scenario: Merge Conflict Is Negotiation
+
+- **WHEN** two authors' changes to one artifact conflict
+- **THEN** resolution SHALL be an explicit negotiated act with recorded outcome — never a silent overwrite
+
+### Requirement: Technical Debt as a Compounding Curve
+
+Per the real software development lesson, expedient work SHALL write technical debt: quick hacks and deferred quality accrue interest along decay curves on the artifact, tool or institution — drag felt in operation, never shown as a meter — until paid down by refactoring as investment. Debt may be carried deliberately (a deadline worth it) with eyes open.
+
+#### Scenario: Interest Accrues on Hacks
+
+- **WHEN** an artifact or institution is patched expediently
+- **THEN** its debt curve SHALL compound, degrading operation until refactored
+
+#### Scenario: Refactoring Is Investment
+
+- **WHEN** debt is paid down through deliberate rework
+- **THEN** the curve SHALL recover at the cost of time and attention now — the trade made explicit in analysis mode
+
+### Requirement: Breaking Changes Ripple Through Dependents
+
+Per the SemVer/dependency lesson, shared artifacts SHALL carry contracts: a breaking change deforms the graph edges of everything depending on the artifact (composing soft-body consequence), version signals declare the intent, and depending on another's artifact exposes you to their fate — the supply chain as attack surface (composing asynchronous intrusion: a compromised dependency compromises its dependents).
+
+#### Scenario: The Ripple Declares Itself
+
+- **WHEN** a shared artifact breaks its contract
+- **THEN** dependents' edges SHALL deform visibly and the blast radius SHALL be derivable from the graph
+
+#### Scenario: Dependencies Are Exposure
+
+- **WHEN** an actor builds on someone else's artifact
+- **THEN** their exposure to that artifact's compromise SHALL be real and priced — trust as attack surface, per the maintainer-rotation curves (burnout degrades maintainership)
+
+### Requirement: Blameless Postmortems and the Issue Trail
+
+Per the SRE lesson, failures SHALL receive blameless postmortems — the structured ritual that crystallizes the causal why without punishing the reporter (composing failure-crystallizes and causal replay); issues SHALL be world-visible work entities (reported, triaged, owned, fixed); and tests SHALL exist as confidence instruments — executable guards an author attaches to an artifact, whose red-green cycle practices understanding (eurekas: writing the test teaches the thing).
+
+#### Scenario: The Postmortem Crystallizes Without Blame
+
+- **WHEN** a significant failure is analyzed
+- **THEN** the postmortem SHALL produce its lesson memory and corrective work as issues, and SHALL NOT assign personal fault as output
+
+#### Scenario: Tests Guard the Artifact
+
+- **WHEN** an artifact with attached tests is changed
+- **THEN** the guards SHALL run and their verdict SHALL gate confidence in the change — a broken guard is information, not punishment
+
+### Requirement: The Dossier Is Not the World
+
+Per the Orwell lesson, intelligence work SHALL operate on selection: analysts browse the raw flow of the world (communications, records, traces) and select fragments — only selected fragments enter the dossier, and selection is interpretation. Institutions SHALL act on the dossier, not on raw reality: a wrong or biased profile produces real institutional action against the wrong reading, recorded as intelligence failure eligible for postmortem. Omission SHALL be an act — withholding exculpatory fragments is a deliberate choice with weight. And surveillance mechanics SHALL apply to in-world characters only, never to players' personal data — avatar-mirror consent is inviolable under this entire requirement.
+
+#### Scenario: Only the Selected Enters the Record
+
+- **WHEN** an analyst works a case
+- **THEN** the dossier SHALL contain the selected fragments and their derivations — never the raw flow wholesale
+
+#### Scenario: Institutions Act on the Dossier
+
+- **WHEN** a dossier reaches an institution
+- **THEN** the institutional response SHALL follow the recorded reading — if the reading is wrong, the response is wrongly aimed, and the failure is analyzable afterward
+
+#### Scenario: Omission Has Weight
+
+- **WHEN** an analyst withholds a fragment that would change the reading
+- **THEN** the omission SHALL be an attributable act, visible in analysis mode and accountable to audit
+
+#### Scenario: Surveillance Stops at the Character
+
+- **WHEN** any surveillance mechanic operates
+- **THEN** its objects SHALL be in-world characters and artifacts — players' personal data and mirror profiles SHALL never become surveillance content
+
+### Requirement: Analysis Bias and Influence as Operable Doctrine
+
+Per the Orwell lesson grounded in the project's doctrine library (Heuer's Psychology of Intelligence Analysis), confirmation bias SHALL be a real force in analysis: hypothesis-confirming selections feel easier and can be honestly wrong — and catching one's own bias is trained skill (training-grade in the intelligence domain, surfacing in analysis mode). Influence operations — cherry-picking and editing fragments to steer opinion (the sequel's mechanic) — SHALL be operable PSYOPS under the narrative auditor: steering is possible, detectable and attributable.
+
+#### Scenario: Bias Is Felt, Then Caught
+
+- **WHEN** an analyst's selections consistently confirm their running hypothesis
+- **THEN** the bias SHALL be real in the resolution, and the analysis mode SHALL expose the pattern to learn from — training transfer for real analytic discipline
+
+#### Scenario: Influence Is Audited Steering
+
+- **WHEN** an actor curates fragments to steer an audience
+- **THEN** the steering SHALL operate (opinion moves per the doctrine), remain detectable by counter-analysis, and be attributable in audit
+
+### Requirement: Preferred-Language Rendering
+
+All delivered text (narration, journal, cards, interface, player speech) SHALL render in each player's preferred language: narration is delivered per language from the bilingual engine with caching (translated once, served many — no per-player retranslation cost); players sharing a scene across languages read each other's speech in their own language, marked as translation; one canonical language version SHALL remain authoritative for audit and memory; control tags and canonical proper nouns SHALL pass through untranslated; and in-world language barriers MAY be enabled as an optional mechanic module (interpreters and translation as content) per the mechanic-modules requirement.
+
+#### Scenario: Everyone Reads Their Language
+
+- **WHEN** players of different preferred languages share a scene
+- **THEN** each SHALL read the narration and the other players' speech in their own language, with translation visibly marked
+
+#### Scenario: The Canon Stays Authoritative
+
+- **WHEN** audit, memory or analysis consumes delivered text
+- **THEN** they SHALL operate on the canonical-language version — translations are renderings, never the record
+
+#### Scenario: Tags and Names Never Mangle
+
+- **WHEN** text containing control tags or canonical proper nouns is rendered
+- **THEN** tags and canonical names SHALL pass through exactly unchanged
+
+#### Scenario: Language Barrier as Optional Content
+
+- **WHEN** a scenario or shard enables in-world language barriers
+- **THEN** interpretation becomes gameplay (interpreters, partial understanding) — declared module, never a global default
+
+### Requirement: Voice Input as Text
+
+Speech SHALL be a first-class input modality alongside manual typing: voice input transcribes to text before it enters the game (the text substrate — audit, memory, curves, translation — consumes only text), with player review and edit before sending, transcription marked as such in the record, and narration MAY be spoken aloud (text-to-speech) as an accessibility output with the text remaining canonical. Voice processing SHALL serve transcription only — no persistent voice storage, per the privacy posture.
+
+#### Scenario: Voice Becomes Reviewable Text
+
+- **WHEN** a player speaks their action or speech
+- **THEN** the transcription SHALL appear for review and editing before entering the world, and the delivered text SHALL be marked voice-origin in the record
+
+#### Scenario: Text Remains Canonical
+
+- **WHEN** narration is spoken via text-to-speech
+- **THEN** the canonical artifact SHALL remain the text — the voice is a rendering, like translation
+
+#### Scenario: Transcription Only, Never Stored Voice
+
+- **WHEN** voice input is processed
+- **THEN** audio SHALL be used for transcription and discarded — never persisted, never replayable
+
 <!-- source: changes/add-worldbuilding-research/ -->
 
 ### add-worldbuilding-research
@@ -4200,7 +5011,7 @@ Project Lunar's world-building today derives from design intuition and from A/B 
 
 **New spec: worldbuilding-research**
 - From: no structured world-building research program; implicit and untraceable lessons.
-- To: 17 requirements — reverse engineering of Albion Online (player-driven economy, territories, risk bands, seasons), the Albion-in-life-RP hybrid synthesis (risk bands as state presence, carry-only loss, closed economy vs RP inflation, declared territory wars — translations mapped to mmo-game), reverse engineering of GTA San Andreas (CJ stats, gang war, NPC routines, wanted level, progressive gating), reverse engineering of GTA V RP worldwide (whitelist gates, IC/OOC rules, player-run institutions, per-country scenes, with translations mapped to mmo-game), reverse engineering of MUDs (offline persistent world, room+look network, social channels, RPI, OLC/MOO), reverse engineering of CyberCode Online (AFK/idle loop, procedural world from community-contributed corpora, multilingual lore channel), reverse engineering of racing simulation fidelity (iRacing/ACC tire thermal, friction circle, weight transfer, aero, telemetry loops, safety rating; BeamNG soft-body node-beam deformation — translations mapped to mmo-game/world-simulation/knowledge-graph), reverse engineering of world-simulator fidelity (MSFS whole-world substrate with attention-based fidelity, live weather injection, licensed aircraft; DCS study-level cockpits, multi-crew stations, mission editor, module ecosystem — translations mapped to mmo-game/scenario-authoring), reverse engineering of military/tactical simulation (Arma 3 honest ballistics, Tarkov ammo/body-part/hydration, Ready or Not entry planning and proportional force — translations mapped to combat-system/mmo-game), reverse engineering of survival simulation (SCUM metabolism ledger and visible time passage, Project Zomboid stress/sleep/wounds/illness — translations mapped to mmo-game/memory-system/narrative-engine), reverse engineering of Red Dead Redemption (RDR2 world-simulation density with consequence afterlife, companion bonds, honor without meter, identity-mediated regional heat, Dead Eye deliberation; RDR1 duels; aging-badly guardrails — translations mapped to mmo-game), reverse engineering of honorable mentions (KSP failure-as-pedagogy, transfer windows, agency endorsements as training-grade evidence; Farming Simulator cycle durations, seasonal production, crop rotation — translations mapped to mmo-game/memory-system/world-simulation), reverse engineering of hacking/intel simulators (Hacknet terminal/recon/traces/lore-in-filesystems, Grey Hack diegetic scripting and async intrusion, NITE Team 4 intel cycle and entity-link analysis, HackHub real-VM tier — translations mapped to mmo-game/knowledge-graph), reverse engineering of life/strategy games (Sims wants-fears and decay as curve evidence, story progression; Civ declared/hidden agendas, eurekas, wonder races, epochs; AoE branching landmarks, counters, fog as attention evidence — translations mapped to mmo-game/plot-generation/npc-minds/world-simulation), a d3wasm-based prototype of the final engine as a world-building laboratory, versioned lesson cards in `data/worldbuilding/lessons.json` with target-spec traceability, and an asset safeguard (documentary observation only + original implementation, d3wasm GPL-3.0 engine as the single documented code exception).
+- To: 21 requirements — reverse engineering of Albion Online (player-driven economy, territories, risk bands, seasons), the Albion-in-life-RP hybrid synthesis (risk bands as state presence, carry-only loss, closed economy vs RP inflation, declared territory wars — translations mapped to mmo-game), reverse engineering of GTA San Andreas (CJ stats, gang war, NPC routines, wanted level, progressive gating), reverse engineering of GTA V RP worldwide (whitelist gates, IC/OOC rules, player-run institutions, per-country scenes, with translations mapped to mmo-game), reverse engineering of MUDs (offline persistent world, room+look network, social channels, RPI, OLC/MOO), reverse engineering of CyberCode Online (AFK/idle loop, procedural world from community-contributed corpora, multilingual lore channel), reverse engineering of racing simulation fidelity (iRacing/ACC tire thermal, friction circle, weight transfer, aero, telemetry loops, safety rating; BeamNG soft-body node-beam deformation — translations mapped to mmo-game/world-simulation/knowledge-graph), reverse engineering of world-simulator fidelity (MSFS whole-world substrate with attention-based fidelity, live weather injection, licensed aircraft; DCS study-level cockpits, multi-crew stations, mission editor, module ecosystem — translations mapped to mmo-game/scenario-authoring), reverse engineering of military/tactical simulation (Arma 3 honest ballistics, Tarkov ammo/body-part/hydration, Ready or Not entry planning and proportional force — translations mapped to combat-system/mmo-game), reverse engineering of survival simulation (SCUM metabolism ledger and visible time passage, Project Zomboid stress/sleep/wounds/illness — translations mapped to mmo-game/memory-system/narrative-engine), reverse engineering of Red Dead Redemption (RDR2 world-simulation density with consequence afterlife, companion bonds, honor without meter, identity-mediated regional heat, Dead Eye deliberation; RDR1 duels; aging-badly guardrails — translations mapped to mmo-game), reverse engineering of honorable mentions (KSP failure-as-pedagogy, transfer windows, agency endorsements as training-grade evidence; Farming Simulator cycle durations, seasonal production, crop rotation — translations mapped to mmo-game/memory-system/world-simulation), reverse engineering of hacking/intel simulators (Hacknet terminal/recon/traces/lore-in-filesystems, Grey Hack diegetic scripting and async intrusion, NITE Team 4 intel cycle and entity-link analysis, HackHub real-VM tier — translations mapped to mmo-game/knowledge-graph), reverse engineering of life/strategy games (Sims wants-fears and decay as curve evidence, story progression; Civ declared/hidden agendas, eurekas, wonder races, epochs; AoE branching landmarks, counters, fog as attention evidence — translations mapped to mmo-game/plot-generation/npc-minds/world-simulation), reverse engineering of classic MMOs (RuneScape authored quests, use-trained skills, housing and gravestones; Habbo owned rooms and player-authored rulesets; Tibia skulls, guild wars, world bosses; Ragnarok career trees, MvP, WoE, cards, marriage — translations mapped to mmo-game/scenario-authoring), reverse engineering of sandbox/platform games (Minecraft editable-world palimpsest, seeds, light-spawning, redstone, 2b2t anarchy, modding; Roblox UGC platform, DevEx, age-safety at scale, social RP demand, cross-experience identity — translations mapped to mmo-game/event-persistence), reverse engineering of real software development practice (git history/blame/merge, technical debt, semver ripples and supply chain, testing/TDD, feature flags, issue tracking, blameless postmortems, estimation, Conway's law, maintainer burnout — translations mapped to mmo-game), reverse engineering of Orwell (datachunk selection, the dossier-not-the-world principle, omission as act, confirmation bias as gameplay, influence editing as PSYOPS, surveillance scope guardrail — translations mapped to mmo-game/knowledge-graph/narrative-audit), a d3wasm-based prototype of the final engine as a world-building laboratory, versioned lesson cards in `data/worldbuilding/lessons.json` with target-spec traceability, and an asset safeguard (documentary observation only + original implementation, d3wasm GPL-3.0 engine as the single documented code exception).
 
 **Translation, not copying**
 - Each researched mechanic SHALL produce a card with: the original mechanic, why it works (emergent effect), and a candidate translation to the narrative engine (or a justified discard). Examples of candidate translations: Albion's regional markets → scarcity/price as a tick trigger; GTA SA pedestrian routines → npc-minds agendas; wanted level → consequence escalation in ticks; Doom 3 lore terminals → story cards.
@@ -4233,6 +5044,8 @@ Project Lunar's world-building today derives from design intuition and from A/B 
 - [ ] Research and document honorable-mentions mechanics (KSP orbital physics and failure-as-pedagogy, transfer windows, agency endorsements; Farming Simulator cycle durations, crop rotation, licensed equipment) in public sources, with translations mapped to mmo-game/memory-system/world-simulation
 - [ ] Research and document hacking/intel sim mechanics (Hacknet terminal/recon/traces/lore-in-filesystems; Grey Hack diegetic scripting and async intrusion; NITE Team 4 intel cycle and entity-link analysis; HackHub real-VM tier) in public sources, with translations mapped to mmo-game/knowledge-graph
 - [ ] Research and document life/strategy game mechanics (Sims wants-fears/decay/story progression; Civ agendas/eurekas/wonder races/epochs/victories; AoE landmarks/counters/fog/random maps) in public sources, with translations mapped to mmo-game/plot-generation/npc-minds/world-simulation
+- [ ] Research and document classic MMO mechanics (RuneScape authored quests/skills/housing/gravestones; Habbo owned rooms and player-authored rulesets; Tibia skulls/guild wars/world bosses; Ragnarok career trees/MvP/WoE/cards/marriage) in public sources, with translations mapped to mmo-game/scenario-authoring
+- [ ] Research and document sandbox/platform mechanics (Minecraft editable world/palimpsest, seeds, light-spawning, redstone, 2b2t anarchy, modding; Roblox UGC platform, DevEx creator economy, age-safety at scale, Brookhaven/Adopt Me social RP, cross-experience identity) in public sources, with translations mapped to mmo-game/event-persistence
 - [ ] Research and document CyberCode Online mechanics (AFK/idle loop, procedural generation from community-contributed corpora, multilingual lore contributions) in the open-source repo and live game
 - [ ] Set up the d3wasm-based prototype (fork/vendor github.com/gabrielcuvillier/d3wasm — WebAssembly + WebGL id Tech 4) as the final-engine prototype base, with a documented GPL-3.0 compliance note
 - [ ] Build the world-building laboratory on it (first-person, dynamic lighting, lore terminals, triggers) with original/free assets — no Doom 3 game data (`.pk4`)
@@ -4240,6 +5053,8 @@ Project Lunar's world-building today derives from design intuition and from A/B 
 - [ ] Map each prototype element to lesson cards
 - [ ] Triage cards (proposed → accepted/discarded) and open changes in the target specs for the accepted ones
 - [ ] Document provenance/license of all prototype assets
+- [ ] Research and document real software development practice (git/versioning/review, technical debt, semver/supply chain, testing, CI/feature flags, issue tracking, blameless postmortems, estimation, Conway's law, maintainer burnout) in public sources, with translations mapped to mmo-game
+- [ ] Research and document Orwell mechanics (datachunk selection, dossier construction, omission, confirmation bias, influence editing, surveillance ethics) in public sources, with translations mapped to mmo-game/knowledge-graph/narrative-audit
 
 #### `changes/add-worldbuilding-research/specs/worldbuilding-research/spec.md`
 
@@ -4334,6 +5149,127 @@ The research system SHALL document, from public sources (Arma 3, Escape from Tar
 #### Scenario: Verifiable Source
 
 - **WHEN** a lesson card claims a mechanic or number about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Orwell Mechanics
+
+The research system SHALL document, from public sources (Osmotic Studios' Orwell and Orwell: Ignorance is Strength, official pages, reviews and analyses), the surveillance-thriller mechanics: datachunk selection (the investigator browses citizens' communications — calls, chats, posts, documents — and selects fragments to upload; selection is the core verb), the dossier as constructed profile (institutions act on what was selected, not on raw reality — wrong or biased selections produce wrong profiles that authorities act upon), omission as an action (withholding exculpatory evidence carries moral weight), confirmation bias as gameplay (hypothesis-confirming selection feels right and can be honestly wrong), the sequel's influence editing (cherry-picking and editing to steer opinion — propaganda as mechanic), and the asymmetric-privacy framing. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Selection-Lesson
+
+- **WHEN** the research documents datachunk selection as the core verb
+- **THEN** the card SHALL propose the dossier-not-the-world principle for the intelligence workflow (mmo-game/knowledge-graph)
+
+#### Scenario: Dossier-Consequence Lesson
+
+- **WHEN** the research documents authorities acting on the constructed profile
+- **THEN** the card SHALL propose institutions acting on recorded intelligence — fallible and consequential (mmo-game)
+
+#### Scenario: Influence Lesson
+
+- **WHEN** the research documents the sequel's influence editing
+- **THEN** the card SHALL propose cherry-picking as operable PSYOPS under audit, grounded in the project's doctrine library (mmo-game/narrative-audit)
+
+#### Scenario: Ethics Guardrail Recorded
+
+- **WHEN** the research documents the surveillance asymmetry
+- **THEN** the card SHALL record the scope rule: surveillance mechanics apply to in-world characters only, never to players' personal data (avatar-mirror consent inviolable)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about the game
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Real Software Development Practice
+
+The research system SHALL document, from public sources (git and SemVer documentation, the Agile Manifesto, the Google SRE book, postmortem culture, open-source dynamics literature), the mechanics of real software engineering as a reference system: version control (history, branches, blame, merges and conflicts), code review as a social gate, technical debt and its compounding interest, semantic versioning and breaking changes rippling through dependents, dependency supply chains as attack surface, testing and test-driven development, CI/CD with feature flags and kill switches, issue tracking as visible work, blameless postmortems, estimation under uncertainty (Hofstadter), Conway's law, and open-source maintainer burnout. Each practice SHALL generate a lesson card in the same format as the game tracks — software engineering is real doctrine with public sources, fitting the training-grade philosophy of the project's engineering/cyber domains.
+
+#### Scenario: Engineering Doctrine Lesson
+
+- **WHEN** the research documents a software engineering practice
+- **THEN** the card SHALL propose its translation to the in-world artifact economy (mmo-game) or a justified discard
+
+#### Scenario: Training-Grade Evidence
+
+- **WHEN** a practice is documented from its canonical public source
+- **THEN** the card SHALL record it as operable-doctrine material for the engineering/cyber domains, with source and date
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a practice or number
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Sandbox/Platform Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the sandbox and platform references: Minecraft (the fully editable voxel world with every modification persistent; procedurally generated infinite worlds from shareable seeds; light-based hostile spawning; redstone as in-world logic built from world materials; player-run server cultures; the 2b2t anarchy experiment — emergent history with zero governance; the modding ecosystem and marketplace; survival/hardcore/creative modes) and Roblox (the UGC platform model — millions of user-built experiences on engine+economy+safety rails; Luau scripting; the DevEx creator economy converting creations to real income; avatar and UGC marketplace with community-maintained value lists; age-safety and moderation at scale, including its documented failures; goal-free social roleplay at massive scale among the youngest audience — Brookhaven, Adopt Me; cross-experience identity). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Palimpsest Lesson
+
+- **WHEN** the research documents a fully editable world where every modification persists
+- **THEN** the card SHALL propose the world as palimpsest — recorded modification history with player-action archaeology as content (mmo-game/event-persistence)
+
+#### Scenario: Neglect-Breeds-Threats Lesson
+
+- **WHEN** the research documents light-based hostile spawning
+- **THEN** the card SHALL propose neglect generating danger — unattended regions darkening and breeding threats, composing attention-based fidelity with consequence afterlife (mmo-game/world-simulation)
+
+#### Scenario: Shard-Spectrum Lesson
+
+- **WHEN** the research documents the 2b2t no-rules anarchy
+- **THEN** the card SHALL propose a shard spectrum including the lawless — adult opt-in no-community-rules shards as valid configuration beneath non-negotiable platform protections (mmo-game)
+
+#### Scenario: Creator-Economy Lesson
+
+- **WHEN** the research documents DevEx and community value lists
+- **THEN** the card SHALL propose a creator economy inside the closed economy — accepted module authors earning in-world share (mmo-game)
+
+#### Scenario: Evidence Reinforcements
+
+- **WHEN** the research documents redstone, the platform model, age-safety and goal-free social RP
+- **THEN** the card SHALL record them as evidence for diegetic scripting, the contribution channel, age-banding at scale (with moderation-failure lessons) and band-A social RP demand already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Classic MMO Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the classic MMOs: RuneScape (use-trained skills at scale, quests as authored puzzle-stories with unlock chains, the world as skill-board, wilderness risk gradient by depth, the gravestone death protocol with social rescue, player-owned houses, recurring distractions, rares as cultural economy, Ironman modes), Habbo Hotel (player-owned decorated rooms as identity, furni as economy, roleplay institutions invented by players inside their rooms with self-authored rules, player-made games, the goal-free social sandbox), Tibia (hardcore death costs, the skull system marking aggressors, paid scheduled guild wars, announced world bosses and raids, map-knowledge as community artifact), and Ragnarok Online (branching class trees with rebirth prestige, contested MvP world bosses on timers, scheduled War of Emperium sieges, card slotting as build combinatorics, refinement with break risk, marriage with mechanical benefits, vending streets). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Authored-Rulesets Lesson
+
+- **WHEN** the research documents players inventing roleplay institutions with self-authored rules inside their rooms
+- **THEN** the card SHALL propose player-authored rulesets in owned spaces as the layer beneath formal player-run institutions (mmo-game)
+
+#### Scenario: Housing Lesson
+
+- **WHEN** the research documents player-owned houses and decorated rooms as identity and economy
+- **THEN** the card SHALL propose owned narrative spaces with decoration as a closed-economy sink (mmo-game)
+
+#### Scenario: World-Threat Lesson
+
+- **WHEN** the research documents announced world bosses and scheduled sieges
+- **THEN** the card SHALL propose announced world-scale cooperative threats with contested rewards (mmo-game/world-simulation)
+
+#### Scenario: Career-Trees Lesson
+
+- **WHEN** the research documents branching class trees with rebirth prestige
+- **THEN** the card SHALL propose branching career/certification paths with prestige tiers grounded in the military forces catalog (mmo-game/military-forces-catalog)
+
+#### Scenario: Authored-Quests Lesson
+
+- **WHEN** the research documents quests as authored puzzle-stories
+- **THEN** the card SHALL record the authored-quest standard for the scenario pipeline — unique mechanics per quest, never procedural fetch work (scenario-authoring/mmo-game)
+
+#### Scenario: Reinforcements Recorded
+
+- **WHEN** the research documents the skull system, gravestones, use-trained skills and vending streets
+- **THEN** the card SHALL record them as evidence for heat-with-identity, carry-only death protocol with social rescue, practice-based skills and regional markets already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
 - **THEN** the card SHALL cite the public source (URL) and verification date
 
 ### Requirement: Reverse Engineering of Life/Strategy Game Mechanics

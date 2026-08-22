@@ -91,6 +91,127 @@ The research system SHALL document, from public sources (Arma 3, Escape from Tar
 - **WHEN** a lesson card claims a mechanic or number about these games
 - **THEN** the card SHALL cite the public source (URL) and verification date
 
+### Requirement: Reverse Engineering of Orwell Mechanics
+
+The research system SHALL document, from public sources (Osmotic Studios' Orwell and Orwell: Ignorance is Strength, official pages, reviews and analyses), the surveillance-thriller mechanics: datachunk selection (the investigator browses citizens' communications — calls, chats, posts, documents — and selects fragments to upload; selection is the core verb), the dossier as constructed profile (institutions act on what was selected, not on raw reality — wrong or biased selections produce wrong profiles that authorities act upon), omission as an action (withholding exculpatory evidence carries moral weight), confirmation bias as gameplay (hypothesis-confirming selection feels right and can be honestly wrong), the sequel's influence editing (cherry-picking and editing to steer opinion — propaganda as mechanic), and the asymmetric-privacy framing. Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Selection-Lesson
+
+- **WHEN** the research documents datachunk selection as the core verb
+- **THEN** the card SHALL propose the dossier-not-the-world principle for the intelligence workflow (mmo-game/knowledge-graph)
+
+#### Scenario: Dossier-Consequence Lesson
+
+- **WHEN** the research documents authorities acting on the constructed profile
+- **THEN** the card SHALL propose institutions acting on recorded intelligence — fallible and consequential (mmo-game)
+
+#### Scenario: Influence Lesson
+
+- **WHEN** the research documents the sequel's influence editing
+- **THEN** the card SHALL propose cherry-picking as operable PSYOPS under audit, grounded in the project's doctrine library (mmo-game/narrative-audit)
+
+#### Scenario: Ethics Guardrail Recorded
+
+- **WHEN** the research documents the surveillance asymmetry
+- **THEN** the card SHALL record the scope rule: surveillance mechanics apply to in-world characters only, never to players' personal data (avatar-mirror consent inviolable)
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about the game
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Real Software Development Practice
+
+The research system SHALL document, from public sources (git and SemVer documentation, the Agile Manifesto, the Google SRE book, postmortem culture, open-source dynamics literature), the mechanics of real software engineering as a reference system: version control (history, branches, blame, merges and conflicts), code review as a social gate, technical debt and its compounding interest, semantic versioning and breaking changes rippling through dependents, dependency supply chains as attack surface, testing and test-driven development, CI/CD with feature flags and kill switches, issue tracking as visible work, blameless postmortems, estimation under uncertainty (Hofstadter), Conway's law, and open-source maintainer burnout. Each practice SHALL generate a lesson card in the same format as the game tracks — software engineering is real doctrine with public sources, fitting the training-grade philosophy of the project's engineering/cyber domains.
+
+#### Scenario: Engineering Doctrine Lesson
+
+- **WHEN** the research documents a software engineering practice
+- **THEN** the card SHALL propose its translation to the in-world artifact economy (mmo-game) or a justified discard
+
+#### Scenario: Training-Grade Evidence
+
+- **WHEN** a practice is documented from its canonical public source
+- **THEN** the card SHALL record it as operable-doctrine material for the engineering/cyber domains, with source and date
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a practice or number
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Sandbox/Platform Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the sandbox and platform references: Minecraft (the fully editable voxel world with every modification persistent; procedurally generated infinite worlds from shareable seeds; light-based hostile spawning; redstone as in-world logic built from world materials; player-run server cultures; the 2b2t anarchy experiment — emergent history with zero governance; the modding ecosystem and marketplace; survival/hardcore/creative modes) and Roblox (the UGC platform model — millions of user-built experiences on engine+economy+safety rails; Luau scripting; the DevEx creator economy converting creations to real income; avatar and UGC marketplace with community-maintained value lists; age-safety and moderation at scale, including its documented failures; goal-free social roleplay at massive scale among the youngest audience — Brookhaven, Adopt Me; cross-experience identity). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Palimpsest Lesson
+
+- **WHEN** the research documents a fully editable world where every modification persists
+- **THEN** the card SHALL propose the world as palimpsest — recorded modification history with player-action archaeology as content (mmo-game/event-persistence)
+
+#### Scenario: Neglect-Breeds-Threats Lesson
+
+- **WHEN** the research documents light-based hostile spawning
+- **THEN** the card SHALL propose neglect generating danger — unattended regions darkening and breeding threats, composing attention-based fidelity with consequence afterlife (mmo-game/world-simulation)
+
+#### Scenario: Shard-Spectrum Lesson
+
+- **WHEN** the research documents the 2b2t no-rules anarchy
+- **THEN** the card SHALL propose a shard spectrum including the lawless — adult opt-in no-community-rules shards as valid configuration beneath non-negotiable platform protections (mmo-game)
+
+#### Scenario: Creator-Economy Lesson
+
+- **WHEN** the research documents DevEx and community value lists
+- **THEN** the card SHALL propose a creator economy inside the closed economy — accepted module authors earning in-world share (mmo-game)
+
+#### Scenario: Evidence Reinforcements
+
+- **WHEN** the research documents redstone, the platform model, age-safety and goal-free social RP
+- **THEN** the card SHALL record them as evidence for diegetic scripting, the contribution channel, age-banding at scale (with moderation-failure lessons) and band-A social RP demand already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
+### Requirement: Reverse Engineering of Classic MMO Mechanics
+
+The research system SHALL document, from public sources, the mechanics of the classic MMOs: RuneScape (use-trained skills at scale, quests as authored puzzle-stories with unlock chains, the world as skill-board, wilderness risk gradient by depth, the gravestone death protocol with social rescue, player-owned houses, recurring distractions, rares as cultural economy, Ironman modes), Habbo Hotel (player-owned decorated rooms as identity, furni as economy, roleplay institutions invented by players inside their rooms with self-authored rules, player-made games, the goal-free social sandbox), Tibia (hardcore death costs, the skull system marking aggressors, paid scheduled guild wars, announced world bosses and raids, map-knowledge as community artifact), and Ragnarok Online (branching class trees with rebirth prestige, contested MvP world bosses on timers, scheduled War of Emperium sieges, card slotting as build combinatorics, refinement with break risk, marriage with mechanical benefits, vending streets). Each mechanic SHALL generate a lesson card in the same format as the other tracks.
+
+#### Scenario: Authored-Rulesets Lesson
+
+- **WHEN** the research documents players inventing roleplay institutions with self-authored rules inside their rooms
+- **THEN** the card SHALL propose player-authored rulesets in owned spaces as the layer beneath formal player-run institutions (mmo-game)
+
+#### Scenario: Housing Lesson
+
+- **WHEN** the research documents player-owned houses and decorated rooms as identity and economy
+- **THEN** the card SHALL propose owned narrative spaces with decoration as a closed-economy sink (mmo-game)
+
+#### Scenario: World-Threat Lesson
+
+- **WHEN** the research documents announced world bosses and scheduled sieges
+- **THEN** the card SHALL propose announced world-scale cooperative threats with contested rewards (mmo-game/world-simulation)
+
+#### Scenario: Career-Trees Lesson
+
+- **WHEN** the research documents branching class trees with rebirth prestige
+- **THEN** the card SHALL propose branching career/certification paths with prestige tiers grounded in the military forces catalog (mmo-game/military-forces-catalog)
+
+#### Scenario: Authored-Quests Lesson
+
+- **WHEN** the research documents quests as authored puzzle-stories
+- **THEN** the card SHALL record the authored-quest standard for the scenario pipeline — unique mechanics per quest, never procedural fetch work (scenario-authoring/mmo-game)
+
+#### Scenario: Reinforcements Recorded
+
+- **WHEN** the research documents the skull system, gravestones, use-trained skills and vending streets
+- **THEN** the card SHALL record them as evidence for heat-with-identity, carry-only death protocol with social rescue, practice-based skills and regional markets already specified
+
+#### Scenario: Verifiable Source
+
+- **WHEN** a lesson card claims a mechanic about these games
+- **THEN** the card SHALL cite the public source (URL) and verification date
+
 ### Requirement: Reverse Engineering of Life/Strategy Game Mechanics
 
 The research system SHALL document, from public sources, the mechanics of the life and strategy references: The Sims (decaying motive system — the historical origin of entity curves; wants/fears in rolling slots with aspiration points; relationship scores that decay over time; memories shaping behavior; autonomy acting on personality; story progression evolving the town without the player; life stages and genetics), Civilization (the 4X loop; leader AI with declared and hidden agendas; the tech/civics trees; eureka boosts — actions accelerating research; wonder races where only one builder completes; golden/dark ages with legacy; declared victory conditions; espionage, diplomacy, city-states), and Age of Empires (real-time resource economy; age advancement as gated progression; branching landmarks changing playstyle per age; counter triangles; fog of war; random maps; unique civilization bonuses). Each mechanic SHALL generate a lesson card in the same format as the other tracks.

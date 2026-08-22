@@ -14,6 +14,8 @@
 - [ ] Research and document honorable-mentions mechanics (KSP orbital physics and failure-as-pedagogy, transfer windows, agency endorsements; Farming Simulator cycle durations, crop rotation, licensed equipment) in public sources, with translations mapped to mmo-game/memory-system/world-simulation
 - [ ] Research and document hacking/intel sim mechanics (Hacknet terminal/recon/traces/lore-in-filesystems; Grey Hack diegetic scripting and async intrusion; NITE Team 4 intel cycle and entity-link analysis; HackHub real-VM tier) in public sources, with translations mapped to mmo-game/knowledge-graph
 - [ ] Research and document life/strategy game mechanics (Sims wants-fears/decay/story progression; Civ agendas/eurekas/wonder races/epochs/victories; AoE landmarks/counters/fog/random maps) in public sources, with translations mapped to mmo-game/plot-generation/npc-minds/world-simulation
+- [ ] Research and document classic MMO mechanics (RuneScape authored quests/skills/housing/gravestones; Habbo owned rooms and player-authored rulesets; Tibia skulls/guild wars/world bosses; Ragnarok career trees/MvP/WoE/cards/marriage) in public sources, with translations mapped to mmo-game/scenario-authoring
+- [ ] Research and document sandbox/platform mechanics (Minecraft editable world/palimpsest, seeds, light-spawning, redstone, 2b2t anarchy, modding; Roblox UGC platform, DevEx creator economy, age-safety at scale, Brookhaven/Adopt Me social RP, cross-experience identity) in public sources, with translations mapped to mmo-game/event-persistence
 - [ ] Research and document CyberCode Online mechanics (AFK/idle loop, procedural generation from community-contributed corpora, multilingual lore contributions) in the open-source repo and live game
 - [ ] Set up the d3wasm-based prototype (fork/vendor github.com/gabrielcuvillier/d3wasm — WebAssembly + WebGL id Tech 4) as the final-engine prototype base, with a documented GPL-3.0 compliance note
 - [ ] Build the world-building laboratory on it (first-person, dynamic lighting, lore terminals, triggers) with original/free assets — no Doom 3 game data (`.pk4`)
@@ -21,3 +23,5 @@
 - [ ] Map each prototype element to lesson cards
 - [ ] Triage cards (proposed → accepted/discarded) and open changes in the target specs for the accepted ones
 - [ ] Document provenance/license of all prototype assets
+- [ ] Research and document real software development practice (git/versioning/review, technical debt, semver/supply chain, testing, CI/feature flags, issue tracking, blameless postmortems, estimation, Conway's law, maintainer burnout) in public sources, with translations mapped to mmo-game
+- [ ] Research and document Orwell mechanics (datachunk selection, dossier construction, omission, confirmation bias, influence editing, surveillance ethics) in public sources, with translations mapped to mmo-game/knowledge-graph/narrative-audit

@@ -8,6 +8,13 @@ context: |
   Keep OpenSpec structural headings and SHALL/MUST keywords in English.
   Game content (scenarios, prompts, crystals, journals, tags) remains
   bilingual (en + pt-br) by design — that is content, not artifacts.
+  The product also operates as a REAL society simulator and emulator —
+  scenario modeling over sealed forks, emulator calibration via the
+  reality feed, consented telemetry and training with measured transfer
+  (spec civilization-lab) — with the Chinese model as reference
+  civilization across dimensions (economic, military, societal,
+  scientific, technological, ecological, governance, formation),
+  adapted as citable doctrine under the platform protections.
 
   ## What the system is
   Project Lunar is a narrative RPG ENGINE — and the committed final product
@@ -21,6 +28,9 @@ context: |
   tag. No HP, mana or grind — narrative only.
 
   ## Stack
+  - Game client: Unreal Engine 5 — Nanite/Lumen/World Partition/Chaos/
+    MetaHuman/Mass; native first, Pixel Streaming as browser path; text
+    client below the 3D floor
   - Frontend: React 19 + Vite 7 + Zustand 5 + Tailwind 3 (frontend/)
   - Backend: Python 3.10+ + FastAPI (backend/app/) — central orchestrator is
     GameSession (services/game_session.py)
@@ -60,16 +70,40 @@ context: |
     and SSE proxy, Neo4j in optional profile), credentials outside the
     image, persistence across restarts, host access for the Hermes proxy
   - worldbuilding-research: documentary reverse engineering of mechanics
-    (Albion Online, GTA San Andreas, MUDs, CyberCode Online) + a playable
-    prototype of the final engine built on d3wasm (Doom 3 / id Tech 4 in
-    WebAssembly+WebGL, GPL-3.0 boundary documented); versioned lesson cards
+    (Albion Online, EVE Online, GTA San Andreas, GTA VI, MUDs, CyberCode
+    Online) + virtual-economies academia + expertise science (Ericsson,
+    Bjork, SDT, Galenson, Ruthsatz) + the profession-simulator corpus
+    (Papers Please, 112 Operator, ETS2, the retail wave, Hardspace,
+    Suzerain, Football Manager, Cart Life) + the Kojima corpus (MGS 1–5,
+    Death Stranding, Snatcher, P.T.) + the Marxist-Leninist glossary +
+    the Chinese societal model as political-economy/society doctrine + the
+    engineering bodies of knowledge (SWEBOK v4, SEBoK v2.11, CyBOK v1.1)
+    expanded via WriteHERE recursive planning + a playable
+    prototype of the final engine built on Unreal Engine 5 (Nanite/Lumen/
+    World Partition/Chaos/Mass/MetaHuman; EULA and royalty terms
+    documented); versioned lesson cards
     in data/worldbuilding/lessons.json with target-spec traceability
   - mmo-game: the final product direction — a lore-based Role-Playing
     MMORPG on the engine: persistent multiplayer world (ticks while
-    offline, cross-player consequences), browser client on the d3wasm
-    engine path, narrative-first progression (no grind), social layer with
+    offline, cross-player consequences), UE5 client (native first, Pixel
+    Streaming browser path, text client floor), maximum-realism doctrine, narrative-first progression (no grind), social layer with
     roleplay integrity, age-banding/avatar-mirror protections in
     multiplayer, moderated community contribution channel
+  - civilization-lab: the real-simulator layer — three modes over one
+    engine (game / simulator over sealed forks / emulator calibrated by
+    the reality feed), consented character-level telemetry (the event
+    store is the dataset — no shadow channels), real research-ethics
+    governance (informed consent, debrief, withdrawal, adult-band only),
+    the Lab surface (aggregate scenario reports, prediction registry,
+    calibration reports), training loop with opt-in verifiable
+    credentials; partnerships never weaken the platform protections
+  - licensing: layered open-source doctrine — specs/research/canon under
+    CC BY-SA 4.0 (share-alike enforces "same canon, never forked lore"),
+    code under AGPL-3.0-or-later (network copyleft closes the SaaS
+    loophole; server stack and tools stay AGPL, the UE5 client layer
+    coexists with the Unreal EULA + royalty, gap documented), trademark and
+    brand reserved, contributions under the DCO, lab governance
+    artifacts out of licensing scope
 
   ## Project invariants (learned in A/B — docs/fase3a_ab.md, fase3b_ab.md)
   - Never feed the narrator's own raw prose back as history beyond the open
